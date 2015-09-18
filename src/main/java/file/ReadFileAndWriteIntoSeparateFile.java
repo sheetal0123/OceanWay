@@ -57,7 +57,6 @@ public class ReadFileAndWriteIntoSeparateFile {
 			bw.flush();
 			bw.close();
 			System.out.println("File written successfully");
-
 		} catch (FileNotFoundException e) {
 			System.out.println(counter);
 			e.printStackTrace();
@@ -73,7 +72,5 @@ public class ReadFileAndWriteIntoSeparateFile {
 	public static void main(String[] args) {
 		ReadFileAndWriteIntoSeparateFile obj = new ReadFileAndWriteIntoSeparateFile();
 		obj.readFileAndFetchFewColumns();
-
 	}
-
 }
