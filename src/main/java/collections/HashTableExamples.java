@@ -14,6 +14,7 @@ import java.util.Set;
  * All Maps e.g. Hashtable, HashMap etc are not collections as they don't implement collection interface, hence standard
  * iterate process like iterate, adv for loop, listIterate can't be used.
  * to iterate we have other options - keySet, values and entrySet
+ * Dictionary > Hashtable > Properties
  */
 public class HashTableExamples {
 

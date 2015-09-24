@@ -6,7 +6,10 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
-
+/*
+ * imp: none of the collection classes are synchronized
+ * all legacy classes like vector, Hashtable etc are synchronized
+ */
 public class ArrayListClass {
 
 	public void howToIterateArrayList() {
