@@ -15,13 +15,13 @@ public class DriversRepo {
 	}
 	
 	public WebDriver getChromeDriver(){
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\sheetalsingh\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "F:\\softwares\\jars\\chromedriver.exe");
 		driver = new ChromeDriver();   //chrome driver version= 2.16
 		return driver;
 	}
 	
 	public WebDriver getIEDriver(){
-		System.setProperty("webdriver.ie.driver", "C:\\Users\\sheetalsingh\\Downloads\\IEDriverServer_x64_2.46.0\\IEDriverServer.exe");
+		System.setProperty("webdriver.ie.driver",  "F:\\softwares\\jars\\IEDriverServer.exe");
 		driver=new InternetExplorerDriver();
 		return driver;
 	}
