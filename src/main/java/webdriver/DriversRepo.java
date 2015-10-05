@@ -8,22 +8,20 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class DriversRepo {
 
-	WebDriver driver;
+	static WebDriver driver;
 	
-	public WebDriver getMozillaDriver(){
+	public static WebDriver getMozillaDriver(){
 		return new FirefoxDriver();
 	}
 	
-	public WebDriver getChromeDriver(){
+	public static WebDriver getChromeDriver(){
 		System.setProperty("webdriver.chrome.driver", "F:\\softwares\\jars\\chromedriver.exe");
-		driver = new ChromeDriver();   //chrome driver version= 2.16
-		return driver;
+		return new ChromeDriver();   //chrome driver version= 2.16
 	}
 	
 	public WebDriver getIEDriver(){
 		System.setProperty("webdriver.ie.driver",  "F:\\softwares\\jars\\IEDriverServer.exe");
-		driver=new InternetExplorerDriver();
-		return driver;
+		return new InternetExplorerDriver();
 	}
 	
 	
