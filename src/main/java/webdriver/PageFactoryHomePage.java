@@ -15,6 +15,7 @@ public class PageFactoryHomePage {
 
 	@FindBy(name = "SEARCH_GO")
 	WebElement searchButton;
+
 	// WebElement SEARCH_GO; | this can also be used
 
 	public PageFactoryHomePage(WebDriver driver) {

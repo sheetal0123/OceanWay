@@ -9,15 +9,14 @@ import org.testng.annotations.Test;
 
 /*
  * AutoIT: 3rd party tool used to handle Window specific UI
+ * html code: <input type="file" name="img">
  */
 public class UploadFileUsingAutoIT {
 	WebDriver driver;
-	DriversRepo repo;
 
 	@BeforeTest
 	public void setup() throws Exception {
-		repo = new DriversRepo();
-		driver = repo.getMozillaDriver();
+		driver = DriversRepo.getMozillaDriver();
 		driver.manage().window().maximize();
 	}
 

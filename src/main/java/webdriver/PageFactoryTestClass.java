@@ -10,16 +10,12 @@ import org.testng.annotations.Test;
 public class PageFactoryTestClass {
 
 	WebDriver driver;
-	DriversRepo repo;
 	PageFactoryHomePage homepage;
 	PageFactoryPricePage pricepage;
 
 	@BeforeClass
 	public void setup() {
-		repo = new DriversRepo();
-//		driver = repo.getMozillaDriver();
-//		driver = repo.getChromeDriver();
-		driver = repo.getIEDriver();
+		driver = DriversRepo.getMozillaDriver();
 		homepage = new PageFactoryHomePage(driver);
 		pricepage = new PageFactoryPricePage(driver);
 	}
@@ -45,7 +41,8 @@ public class PageFactoryTestClass {
 		pricepage.applyPriceFilter("100", "200");
 		String url = pricepage.getUrl();
 		System.out.println(url);
-		Assert.assertTrue(url.contains("maxPrice--200__minPrice--100"), "price filter not applied");
+		Assert.assertTrue(url.contains("maxPrice--200__minPrice--100"),
+				"price filter not applied");
 	}
 
 }

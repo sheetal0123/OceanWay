@@ -13,15 +13,14 @@ import org.testng.annotations.Test;
 
 /*
  * Robot class is a java class which take control of Mouse and Keyboard
+ * html code: <input type="file" name="img">
  */
 public class UploadFileUsingRobotFramework {
 	WebDriver driver;
-	DriversRepo repo;
 
 	@BeforeTest
 	public void setup() throws Exception {
-		repo = new DriversRepo();
-		driver = repo.getMozillaDriver();
+		driver = DriversRepo.getMozillaDriver();
 		driver.manage().window().maximize();
 	}
 
@@ -32,16 +31,18 @@ public class UploadFileUsingRobotFramework {
 		driver.findElement(By.name("img")).click();
 		robotFunc("F:\\softwares\\autoit\\testupload.txt");
 		Thread.sleep(4000);
-		System.out.println("Title: " + driver.getTitle()); 
+		System.out.println("Title: " + driver.getTitle());
 	}
 
 	/*
 	 * This method will copy file path to system's clip-board.
 	 */
 	public static void setClipboardData(String string) {
-		// StringSelection is a class that can be used for copy and paste operations
+		// StringSelection is a class that can be used for copy and paste
+		// operations
 		StringSelection stringSelection = new StringSelection(string);
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
+		Toolkit.getDefaultToolkit().getSystemClipboard()
+				.setContents(stringSelection, null);
 	}
 
 	public static void robotFunc(String fileLocation) {
