@@ -9,13 +9,14 @@ import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+/*
+ * Here we have to use @BeforeMethod rather @BeforeClass else getting "Error communicating with the remote browser. It may have died."
+ */
 public class MultipleBrowserLinux {
 
 	WebDriver driver;
@@ -51,20 +52,20 @@ public class MultipleBrowserLinux {
 		driver.quit();
 	}
 
-	// @Test
-	// public void test1() throws MalformedURLException, InterruptedException {
-	// driver.navigate().to("https://xebialabs.com/");
-	// driver.findElement(By.id("search")).sendKeys("Hello Xebia");
-	// Thread.sleep(15000);
-	// System.out.println("Test1:" + Thread.currentThread().getId());
-	// driver.close();
-	// }
+//	 @Test
+	 public void test1() throws MalformedURLException, InterruptedException {
+	 driver.navigate().to("https://xebialabs.com/");
+	 driver.findElement(By.id("search")).sendKeys("Hello Xebia");
+	 Thread.sleep(15000);
+	 System.out.println("Test1:" + Thread.currentThread().getId());
+	 driver.close();
+	 }
 
 	@Test
 	public void test2() throws MalformedURLException, InterruptedException {
-		driver.navigate().to("https://in.yahoo.com/?p=us");
-		driver.findElement(By.id("UHSearchBox")).sendKeys("Hello Yahoo");
-		// Thread.sleep(10000);
+		driver.navigate().to("https://www.google.co.in");
+//		driver.findElement(By.id("UHSearchBox")).sendKeys("Hello Yahoo");
+		 Thread.sleep(10000);
 		System.out.println("Test2:" + Thread.currentThread().getId());
 		driver.close();
 	}
@@ -74,7 +75,7 @@ public class MultipleBrowserLinux {
 		driver.navigate().to("http://www.amazon.in");
 		driver.findElement(By.id("twotabsearchtextbox")).sendKeys(
 				"Hello Amazon");
-		// Thread.sleep(10000);
+		 Thread.sleep(10000);
 		System.out.println("Test3:" + Thread.currentThread().getId());
 		driver.close();
 	}
