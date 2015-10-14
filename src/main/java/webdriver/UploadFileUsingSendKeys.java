@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 /*
  html code: <input type="file" name="img">
  file can be uploaded using three ways: sendKeys, AutoIT and Robot framework
+ refer: http://seleniumeasy.com/selenium-tutorials/uploading-file-with-selenium-webdriver
  */
 public class UploadFileUsingSendKeys {
 

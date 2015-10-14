@@ -32,7 +32,7 @@ public class AppiumTest {
 			System.out.println("android");
 			
 /*				File appDir = new File("{pathApk file}");
-		        File app = new File(appDir, "{APK file Name}"); //my case “demo1.apk”
+		        File app = new File(appDir, "{APK file Name}"); //my case ï¿½demo1.apkï¿½
 		        capabilities = new DesiredCapabilities();
 		        capabilities.setCapability("device","Android");
 		        capabilities.setCapability(CapabilityType.BROWSER_NAME,  "");
@@ -61,7 +61,7 @@ public class AppiumTest {
 	        
 	        
 	        
-	        
+	        /*
 	        
 	        capabilities = new DesiredCapabilities();
 	        capabilities.setCapability(
@@ -70,6 +70,9 @@ public class AppiumTest {
 	        			    MobileCapabilityType.PLATFORM_NAME, "Android");
 	        		    capabilities.setCapability(
 	        			    MobileCapabilityType.DEVICE_NAME, "AndroidPhone");
+	        		    
+	        		    
+	        		    
 //	        		    capabilities.setCapability(
 //	        			    MobileCapabilityType.BROWSER_NAME, "Chrome");
 	        		    // capabilities.setCapability("avd", "AndroidPhone");
@@ -80,10 +83,22 @@ public class AppiumTest {
 	        		    ((AppiumDriver) driver).context("NATIVE_APP");
 	        		    ((AppiumDriver) driver).rotate(ScreenOrientation.PORTRAIT);
 	        		    ((AppiumDriver) driver).context("WEBVIEW_1");
+	        		    
+	        		    */
+	        		    
+			 capabilities = new DesiredCapabilities();    
+			 capabilities.setCapability("appium-version", "1.4.13");
+             capabilities.setCapability("platformName", "Android");
+             capabilities.setCapability("platformVersion", "6.0");
+             capabilities.setCapability("deviceName", "AVD_for_Nexus_5_by_Google");
+//             capabilities.setCapability("app", userDir + "/src/test/resources/fixtures/Grindr_Android_Debug_668.apk")
+//             capabilities.setCapability("appPackage", "com.grindrapp.android");
 
-	        			
-	        
-	        
+             AndroidDriver driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
+	    
+	        		    
+	        		    
+	        		    
 		}else{
 			System.out.println("Browser not selected");
 		}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Custom Suite">
+  <listeners>
+    <listener class-name="CustomReporter" />
+  </listeners>
+
+  <test name="test1">
+    <classes>
+      <class name="CustomTest" />
+    </classes>
+  </test>
+</suite>

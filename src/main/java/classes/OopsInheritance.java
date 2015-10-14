@@ -1,4 +1,7 @@
 package classes;
+/*
+ * oops concept: inheritance
+ */
 
 class Box {
 
@@ -28,7 +31,7 @@ class BoxWeight extends Box {
 	}
 }
 
-public class InheritanceExample {
+public class OopsInheritance {
 
 	public static void main(String[] args) {
 		BoxWeight bw = new BoxWeight(10, 10, 10, 200);
