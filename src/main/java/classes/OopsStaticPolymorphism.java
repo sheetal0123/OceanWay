@@ -2,7 +2,7 @@ package classes;
 /*
  * Overloading is static or compile time polymorphism
  * compiler know which overloading method to run
- * return type does not matter, only argument shd be different
+ * return type does not matter, only argument should be different
  */
 public class OopsStaticPolymorphism {
 	public void print(String s) {

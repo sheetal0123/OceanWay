@@ -8,7 +8,7 @@ import java.util.TreeSet;
 
 public class HashSetExamples {
 	/*
-	 * HashSet: Unordered + UnSorted Duplicate note allowed, null can be added
+	 * HashSet: Unordered + UnSorted Duplicate not allowed, null can be added
 	 */
 	public void hashSetMethods() {
 		HashSet<String> hashSet = new HashSet<String>();

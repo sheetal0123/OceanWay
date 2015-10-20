@@ -38,12 +38,13 @@ public class CheckedException1 {
 }
 
 /* unchecked exception propagates till main method
+
 method1
 method2
 method3
-Exception in thread "main" java.lang.ArithmeticException: / by zero
-	at exceptions.ThrowExample1.method3(ThrowExample1.java:7)
-	at exceptions.ThrowExample1.method2(ThrowExample1.java:12)
-	at exceptions.ThrowExample1.method1(ThrowExample1.java:17)
-	at exceptions.ThrowExample1.main(ThrowExample1.java:23)
+Exception handled
+method2 out
+method1 out
+	
+	
 */

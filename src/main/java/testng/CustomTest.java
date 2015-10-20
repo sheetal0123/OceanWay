@@ -19,3 +19,9 @@ public class CustomTest {
         Assert.assertTrue(true);
     }
 }
+
+/*
+PASSED: testMethodOne
+FAILED: testMethodTwo
+SKIPPED: testMethodThree
+*/

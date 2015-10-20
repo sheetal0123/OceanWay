@@ -31,14 +31,14 @@ public class TestNGAnnotations {
 		System.out.println("Before Test");
 	}
 
-	@BeforeGroups("reg")
-	public void beforegroup() {
-		System.out.println("Before Groups");
-	}
-
 	@BeforeClass
 	public void beforeclass() {
 		System.out.println("Before Class");
+	}
+
+	@BeforeGroups("reg")
+	public void beforegroup() {
+		System.out.println("Before Groups");
 	}
 
 	@BeforeMethod
@@ -90,12 +90,27 @@ public class TestNGAnnotations {
 
 /*
  * STC'M' Before Suite Before Test Before Class
- * 
- * Before Method test 1 After Method
- * 
- * Before Method test 2 After Method
- * 
- * Before Method test 3 After Method
- * 
- * After Class After Test After Suite
+
+Before Suite
+Before Test
+Before Class
+
+Before Method
+test 1
+After Method
+
+Before Groups
+Before Method
+test 2
+After Method
+Before Method
+test 3
+After Method
+After Groups
+
+After Class
+After Test
+After Suite
+
+
  */

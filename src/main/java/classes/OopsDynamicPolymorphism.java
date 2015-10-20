@@ -2,7 +2,7 @@ package classes;
 
 /*
  * Overriding is dynamic or runtime polymorphism
- * In overriding, always method invoked based on object not reference
+ * In overriding, method invoked based on object not reference
  * Compiler don't know which method to run it decide at run time
  */
 

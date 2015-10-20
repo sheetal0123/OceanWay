@@ -21,3 +21,10 @@ public class ScannerFindInLine {
 
 	}
 }
+
+/*
+
+30.0
+2.7
+
+*/

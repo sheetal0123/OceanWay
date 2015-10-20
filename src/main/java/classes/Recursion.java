@@ -1,7 +1,7 @@
 package classes;
 
 /*
- * recursion call itself again and again, if stmt is very imp so that a one point method start returning something
+ * recursion call itself again and again, if stmt is very imp so that at one point method start returning something
  * else method enters in infinite loop
  */
 public class Recursion {
