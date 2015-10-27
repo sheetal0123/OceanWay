@@ -1,12 +1,10 @@
-package webdriver;
+package pom;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-
-public class PageFactoryPricePage {
+public class BizrateSearchPageObjects {
 	WebDriver driver;
 
 	@FindBy(xpath = ".//*[@id='minPriceBox']")
@@ -18,9 +16,8 @@ public class PageFactoryPricePage {
 	@FindBy(id = "update-go-button")
 	WebElement priceButton;
 
-	public PageFactoryPricePage(WebDriver driver) {
+	public BizrateSearchPageObjects(WebDriver driver) {
 		this.driver = driver;
-		PageFactory.initElements(driver, this);
 	}
 
 	public void applyPriceFilter(String min, String max) {
@@ -30,9 +27,4 @@ public class PageFactoryPricePage {
 		maxPrice.sendKeys(max);
 		priceButton.click();
 	}
-
-	public String getUrl() {
-		return driver.getCurrentUrl();
-	}
-
 }
