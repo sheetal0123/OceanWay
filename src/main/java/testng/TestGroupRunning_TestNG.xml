@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Group of group Suite" verbose="1">
+	<test name="Group of group Test">
+		<groups>
+			<define name="group1">
+				<include name="sanityA" />
+				<include name="sanityB" />
+			</define>
+			<define name="group2">
+				<include name="regA" />
+				<include name="regB" />
+			</define>
+			<run>
+				<include name="group2" />
+				<exclude name="group1" />
+			</run>
+		</groups>
+		<classes>
+			<class name="testng.TestGroupsRunning" />
+		</classes>
+	</test>
+</suite>

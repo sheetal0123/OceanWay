@@ -10,17 +10,18 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import webdriver.DriversRepo;
-
 public class TestClass {
 
 	WebDriver driver;
 	BizrateHomePageObjects homepage;
 	BizrateSearchPageObjects pricepage;
+	Helper helper;
 
 	@BeforeClass
 	public void setup() {
-		driver = DriversRepo.getMozillaDriver();
+		helper=new Helper();
+		helper.getProperties();
+		driver=helper.getDriver();
 	}
 
 	@AfterClass
@@ -31,7 +32,7 @@ public class TestClass {
 
 	@Test
 	public void verifyPriceFilter() {
-		driver.get("http://www.bizrate.com");
+		driver.get(helper.server);
 		homepage = PageFactory.initElements(driver,
 				BizrateHomePageObjects.class);
 		pricepage = homepage.searchForKeyword("dell");
