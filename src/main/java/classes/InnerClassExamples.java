@@ -1,13 +1,14 @@
 package classes;
+
 /*
  * inner or nested classes are only known to its enclosing outer class
- * outer class cannot access inner class member directly
+ * outer class cannot access inner class member directly, inner class object is required
  * inner class can use outer class member directly w/o using object
  */
 class OuterClass {
 	int out = 20;
 	public void outMethod() {
-		// System.out.println("Inner class var= "+ in); // can't access inner class member
+		// System.out.println("Inner class var= "+ in); // compiler error, can't access inner class member
 		InnerClass inObj = new InnerClass();
 		inObj.inMethod();
 	}

@@ -113,7 +113,7 @@ public class AppiumTest {
 		driver.quit();
 	}
 
-	@Test
+
 	public void test1() throws MalformedURLException, InterruptedException {
 		driver.navigate().to("https://xebialabs.com/");
 		Thread.sleep(60000);

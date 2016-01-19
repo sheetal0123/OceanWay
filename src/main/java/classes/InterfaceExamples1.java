@@ -24,11 +24,11 @@ class InterfaceExamples1 implements Runnable {
 	}
 
 	public static void main(String[] args) {
-		InterfaceExamples1 obj = new InterfaceExamples1();
-		Runnable objInterface = new InterfaceExamples1();
+		InterfaceExamples1 objClass = new InterfaceExamples1();
+		objClass.run(); // I am run: 100
 
-		objInterface.run(); // I am run: 100
-		// objInterface.sports(); // compiler error
+		Runnable obj = new InterfaceExamples1();
 		obj.run(); // I am run: 100
+		// obj.sports(); // compiler error
 	}
 }

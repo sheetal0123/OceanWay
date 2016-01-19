@@ -8,6 +8,7 @@ package classes;
  * College HAS A Plant, Both are independent of each other
  */
 
+//Independent class, not depending on below class hence Aggregation
 class Square{
 	public int sqr(int a){
 		return a*a;
@@ -26,6 +27,6 @@ public class _HASA_Aggregation {
 	public static void main(String [] args){
 		_HASA_Aggregation obj=new _HASA_Aggregation();
 		double res=obj.circleArea(5);
-		System.out.println(res); 
+		System.out.println("Circle Area: " + res);
 	}
 }
