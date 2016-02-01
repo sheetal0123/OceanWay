@@ -9,7 +9,7 @@ public class Return {
 		System.out.println("i am abc start");
 		xyz();
 		System.out.println("");
-		System.out.println("i am abc end");
+		System.out.print("i am abc end");
 	}
 
 	public void xyz() {

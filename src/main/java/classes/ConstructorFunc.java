@@ -11,6 +11,11 @@ class Child extends Parent {
 		// super(); -> added implicitly by compiler
 		System.out.println("Child constructor");
 	}
+	
+	//Param parent const never called
+	Child(int a){
+		System.out.println("Child Param Const");
+	}
 }
 
 public class ConstructorFunc extends Child {
@@ -21,8 +26,7 @@ public class ConstructorFunc extends Child {
 	}
 
 	public ConstructorFunc(int a) {
-		// super(); // Imp: Parameterized const also called default super
-		// constructor only rather parameterized super const
+		// super(); // Imp: Parameterized const also called default super constructor rather parameterized super const
 		System.out.println("Grand Child Param constructor");
 	}
 

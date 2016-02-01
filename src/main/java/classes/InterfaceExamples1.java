@@ -10,6 +10,7 @@ package classes;
 interface Runnable {
 	int TON = 100; // static + final
 	void run(); // abstract
+	//void abc(){} //compiler error
 }
 
 class InterfaceExamples1 implements Runnable {
@@ -27,8 +28,10 @@ class InterfaceExamples1 implements Runnable {
 		InterfaceExamples1 objClass = new InterfaceExamples1();
 		objClass.run(); // I am run: 100
 
-		Runnable obj = new InterfaceExamples1();
-		obj.run(); // I am run: 100
-		// obj.sports(); // compiler error
+		Runnable objIntrfc = new InterfaceExamples1();
+		objIntrfc.run(); // I am run: 100
+		// objIntrfc.sports(); // compiler error
+		
+		//Runnable o=new Runnable(); // compiler error
 	}
 }

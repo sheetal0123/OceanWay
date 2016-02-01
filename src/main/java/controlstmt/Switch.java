@@ -7,7 +7,7 @@ public class Switch {
 	public static void main(String[] args) {
 
 		Scanner s = new Scanner(System.in);
-		System.out.println("Enter any no 1 to 5, and then press enter and 'q'");
+		System.out.println("Enter any no 1 to 5, and press q to exit");
 		int i = -1;
 		while (s.hasNextInt()) {
 			i = s.nextInt();

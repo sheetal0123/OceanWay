@@ -14,10 +14,9 @@ public class PassbyValue {
 	public static void main(String[] args) {
 		PassbyValue obj = new PassbyValue();
 		int a = 10, b = 20;
-		System.out.println("Intial values: " + a + ", " + b); // Initial values:
-																// 10, 20
+		System.out.println("Intial values: " + a + ", " + b); // Initial values: 10, 20
+
 		obj.change(a, b); // copy passed
-		System.out.println("After values: " + a + ", " + b); // After values:
-																// 10, 20
+		System.out.println("After values: " + a + ", " + b); // After values: 10, 20
 	}
 }

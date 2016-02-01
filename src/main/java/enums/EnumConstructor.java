@@ -5,6 +5,7 @@ enum Mango {
 
 	int price;
 
+	//enum constructor
 	Mango(int p) {
 		price = p;
 	}
@@ -20,7 +21,7 @@ public class EnumConstructor {
 		System.out.println("Safeda price: " + p); // Safeda price: 50
 
 		for (Mango m : Mango.values()) {
-			System.out.println(m + " : " + m.getPrice());
+			System.out.println(m + " : " + m.getPrice() );
 		}
 	}
 }

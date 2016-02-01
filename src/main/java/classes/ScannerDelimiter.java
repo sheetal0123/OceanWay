@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class ScannerDelimiter {
 
 	public void stringPattern() {
-		String path = "/home/xebia/workspace/OceanWay/src/main/java/classes/scannerdelimiter.dat";
+		String path = "/Users/sheetal/Documents/workspace/OceanWay/src/main/java/classes/scannerdelimiter.txt";
 
 		try {
 			FileWriter fw = new FileWriter(path);

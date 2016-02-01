@@ -14,22 +14,24 @@ public class TestEqualTo {
 		String obj3 = new String("xyz");
 
 		if (obj1 == obj2)
-			System.out.println("obj1 == obj2"); // obj1 == obj2
+			System.out.println("Obj: obj1 == obj2"); // obj1 == obj2
 		else
 			System.out.println("obj1 != obj2");
 
 		if (obj1 == obj3)
 			System.out.println("obj1 == obj3");
 		else
-			System.out.println("obj1 != obj3"); // obj1 != obj3
+			System.out.println("Obj: obj1 != obj3"); // obj1 != obj3
+		// obj 1 and obj 3 are having two diff memory location but pointing same
+		// obj on heap
 	}
 
 	public void primitiveReferences() {
 		int a = 10;
-		int b = a;
+		int b = 10;
 
 		if (a == b)
-			System.out.println("a == b"); // a == b
+			System.out.println("Prim: a == b"); // a == b
 		else
 			System.out.println("a != b");
 	}
@@ -39,7 +41,7 @@ public class TestEqualTo {
 		Integer b = null;
 
 		if (a == b)
-			System.out.println("a == b"); // a == b
+			System.out.println("Null: a == b"); // a == b
 		else
 			System.out.println("a != b");
 	}
@@ -57,10 +59,10 @@ public class TestEqualTo {
 	public static void main(String[] args) {
 
 		TestEqualTo obj = new TestEqualTo();
-		// obj.objectReferences();
-		// obj.primitiveReferences();
+		obj.objectReferences();
+		obj.primitiveReferences();
 		obj.nulls();
-		// obj.incompatibleType();
+		obj.incompatibleType();
 
 	}
 }

@@ -9,6 +9,7 @@ import java.util.ListIterator;
 /*
  * imp: none of the collection classes are synchronized
  * all legacy classes like vector, Hashtable etc are synchronized
+ * AL as Ordered (by insertion) + Not sorted + Duplicate allowed
  */
 public class ArrayListClass {
 
@@ -127,10 +128,7 @@ public class ArrayListClass {
 		System.out.println(al); // [C, D, A, B]
 	}
 
-	public void initializeArrayListWithAsListMethod() {
-		ArrayList<String> al = new ArrayList<String>(Arrays.asList("Jan","Feb", "Mar", "Apr", "May"));    //converting string array into array list
-		System.out.println(al); // [Jan, Feb, Mar, Apr, May]
-	}
+	
 
 	
 	public static void main(String[] args) {
@@ -139,6 +137,6 @@ public class ArrayListClass {
 		obj.handleObjectsArray();
 		obj.initializeArrayListWithNCopies();
 		obj.initializeArrayListWithInnerClass();
-		obj.initializeArrayListWithAsListMethod();
+		
 	}
 }

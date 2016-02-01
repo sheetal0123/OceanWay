@@ -2,10 +2,10 @@ package collections;
 
 public class ArraysExamples {
 
+	//Initializing Type 1
 	public void oneDimArray1() {
 		int[] arr; // declared array
-		arr = new int[5]; // allocate physical memory with initial value as 0 in
-							// all slots
+		arr = new int[5]; // allocate physical memory with initial value as 0 in all slots
 		arr[0] = 10;
 		arr[1] = 20;
 		arr[2] = 30;
@@ -13,32 +13,55 @@ public class ArraysExamples {
 		arr[4] = 50;
 
 		int res = 0;
-		for (int i = 0; i < 5; i++)
-			res = res + arr[i];
+		for(int i: arr){
+			res=res + i;
+		}
 		System.out.println("avg:" + res / 5); // avg:30
 	}
 
+	//Initializing Type 2 : declared array and initialize it with data on the spot
 	public void oneDimArray2() {
-		int[] arr = { 10, 20, 30, 40, 50 }; // declared array and initialize it
+		int[] arr = { 10, 20, 30, 40, 50 }; //note there is no 'new' keyword used 
 		int res = 0;
-		for (int i = 0; i < 5; i++)
+		for (int i = 0; i < arr.length; i++)
 			res = res + arr[i];
 		System.out.println("avg:" + res / 5); // avg:30
 	}
+	
+	
+	public void oneDimArray3(){
+		String [] arr1={"0","1","2"};
+		String [] arr2=new String[3];
+		arr2[0]="a";
+		arr2[2]="c";
+		
+		for(int i=0; i<arr1.length; i++){
+			System.out.print(arr1[i]+" and "+arr2[i]+",   "); // 0 and a,   1 and null,   2 and c
+		}
+		 
+		System.out.println("");
+	}
+	
+	
 
 	public void multiDim2DArray1() {
 		int[][] mult = new int[3][5]; // [row][column]
 		int val = 1;
+		
+		System.out.println(mult.length); // 3
+		System.out.println(mult[0].length); // 5
+		
+		
 		// allocate val to 2-D array
-		for (int row = 0; row <= 2; row++) {
-			for (int col = 0; col <= 4; col++) {
+		for (int row = 0; row < mult.length; row++) {
+			for (int col = 0; col < mult[row].length; col++) {
 				mult[row][col] = val;
 				val++;
 			}
 		}
 
-		for (int row = 0; row <= 2; row++) {
-			for (int col = 0; col <= 4; col++) {
+		for (int row = 0; row < mult.length; row++) {
+			for (int col = 0; col < mult[row].length; col++) {
 				System.out.print(mult[row][col] + "	");
 			}
 			System.out.println("");
@@ -59,9 +82,13 @@ public class ArraysExamples {
 		mult[1] = new int[5];
 		mult[2] = new int[1];
 
+		System.out.println(mult[0].length); // 2
+		System.out.println(mult[1].length); // 5
+		System.out.println(mult[2].length); // 1
+		
 		int val = 1;
 		// allocate val to 2-D array
-		for (int row = 0; row <= 2; row++) {
+		for (int row = 0; row < mult.length; row++) {
 			for (int col = 0; col < mult[row].length; col++) {
 				mult[row][col] = val;
 				val++;
@@ -69,7 +96,7 @@ public class ArraysExamples {
 		}
 		
 		System.out.println("");
-		for (int row = 0; row <= 2; row++) {
+		for (int row = 0; row < mult.length; row++) {
 			for (int col = 0; col < mult[row].length; col++) {
 				System.out.print(mult[row][col] + "	");
 			}
@@ -101,7 +128,7 @@ public class ArraysExamples {
 	100	200	300	400	
 */
 	
-	public void multiDim3DArray3() {
+	public void multiDim3DArray1() {
 		int[][][] mult = new int[4][2][7]; // [set][set-row][set-column]
 		int val = 1;
 
@@ -129,10 +156,13 @@ public class ArraysExamples {
 		ArraysExamples obj = new ArraysExamples();
 		obj.oneDimArray1();
 		obj.oneDimArray2();
+		obj.oneDimArray3();
+		
 		obj.multiDim2DArray1();
 		obj.multiDim2DArray2();
 		obj.multiDim2DArray3();
-		obj.multiDim3DArray3();
+		
+		obj.multiDim3DArray1();
 	}
 }
 

@@ -4,7 +4,7 @@ public class PlainClassWOConst {
 
 	int x, y;
 
-	//setter will be replaced with constructor in next eg.
+	// setter initializing variable, can be replaced by constructor
 	public void set(int m, int n) {
 		x = m;
 		y = n;
@@ -15,8 +15,8 @@ public class PlainClassWOConst {
 	}
 
 	public static void main(String[] args) {
-		PlainClassWOConst obj = new PlainClassWOConst();
-		obj.set(10, 20);
+		PlainClassWOConst obj = new PlainClassWOConst(); // obj is useless as of now
+		obj.set(10, 20); // obj now become functional
 		System.out.println("Sum is: " + obj.add()); // Sum is: 30
 
 		obj.set(100, 200);

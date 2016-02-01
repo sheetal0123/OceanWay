@@ -9,7 +9,7 @@ public class ScannerFileReading {
 	public static void main(String[] args) {
 		try {
 			FileReader fr = new FileReader(
-					"/home/xebia/workspace/OceanWay/src/main/java/classes/scanner.dat");
+					"/Users/sheetal/Documents/workspace/OceanWay/src/main/java/classes/scanner.txt");
 
 			Scanner sc = new Scanner(fr);
 			int sum = 0, counter = 0;

@@ -1,5 +1,6 @@
 package classes;
 
+//basic func has been added into Abstract class
 abstract class VehicleAbstract {
 	public abstract void start();
 

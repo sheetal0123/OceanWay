@@ -17,14 +17,9 @@ public class ScannerKeyboardReading {
 		sc.close();
 	}
 
-	public void reverseString(){
-		
-	}
 	
 	public static void main(String[] args) {
 		ScannerKeyboardReading obj = new ScannerKeyboardReading();
 		obj.getAverage();
-		obj.reverseString();
 	}
-
 }

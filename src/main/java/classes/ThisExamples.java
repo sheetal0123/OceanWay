@@ -3,9 +3,10 @@ package classes;
 /*
  * 'this' keyword always represent the current object accessing it. 
  * if local variable is not same as instance variable then 'this' can be removed
+ * static methods cannot use this as static method belong to class not objects/instances
  */
 public class ThisExamples {
-	int x, y;
+	int x, y; //instance variables
 
 	public ThisExamples(int x, int y) {
 		this.x = x;  // to differentiate between instance var and local variable 'this' is used
@@ -30,6 +31,4 @@ o/p when 'this' is not used
 Sum is: 0
 Sum is: 0
 
-Sum is: 30
-Sum is: 300
 */

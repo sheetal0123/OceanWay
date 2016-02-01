@@ -16,8 +16,10 @@ abstract class Games implements Durable{
 	void football(){
 		//non abstract method
 	}
+	//Abstract class is free to implement or non implementation of interface methods
 }
 
+//Non Abstract class has to implement interface methods
 public class InterfaceExample2 extends Games{
 	public void cure(){
 		//implemented - Curable method

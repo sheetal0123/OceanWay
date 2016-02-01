@@ -3,31 +3,30 @@ package exceptions;
 import java.io.IOException;
 
 /*
- * Checked exception(i.e. SQL,IO etc) can't propagates and have to be handled at the point of generation 
- * Checked can be checked by compiler and hence called checked 
+ * Checked CAN BE checked by compiler and hence called checked e.g. SQL, IO
+ * Checked exception can't propagates and have to be handled at the point of generation 
  * Checked exception can be throw using 'throw' keyword but have to handle immediately
  */
 public class CheckedException1 {
 
-	public void method3(){
+	public void method3() throws IOException{
 		System.out.println("method3");
-//		throw new IOException(); // compiler error
-		try {
-			throw new IOException(); 
-		} catch (IOException e) {
-			System.out.println("Exception handled");
-		}
+		throw new IOException(); 
 	}
 	
-	public void method2(){
+	public void method2() throws IOException{
 		System.out.println("method2");
-		method3();
-		System.out.println("method2 out"); 
+		method3(); 
+		System.out.println("method2 out"); //Will not get executed
 	}
 	
 	public void method1(){
 		System.out.println("method1");
-		method2();
+		try {
+			method2();
+		} catch (IOException e) {
+			System.out.println("Exception Handled");
+		}
 		System.out.println("method1 out");
 	}
 	
@@ -42,8 +41,7 @@ public class CheckedException1 {
 method1
 method2
 method3
-Exception handled
-method2 out
+Exception Handled
 method1 out
 	
 	
