@@ -50,7 +50,7 @@ public class HashTableExamples {
 		ht.put(5, "May");
 		
 				
-		//Method 1: Using keySet()
+		//Method 1: Using keySet() : iterating on keys  - best to use this
 		Set<Integer> set=ht.keySet();
 		for(Integer key:set){
 			System.out.print(key+":"+ht.get(key)+" , ");//5:May , 4:Apr , 3:Mar , 2:Feb , 1:Jan ,
@@ -58,7 +58,7 @@ public class HashTableExamples {
 		System.out.println("");
 
 		
-		//Method 2: Using values()
+		//Method 2: Using values(): iterating on values
 		Collection<String> c=ht.values();
 		for(String str:c){
 			System.out.print(str+ " -- " ); // May -- Apr -- Mar -- Feb -- Jan --

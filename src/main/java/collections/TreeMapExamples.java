@@ -21,7 +21,7 @@ public class TreeMapExamples {
 		tm.put("d", "dog");
 		tm.put("e", null);
 		tm.put("c", "cat");
-		// tm.put(null, "joker"); // compiler error
+		//tm.put(null, "joker"); // runtime error
 		tm.put("f", null);
 		tm.put("a", "big-apple");
 
@@ -151,6 +151,6 @@ public class TreeMapExamples {
 
 class MyComparator implements Comparator<String> {
 	public int compare(String str1, String str2) {
-		return str2.compareTo(str1);
+		return str2.compareTo(str1);  // descending order
 	}
 }

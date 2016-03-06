@@ -2,6 +2,7 @@ package collections;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Iterator;
 import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Queue;
@@ -9,10 +10,45 @@ import java.util.SortedSet;
 import java.util.TreeSet;
 
 /*
- * PQ: 
+ * PQ: Ordered by Comparator 
+ * In PQ only poll and peek method return first least element which ensure ordering
  */
 public class PriorityQueueExamples {
 
+	public void PQOrdering(){
+		PriorityQueue<String> pq=new PriorityQueue<String>();
+		pq.add("5");
+		pq.add("3");
+		pq.add("1");
+		pq.add("2");
+		pq.add("4");
+		pq.add("6");
+		
+		System.out.println("Unordered: "+pq); // Unordered: [1, 2, 3, 5, 4, 6]
+		
+		Iterator<String> itr=pq.iterator();
+		System.out.print("Unordered Itr: ");
+		while(itr.hasNext()){
+			System.out.print(itr.next()+", "); // Unordered Itr: 1, 2, 3, 5, 4, 6, 
+		}
+		
+		System.out.println("");
+		System.out.print("Unordered Arrays: ");
+		Object [] obj=pq.toArray();
+		for(Object o: obj){
+			System.out.print(o+", ");  //Unordered Arrays: 1, 2, 3, 5, 4, 6, 
+		}
+		
+		
+		//To order a PQ
+		System.out.print("\nOrdered:");
+		while(!pq.isEmpty()){
+			System.out.print(pq.poll()+", ");   //Ordered: 1, 2, 3, 4, 5, 6, 
+		}
+		System.out.println("********************************************");
+		
+	}
+	
 	public void methodsOfPQ() {
 		PriorityQueue<Integer> pq = new PriorityQueue<Integer>(); // Default Constructor:
 //		Queue<Integer> pq = new PriorityQueue<Integer>();
@@ -56,7 +92,7 @@ public class PriorityQueueExamples {
 		System.out.println(pq); // [101, 102]
 
 		System.out.println(pq.containsAll(ls)); // true
-		
+		System.out.println("********************************************");
 		
 //		Queue<String> q=new PriorityQueue<String>();
 	}
@@ -74,7 +110,7 @@ public class PriorityQueueExamples {
 		PriorityQueue<Integer> pq2 = new PriorityQueue<Integer>(ls);
 		System.out.println(pq2); // [100, 200]
 
-		// Constructor 4: taking comparator
+		// Constructor 4: taking initial capacity and comparator
 		PriorityQueue<Integer> pq3 = new PriorityQueue<Integer>(2,new MyCompPQ());
 		pq3.add(2);
 		pq3.add(8);
@@ -109,6 +145,7 @@ public class PriorityQueueExamples {
 
 	public static void main(String[] args) {
 		PriorityQueueExamples obj = new PriorityQueueExamples();
+		obj.PQOrdering();
 		obj.methodsOfPQ();
 		obj.constructorsOfPQ();
 		obj.constructorsOfPQ2();
@@ -117,6 +154,9 @@ public class PriorityQueueExamples {
 
 class MyCompPQ implements Comparator<Integer> {
 	public int compare(Integer a, Integer b) {
-		return b.compareTo(a);
+		int z=b.compareTo(a);
+		System.out.println("<>"+b+","+a+","+z);
+		
+		return z;
 	}
 }

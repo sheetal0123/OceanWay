@@ -47,7 +47,7 @@ public class LinkedHashSetExamples {
 		lhs.add("Orange");
 
 		String [] arr=new String[lhs.size()];
-		lhs.toArray(arr);
+		arr=lhs.toArray(arr);
 		System.out.println("");
 		for(String str:arr){
 			System.out.print(str+" , ");  //Apple , Mango , Orange , 

@@ -16,7 +16,7 @@ class Address{
 	}
 	
 	public String toString(){
-		return houseNo+","+street+","+state;
+		return houseNo+"-"+street+"-"+state;
 	}
 }
 
@@ -24,7 +24,7 @@ class Address{
 public class LinkedListUDC {
 
 	public static void main(String[] args) {
-		LinkedList<Address> ll=new LinkedList<Address>();
+		LinkedList<Address> ll=new LinkedList<Address>(); // LL of Address's Objects
 		ll.add(new Address("HNO43","Street 6","Delhi"));
 		ll.add(new Address("10","Down Town","London"));
 		ll.add(new Address("50","Wall Street","NY"));
@@ -35,9 +35,3 @@ public class LinkedListUDC {
 	}
 }
 
-//output
-//HNO43 Street 6 Delhi
-//10 Down Town London
-//50 Wall Street NY
-
-//commented part will give same result as well - need to check how

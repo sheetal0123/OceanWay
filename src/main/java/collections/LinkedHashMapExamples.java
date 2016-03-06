@@ -3,6 +3,10 @@ package collections;
 import java.util.LinkedHashMap;
 import java.util.Set;
 
+/*
+ * LHM is ordered(by insertion) + not sorted
+ * Its again a Map interface class and don't implement Iterable interface hence can't use List iteration methods
+ */
 public class LinkedHashMapExamples {
 
 	public void methodsOfLinkedHashMap() {

@@ -2,39 +2,36 @@ package collections;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.ListIterator;
+import java.util.NavigableMap;
+import java.util.PriorityQueue;
+import java.util.Properties;
+import java.util.Set;
+import java.util.TreeMap;
+import java.util.TreeSet;
 
 public class Test {
 
 	public void test(){
 		
-		Integer [] a=new Integer[3];
-		a[0]=10;
-		a[1]=20;
-		a[2]=30;
-		System.out.println(a.length);
 		
-		List<Integer> ls=new ArrayList<Integer>(Arrays.asList(a));
-		System.out.println(ls);
+		TreeMap<String, String> tm =new TreeMap<String, String>();
+		tm.put("1", "One");
+		tm.put("4", "Four");
+		tm.put("3", "three");
+		tm.descendingMap();
 		
-		
+		System.out.println(tm+"   "+tm.comparator());
 		
 		
-		String [] arr=new String[2];
-		arr[0]="aam";
-		arr[1]="mango";
 		
-		List<String> strList=new ArrayList<String>(Arrays.asList(arr));
-		System.out.println(strList);
-		
-		
-		String sArray[] = new String []{"Array 1", "Array 2", "Array 3"};
-		  
-		  //convert array to list
-		  List lList = Arrays.asList(sArray);
-		
-		  System.out.println(lList);
 	}
 	
 	public static void main(String [] args){

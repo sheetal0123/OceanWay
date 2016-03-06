@@ -15,10 +15,10 @@ class LastNameComparator implements Comparator<String> {
 		subA = a.substring(i); // return last name
 		subB = b.substring(j);
 
-		k = subA.compareTo(subB);
+		k = subA.compareTo(subB); // k = 0 if last name is same 
 
 		if (k == 0)
-			return k = a.compareTo(b);
+			return k = a.compareTo(b); // if last name is same, sort with first name
 		else
 			return k;
 	}

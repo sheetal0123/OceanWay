@@ -16,8 +16,8 @@ public class HashMapExamples {
 		hm.put("3", "Three");
 		hm.put("4", null);
 		hm.put("5", null);
-		hm.put(null, "Joe"); // previous duplicate will be removed		
-		hm.put(null, null);  
+		hm.put(null, "Small Joe"); 	
+		hm.put(null, "Big Joe");  //Small Joe will be removed as key is duplicate
 		
 		hm.remove("3");
 		System.out.println(hm.containsKey("1"));     //true
@@ -31,18 +31,18 @@ public class HashMapExamples {
 		
 		Set<String> set=hm.keySet();
 		for(String key:set){
-			System.out.print(key+":"+hm.get(key)+"  "); // null:null  3:Three  2:Two  1:One  5:null  4:null 
+			System.out.print(key+":"+hm.get(key)+"  "); // null:Big Joe  1:One  A:Apple  2:Two  B:Boy  4:null  5:null 
 		}
 		
 		System.out.println("");
 		for(Map.Entry<String,String> map:hm.entrySet()){
-			System.out.print(map.getKey()+":"+map.getValue()+"  "); // null:null  3:Three  2:Two  1:One  5:null  4:null  
+			System.out.print(map.getKey()+":"+map.getValue()+"  "); // null:Big Joe  1:One  A:Apple  2:Two  B:Boy  4:null  5:null
 		}
 		
 		System.out.println("");
 		Set<Entry<String, String>> entires = hm.entrySet();
 		for(Entry<String,String> ent:entires){
-			System.out.print(ent.getKey()+":"+ent.getValue()+"  "); // null:null  3:Three  2:Two  1:One  5:null  4:null 
+			System.out.print(ent.getKey()+":"+ent.getValue()+"  "); // null:Big Joe  1:One  A:Apple  2:Two  B:Boy  4:null  5:null 
 		}
 		
 	}

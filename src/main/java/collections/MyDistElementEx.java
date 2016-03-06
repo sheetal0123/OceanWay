@@ -5,7 +5,7 @@ import java.util.LinkedHashSet;
 /*
  * Dont know how this is working will check latter
  */
-public class MyDistElementEx {
+public class MyDistElementEx { deleteme
  
     public static void main(String a[]){
          
@@ -23,6 +23,7 @@ public class MyDistElementEx {
         for(Price pr:lhm){
             System.out.println(pr);
         }
+        
     }
 }
  

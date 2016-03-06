@@ -1,8 +1,9 @@
 package collections;
 
+import java.util.Iterator;
 import java.util.Stack;
 
-/*
+/*											  | |
  * Stack is subclass of Vector. FILO or LIFO  |_|
  */
 public class StackExamples {
@@ -14,6 +15,12 @@ public class StackExamples {
 		stk.push(30);
 		System.out.println(stk); // [10, 20, 30]
 
+		
+		Iterator<Integer> itr=stk.iterator();
+		while(itr.hasNext()){
+			System.out.println(itr.next());  // 10 20 30
+		}
+		
 		int peek = stk.peek();
 		System.out.println(stk + " | " + peek);// [10, 20, 30] | 30
 

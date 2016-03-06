@@ -14,7 +14,7 @@ public class HashSetExamples {
 		HashSet<String> hashSet = new HashSet<String>();
 		hashSet.add("A");
 		hashSet.add("C"); // insertion order will not be maintained
-		hashSet.add(null); // null can be added
+		hashSet.add(null); // null can be added as in ArrayList
 		hashSet.add("B");
 		hashSet.add("A"); // previous duplicate will be removed
 		hashSet.add(null);
@@ -25,7 +25,7 @@ public class HashSetExamples {
 		hashSet2.add("10");
 		hashSet2.add("1");
 
-		hashSet.addAll(hashSet2);
+		hashSet.addAll(hashSet2); // element will get added randomly
 		System.out.println(hashSet); // [3, null, 10, 1, A, B, C]
 		System.out.println(hashSet.contains("10")); // true
 		System.out.println("Size: " + hashSet.size()); // 7
@@ -53,6 +53,7 @@ public class HashSetExamples {
 		}
 	}
 
+	//same as array list
 	public void hashSetToSimpleArray() {
 		HashSet<String> hashSet = new HashSet<String>();
 		hashSet.add("Jan");
