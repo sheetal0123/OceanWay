@@ -139,18 +139,24 @@ public class TreeMapExamples {
 
 	public static void main(String[] args) {
 		TreeMapExamples obj = new TreeMapExamples();
-		obj.treeMapMethods();
-		obj.iterationUsingEntrySet();
-		obj.subMap();
-		obj.sortedMap();
-		obj.sortingMap();
+		//obj.treeMapMethods();
+		//obj.iterationUsingEntrySet();
+		//obj.subMap();
+		//obj.sortedMap();
+		//obj.sortingMap();
 		obj.sortUsingComparator();
 
 	}
 }
 
 class MyComparator implements Comparator<String> {
+	/*
 	public int compare(String str1, String str2) {
 		return str2.compareTo(str1);  // descending order
+	}
+	*/
+
+	public int compare(String str1, String str2) {
+		return str1.compareTo(str2);  // ascending order
 	}
 }

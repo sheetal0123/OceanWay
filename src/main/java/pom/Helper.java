@@ -19,7 +19,7 @@ public class Helper {
 		prop = new Properties();
 		try {
 			prop.load(new FileInputStream(
-					"/home/xebia/workspace/OceanWay/src/main/java/pom/br.properties"));
+					"/Users/sheetal/Documents/workspace/OceanWay/src/main/java/pom/br.properties"));
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

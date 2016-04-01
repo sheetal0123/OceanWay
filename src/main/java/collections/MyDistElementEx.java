@@ -5,7 +5,7 @@ import java.util.LinkedHashSet;
 /*
  * Dont know how this is working will check latter
  */
-public class MyDistElementEx { deleteme
+public class MyDistElementEx {
  
     public static void main(String a[]){
          

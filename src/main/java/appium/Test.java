@@ -39,11 +39,24 @@ public class Test {
 
 	}
 
+	
+	public void xyz(int a){
+		System.out.println("Int *****");
+	}
+
+	
+	public void xyz(short a){
+		System.out.println("long ******");
+	}
+
+	
+	
 	public static void main(String args[]) {
 		Test obj = new Test();
 		// obj.abc();
-		obj.def();
-
+		//obj.def();
+		byte a=10;
+		obj.xyz(a);
 	}
 
 }
