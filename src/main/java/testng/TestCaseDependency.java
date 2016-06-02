@@ -9,7 +9,7 @@ public class TestCaseDependency {
 	@Test
 	public void test1() {
 		System.out.println("test 1");
-		Assert.assertEquals(true, false);
+		Assert.assertEquals(true, true);
 	}
 
 	@Test(dependsOnMethods = { "test1" })

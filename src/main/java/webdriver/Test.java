@@ -13,8 +13,8 @@ public class Test {
 	//
 
 	public static void main(String[] args) {
-//		WebDriver driver=DriversRepo.getMozillaDriver();
-		WebDriver driver=DriversRepo.getChromeDriver();
+		WebDriver driver=DriversRepo.getMozillaDriver();
+//		WebDriver driver=DriversRepo.getChromeDriver();
 		driver.get("http://www.bizrate.com");
 		System.out.println(driver.getTitle());
 		
