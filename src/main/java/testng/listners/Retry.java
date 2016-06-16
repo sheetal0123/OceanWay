@@ -6,7 +6,7 @@ import org.testng.ITestResult;
 public class Retry implements IRetryAnalyzer {
 
 	 private int retryCount = 0;
-	 private int maxRetryCount = 10;  // If test pass in between then it will not retry again
+	 private int maxRetryCount = 10;  // Note: If test pass in between then it will not retry again
 
 	// Below method returns 'true' if the test method has to be retried else 'false' 
 	//and it takes the 'Result' as parameter of the test method that just ran

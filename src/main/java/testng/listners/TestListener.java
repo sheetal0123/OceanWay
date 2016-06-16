@@ -10,16 +10,21 @@ import org.testng.ITestResult;
 public class TestListener implements ITestListener{
 
 	/**
-	 * method used to rerun test on finish if test get failed
+	 *	This method it to set final test result counter i.e. total test  run 
+	 *  should remain 4(actual test count) even if we retry it for 10 times
 	 */
 	public void onFinish(ITestContext context) {
 		Set<ITestResult> failedTests = context.getFailedTests().getAllResults();
 		for (ITestResult temp : failedTests) {
+			System.out.println("FOR LOOP");
 			ITestNGMethod method = temp.getMethod();
 			if (context.getFailedTests().getResults(method).size() > 1) {
+				System.out.println("IF LOOP");
 				failedTests.remove(temp);
 			} else {
+				System.out.println("ELSE LOOP");
 				if (context.getPassedTests().getResults(method).size() > 0) {
+					System.out.println("ELSE IF LOOP");
 					failedTests.remove(temp);
 				}
 			}
@@ -44,7 +49,7 @@ public class TestListener implements ITestListener{
 		String testclass = testclassRaw.substring(32, testclassRaw.length() - 1); 
 		String testname = result.getName().toString().trim();
 		
-		System.out.println("Failed class and test name:  "+testclass+", "+testname);
+		System.out.println("Screenshot for failed class and test name:  "+testclass+", "+testname);
 		
 	}
 

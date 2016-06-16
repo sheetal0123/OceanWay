@@ -1,6 +1,7 @@
 package enums;
 
 enum Mango {
+	//enum objects with some parameters
 	Alphanzo(2000), Malda(200), Safeda(50), Langda(80);
 
 	int price;
@@ -23,6 +24,7 @@ public class EnumConstructor {
 		for (Mango m : Mango.values()) {
 			System.out.println(m + " : " + m.getPrice() );
 		}
+				
 	}
 }
 
