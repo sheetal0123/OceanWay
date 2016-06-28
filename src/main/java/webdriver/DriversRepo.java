@@ -14,19 +14,21 @@ public class DriversRepo {
 	}
 
 	public static WebDriver getChromeDriver() {
-		if (System.getProperty("os.name").contains("Linux")) {
-			System.setProperty("webdriver.chrome.driver",
-					"/home/xebia/Downloads/jars/chromedriver");
-			return new ChromeDriver();
+		String current_os = System.getProperty("os.name");
+		
+		if(current_os.equals("Mac OS X")){
+			System.setProperty("webdriver.chrome.driver", "/Users/sheetalsingh/Downloads/chromedriver");
+		}else if(current_os.equals("Linux")){
+			System.setProperty("webdriver.chrome.driver", "/home/xebia/Downloads/jars/chromedriver");
+		}else{
+			System.setProperty("webdriver.chrome.driver", "F:\\softwares\\jars\\chromedriver.exe");
 		}
-		System.setProperty("webdriver.chrome.driver",
-				"F:\\softwares\\jars\\chromedriver.exe");
+		
 		return new ChromeDriver();
 	}
 
 	public WebDriver getIEDriver() {
-		System.setProperty("webdriver.ie.driver",
-				"F:\\softwares\\jars\\IEDriverServer.exe");
+		System.setProperty("webdriver.ie.driver", "F:\\softwares\\jars\\IEDriverServer.exe");
 		return new InternetExplorerDriver();
 	}
 

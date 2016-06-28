@@ -16,7 +16,9 @@ public class DynamicXpath {
 	 * We can use both starts-with and contains method for dynamic xpath
 	 */
 	public void dynamicXpathEg() {
-		driver = DriversRepo.getMozillaDriver();
+		//driver = DriversRepo.getMozillaDriver();
+		driver = DriversRepo.getChromeDriver();
+		
 		driver.get("https://in.yahoo.com/?p=us");
 		driver.findElement(By.id("UHSearchBox")).sendKeys("selenium");
 //		List<WebElement> list = driver.findElements(By.xpath("//*[starts-with(@id,'yui_3_12_0_1_144585')]/a"));
