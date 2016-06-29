@@ -4,26 +4,28 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
 /**
- * Using reflection we can break simple singleton logic	
+ * Here we see how to block reflection from breaking our singleton code
+ * simply put a check in constructor
  */
 
-public class Singleton2 {
+public class Singleton2A {
 	
-	//create a static class level instance using lazy loading concept
-	//rather than initializing instance here, we can do in getInstance()
-	private static Singleton2 instance = null;
+	private static Singleton2A instance = null;
 	
-	//private const make sure no one can create other obj using new keyword
-	private Singleton2(){
+	/**
+	 * In private constr we check if instance already initialized and then if someone call this constructor then we throw exception
+	 */
+	private Singleton2A(){
+		if(instance != null){
+			throw new RuntimeException("One instance already created cant create other");
+		}		
 		System.out.println("I am private constructor");
 	}
 	
-	//public method ensure anyone can access it
-	//initialize instance only when this method will get called
-	public static Singleton2 getInstance(){
+	public static Singleton2A getInstance(){
 		
 		if(instance == null){
-			instance = new Singleton2();
+			instance = new Singleton2A();
 		}
 		
 		return instance;
@@ -33,16 +35,16 @@ public class Singleton2 {
 
 
 
-class TestClass2{
+class TestClass2A{
 
-	public static void printme(String name, Singleton2 obj){
+	public static void printme(String name, Singleton2A obj){
 		System.out.println(name +", "+ obj.hashCode());
 	}
 	
 	public static void main(String [] args) throws ClassNotFoundException, NoSuchMethodException, SecurityException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException{
 		//Singleton obj1 = new Singleton();  - compiler error as constr is private and cannot be used from outside class
-		Singleton2 obj1 = Singleton2.getInstance();
-		Singleton2 obj2 = Singleton2.getInstance();
+		Singleton2A obj1 = Singleton2A.getInstance();
+		Singleton2A obj2 = Singleton2A.getInstance();
 		
 		printme("obj1", obj1);    // 	obj1, 2018699554
 		printme("obj2", obj2);    // 	obj2, 2018699554
@@ -52,10 +54,10 @@ class TestClass2{
 		
 		//Breaking singleton code using reflection:
 		Class cls = Class.forName("advjava.Singleton2");
-		Constructor<Singleton2> constr = cls.getDeclaredConstructor();	
-		constr.setAccessible(true); // class constructor become accessible
+		Constructor<Singleton2A> constr = cls.getDeclaredConstructor();	
+		constr.setAccessible(true); // call constructor
 		
-		Singleton2 obj3 = constr.newInstance(); // new object created
+		Singleton2A obj3 = constr.newInstance(); // new object created
 		printme("obj3", obj3);   //     obj3, 1311053135
 		
 		System.out.println(obj1.equals(obj3));   // false
