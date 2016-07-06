@@ -14,10 +14,11 @@ class TwoWheeler extends VehicleAbstract {
 	public void start() {
 		System.out.println("Starting Two Wheeler");
 	}
+
 	public void stop() {
 		System.out.println("Stopping Two Wheeler");
 	}
-	
+
 }
 
 class FourWheeler extends VehicleAbstract {
@@ -39,8 +40,6 @@ public class OopsAbstraction {
 }
 
 /*
-Starting Two Wheeler
-Stopping Two Wheeler
-Starting Four Wheeler
-Stopping Vehicle in abstract class
-*/
+ * Starting Two Wheeler Stopping Two Wheeler Starting Four Wheeler Stopping
+ * Vehicle in abstract class
+ */
