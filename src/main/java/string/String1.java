@@ -3,6 +3,7 @@ package string;
 /**
  * Till Java 6: String pool are stored in PermGen area
  * From Java 7: String pool are stored in main heap area
+ * Every string create is cached in string pool
  * 
  * Why String pool concept in Java: Suppose we have 1lac name DB saved in a array list. In 1 lac lot of name surname will be
  * common. If there is no pool then we will have 1 lac object in memory.
