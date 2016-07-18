@@ -1,4 +1,4 @@
-package classes;
+package classes.oops;
 
 public class OopsEncapsulationTest {
 	public static void main(String args[]) {

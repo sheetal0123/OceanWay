@@ -1,4 +1,4 @@
-package classes;
+package classes.interfaces;
 
 /*
  * - interface can either be public or default

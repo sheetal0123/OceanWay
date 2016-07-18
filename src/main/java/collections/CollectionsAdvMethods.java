@@ -44,6 +44,7 @@ public class CollectionsAdvMethods {
 		al1.add("2");
 		al1.add("3");
 		al1.add("4");
+		
 
 		List<String> al2 = new ArrayList<String>();
 		al2.add("2");

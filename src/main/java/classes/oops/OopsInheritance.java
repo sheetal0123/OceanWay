@@ -1,4 +1,4 @@
-package classes;
+package classes.oops;
 /*
  * oops concept: inheritance
  */

@@ -1,4 +1,4 @@
-package classes;
+package classes.reading;
 
 import java.io.FileReader;
 import java.io.FileWriter;

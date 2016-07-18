@@ -1,4 +1,4 @@
-package classes;
+package classes.oops;
 
 /*
  * encapsulation: variable shd be private and method should be public

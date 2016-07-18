@@ -1,4 +1,4 @@
-package classes;
+package classes.reading;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;

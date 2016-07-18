@@ -1,4 +1,4 @@
-package classes;
+package classes.initialization;
 
 /*
  * static var share common copy for all class object

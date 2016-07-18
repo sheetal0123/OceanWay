@@ -1,4 +1,4 @@
-package classes;
+package classes.initialization;
 
 public class PlainClassWOConst {
 

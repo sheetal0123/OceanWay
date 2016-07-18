@@ -1,4 +1,4 @@
-package classes;
+package classes.oops;
 
 //basic func has been added into Abstract class
 abstract class VehicleAbstract {

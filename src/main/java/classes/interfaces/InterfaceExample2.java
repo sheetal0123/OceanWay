@@ -1,4 +1,4 @@
-package classes;
+package classes.interfaces;
 
 interface Curable {
 	void cure(); // abstract

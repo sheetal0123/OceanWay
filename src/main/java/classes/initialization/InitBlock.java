@@ -1,4 +1,4 @@
-package classes;
+package classes.initialization;
 
 /*
  * static block execute once when class loads i.e. before any block and constructor

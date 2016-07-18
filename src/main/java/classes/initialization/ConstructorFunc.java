@@ -1,4 +1,4 @@
-package classes;
+package classes.initialization;
 
 class Parent {
 	Parent() {

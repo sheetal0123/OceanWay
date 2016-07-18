@@ -1,4 +1,4 @@
-package classes;
+package classes.reading;
 /*
  *go to run config and give three arg space separated 
  */
