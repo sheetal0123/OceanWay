@@ -1,12 +1,12 @@
 package enums;
 
 enum Mango {
-	//enum objects with some parameters
+	//enum objects with some parameters, parameters can be any
 	Alphanzo(2000), Malda(200), Safeda(50), Langda(80);
 
 	int price;
 
-	//enum constructor
+	//enum constructor as per objects arguments
 	Mango(int p) {
 		price = p;
 	}
