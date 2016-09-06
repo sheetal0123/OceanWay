@@ -9,4 +9,6 @@ test-output/*
 
 
 
+*.xml
+
 *.class
