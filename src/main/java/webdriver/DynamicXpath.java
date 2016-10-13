@@ -16,8 +16,9 @@ public class DynamicXpath {
 	 * We can use both starts-with and contains method for dynamic xpath
 	 */
 	public void dynamicXpathEg() {
-		//driver = DriversRepo.getMozillaDriver();
-		driver = DriversRepo.getChromeDriver();
+		driver = DriversRepo.getMozillaDriver();
+		//driver = DriversRepo.getChromeDriver();
+		//driver = DriversRepo.getSafariDriver();
 		
 		driver.get("https://in.yahoo.com/?p=us");
 		driver.findElement(By.id("UHSearchBox")).sendKeys("selenium");

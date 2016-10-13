@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.safari.SafariDriver;
 
 public class DriversRepo {
 
@@ -30,6 +31,12 @@ public class DriversRepo {
 	public WebDriver getIEDriver() {
 		System.setProperty("webdriver.ie.driver", "F:\\softwares\\jars\\IEDriverServer.exe");
 		return new InternetExplorerDriver();
+	}
+	
+	
+	public static WebDriver getSafariDriver() {
+		//System.setProperty("webdriver.ie.driver", "F:\\softwares\\jars\\IEDriverServer.exe");
+		return new SafariDriver();
 	}
 
 }

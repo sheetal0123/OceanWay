@@ -33,6 +33,9 @@ public class InterfaceExample2 extends Games{
 		//implemented - abstract class method
 	}
 	
+	//Not implemented football() as this has already been implemented by abstract class
+	
+	
 	public static void main(String [] args){
 		InterfaceExample2 obj=new InterfaceExample2();
 		obj.size();

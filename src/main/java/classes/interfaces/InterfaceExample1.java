@@ -34,10 +34,11 @@ class InterfaceExample1 implements Runnable {
 		objClass.run(); // I am run: 100
 		objClass.sports(); // I am class sports:100
 		
+		//Polymorphism
 		Runnable objInterface = new InterfaceExample1();
 		objInterface.run(); // I am run: 100
 		// objIntrfc.sports(); // compiler error - for security
 		
-		//Runnable o=new Runnable(); // compiler error, as interface dont have constructors
+		//Runnable o=new Runnable(); // compiler error, as interface don't have constructors
 	}
 }

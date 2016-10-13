@@ -20,7 +20,7 @@ public class CollectionsAdvMethods {
 
 		System.out.println("Are collections has no common element: "
 				+ Collections.disjoint(al1, al2)); // true
-
+		
 		Collections.fill(al2, "50"); // fill list with given object
 		System.out.println(al2); // [50, 50, 50]
 

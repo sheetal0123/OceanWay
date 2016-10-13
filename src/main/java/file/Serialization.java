@@ -8,9 +8,9 @@ import java.io.Serializable;
 
 
 /*
- * Serialization for primitive values of object
+ * simple case 1: serialization of object having primitive values
  * 
- * static var cannot be serialized
+ * static var cannot be serialized as they are class var not obj var
  * to stop a var from getting serialized add a keyword 'transient'
  * Serializable interface don't have any method, it is just to inform JVM that class objects can be serialized else run time exception will come
  * transient variable re initialize with default values ie. obj = null, int = 0 etc
@@ -18,6 +18,7 @@ import java.io.Serializable;
  * complete class is not sending along with serialization as it will impact performance of network, using RMI we get class information like path for .class file
  * 
  */
+
 class Demo implements Serializable {
 	String s;
 	int i;
@@ -30,11 +31,19 @@ class Demo implements Serializable {
 	public String toString() {
 		return "s:" + s + ", i:" + i;
 	}
+	
+//  If toString has not been override then we will get following output	
+//	Before Serialization: file.Demo@7852e922
+//	De-serialization: file.Demo@4aa298b7
+	
 }
+
+
 
 public class Serialization {
 	public static void main(String[] args) {
 		Demo obj = new Demo("Dial", 100);
+		
 		System.out.println("Before Serialization: "+obj); // s:Dial, i:100
 		try {
 			// Serialization
