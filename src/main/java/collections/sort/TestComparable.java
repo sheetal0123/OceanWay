@@ -24,7 +24,7 @@ public class TestComparable {
 		//To use above method we need to implement Comparable interface
 		
 		// as we have implemented Comparable interface now there will be no error
-		//C.sort method will call compareTo method internally
+		//Collection.sort method will call compareTo method internally
 		Collections.sort(ls);  
 		
 		System.out.println(ls.get(0).getUsername());    // elli

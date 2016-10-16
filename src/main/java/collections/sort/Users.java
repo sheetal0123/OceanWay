@@ -3,7 +3,7 @@ package collections.sort;
 
 /*
  * To sort simple list of strings, int we can simply use Collections.sort(list)
- * Comparable used to sort objects of any customized class like Users
+ * Comparable used to sort objects of any customized class like Users - i doubt???
  * Comparable<T> take generic type, it can be anything like username, String, int etc 
  * 
  */

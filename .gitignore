@@ -2,13 +2,5 @@ target/*
 test-output/*
 .classpath
 *.class
-/target/
-
-
-
-
-
-
 *.xml
 
-*.class
