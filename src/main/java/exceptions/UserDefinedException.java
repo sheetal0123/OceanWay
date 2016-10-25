@@ -1,6 +1,11 @@
 package exceptions;
 
+/**
+ * Tp create a custom exception extends Exception class which further extends Throwable class
+ */
 class MyOwnException extends Exception {
+	
+	// constructor
 	public MyOwnException() {
 		System.out.println("I am a user defined exception");
 	}
@@ -8,27 +13,28 @@ class MyOwnException extends Exception {
 
 public class UserDefinedException {
 
-	public void method1(int a) throws MyOwnException {
-		if (a > 20) {
-			throw new MyOwnException();
+	/**
+	 * I am throwing a custom exception
+	 */
+	public void customException() throws MyOwnException {
+		throw new MyOwnException(); // call constructor
+	}
+
+	public void apple() {
+
+		try {
+			customException();
+		} catch (MyOwnException e) {
+			//code
 		}
-		System.out.println("method 1 out");
+		System.out.println("program recovered");
+
 	}
 
 	public static void main(String[] args) {
 		UserDefinedException obj = new UserDefinedException();
-		try {
-			obj.method1(10);
-			obj.method1(100);
-		} catch (MyOwnException e) {
-			System.out.println("Exception handled");
-		}
+		obj.apple();
 
 	}
 }
 
-/*
-method 1 out
-I am a user defined exception
-Exception handled
-*/
