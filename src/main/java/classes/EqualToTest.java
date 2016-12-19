@@ -6,7 +6,7 @@ package classes;
  * incompatible type cannot be compared, will get compile time error
  * null can be compared
  */
-public class TestEqualTo {
+public class EqualToTest {
 
 	public void objectReferences() {
 		String obj1 = new String("xyz");
@@ -58,7 +58,7 @@ public class TestEqualTo {
 
 	public static void main(String[] args) {
 
-		TestEqualTo obj = new TestEqualTo();
+		EqualToTest obj = new EqualToTest();
 		obj.objectReferences();
 		obj.primitiveReferences();
 		obj.nulls();

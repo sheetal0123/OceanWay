@@ -1,6 +1,5 @@
 target/*
 test-output/*
-.classpath
 *.class
-*.xml
+.classpath
 

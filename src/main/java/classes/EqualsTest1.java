@@ -2,11 +2,11 @@ package classes;
 
 /*
  * equals used to compare two objects content
- * incompatible type can be compared will get false, but no compile time error
+ * incompatible type can be compared, will get false, but no compile time error
  * only objects can be compared i.e. primitive cannot be compared, will get compile time error
  * null object cannot be compared, will get null pointer exception
  */
-public class TestEquals {
+public class EqualsTest1 {
 
 	public void objectContent() {
 		String obj1 = new String("xyz");
@@ -31,29 +31,32 @@ public class TestEquals {
 	public void primitive() {
 		int a = 10;
 		int b = 10;
-
-		// if (a.equals(b))
-		// System.out.println("TRUE");
-		// else
-		// System.out.println("FALSE");
+		
+		
+/* 		//compilere error	
+		if (a.equals(b))
+			System.out.println("TRUE");
+		else
+			System.out.println("FALSE");
+*/			
 	}
 
 	public void nulls() {
 		String obj1 = null;
 		String obj2 = null;
 
-		if (obj1.equals(obj2)) // NullPointerException
+		if (obj1.equals(obj2)) // Runtime Exception: NullPointerException
 			System.out.println("TRUE");
 		else
 			System.out.println("FALSE");
 	}
 
 	public static void main(String[] args) {
-		TestEquals obj = new TestEquals();
+		EqualsTest1 obj = new EqualsTest1();
 		obj.objectContent();
 		obj.incompatibleType();
-//		obj.primitive();
-//		obj.nulls();
+		obj.primitive();
+		// obj.nulls();
 
 	}
 }
