@@ -19,7 +19,7 @@ public class EqualsDeep2 {
 		
 		
 		/**
-		 * equals method check for objects content + its storage location on heap
+		 * equals method check for objects content ++ its storage location on heap
 		 * in this case content is same but location of two objects are different on heap
 		 * in case of String o/p will be "SAME PERSON" because content is same and storage location is also same on heap (string pool concept)
 		 */
