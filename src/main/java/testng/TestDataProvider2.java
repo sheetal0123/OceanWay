@@ -6,7 +6,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 /*
- * depending upon test method name we can provide different data
+ * depending upon test method name we can provide different data set
  */
 public class TestDataProvider2 {
 
@@ -20,6 +20,10 @@ public class TestDataProvider2 {
 		Assert.assertEquals(email, expected);
 	}
 
+	
+	/**
+	 * Generating two type of data - int and strings lists
+	 */
 	@DataProvider(name = "dataProvider")
 	public Object[][] provideData(Method method) {
 

@@ -4,12 +4,13 @@ package classes;
 /*
  'this' normally used to refer to instance/object of class which is being used
  but in case of constructors, 'this' calls to another constructor in same class 
+ this() and super() both shd be first stmt in constructor hence cannot exists together
  */
 public class ThisInConstructor {
 
 	public ThisInConstructor() {
 		this("Orange"); // Call constructor of same class
-		//this("Apple"); // only one 'this' allowed inside constructor
+		//this("Apple"); // only one 'this' allowed inside constructor and that also shd be first stmt
 	}
 
 	public ThisInConstructor(String string) {
@@ -17,7 +18,7 @@ public class ThisInConstructor {
 	}
 	
 	
-	public void normalMethod(){
+	public void abc(){
 		//this();   can only be used from inside a constructor
 	}
 

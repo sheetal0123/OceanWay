@@ -12,9 +12,10 @@ public class CallingMain {
 	
 	public static void callme(CallingMain obj){
 		System.out.println("I am in Method");
-		String [] arr = {};
-		//obj.main(arr);  // also work fine but get into a loop
 		obj.iamstatic();
+		
+		//String [] arr = {};
+		//obj.main(arr);  // also work fine but get into a loop
 	}
 	
 	public static void iamstatic(){

@@ -6,26 +6,14 @@ package classes;
  * incompatible type cannot be compared, will get compile time error
  * null can be compared
  */
-public class EqualToTest {
 
-	public void objectReferences() {
-		String obj1 = new String("xyz");
-		String obj2 = obj1;
-		String obj3 = new String("xyz");
-
-		if (obj1 == obj2)
-			System.out.println("Obj: obj1 == obj2"); // obj1 == obj2
-		else
-			System.out.println("obj1 != obj2");
-
-		if (obj1 == obj3)
-			System.out.println("obj1 == obj3");
-		else
-			System.out.println("Obj: obj1 != obj3"); // obj1 != obj3
-		// obj 1 and obj 3 are having two diff memory location but pointing same
-		// obj on heap
+class Duck {
+	Duck() {
 	}
+}
 
+public class EqualToTest {
+	
 	public void primitiveReferences() {
 		int a = 10;
 		int b = 10;
@@ -36,6 +24,9 @@ public class EqualToTest {
 			System.out.println("a != b");
 	}
 
+	/**
+	 * null exists in objects only as primitives have default values
+	 */
 	public void nulls() {
 		Integer a = null;
 		Integer b = null;
@@ -56,13 +47,58 @@ public class EqualToTest {
 		// System.out.println("a != b");
 	}
 
+	
+	/**
+	 * In objects if "new" keyword is come then == cannot pass that thing
+	 * this rule is applicable for normal object and String object
+	 */
+	public void normalObjectTest() {
+		Duck d1 = new Duck();
+		Duck d2 = d1;
+		Duck d3 = new Duck();
+
+		if (d1 == d2)
+			System.out.println("Duck are same"); // Duck are same
+		else
+			System.out.println("Duck are diff"); 
+		
+		
+		if (d1 == d3)
+			System.out.println("Duck are same");
+		else
+			System.out.println("Duck are diff"); // Duck are diff
+	}
+
+	
+	
+	public void stringObjectTest() {
+		String obj1 = new String("xyz");
+		String obj2 = obj1;
+		String obj3 = new String("xyz");
+
+		if (obj1 == obj2)
+			System.out.println("Obj: obj1 == obj2"); // obj1 == obj2
+		else
+			System.out.println("obj1 != obj2");
+
+		/**
+		 * obj 1 and obj 3 are having two diff memory location but pointing same obj on heap
+		 */
+		if (obj1 == obj3)
+			System.out.println("obj1 == obj3");
+		else
+			System.out.println("Obj: obj1 != obj3"); // obj1 != obj3
+	}
+
+	
 	public static void main(String[] args) {
 
 		EqualToTest obj = new EqualToTest();
-		obj.objectReferences();
 		obj.primitiveReferences();
 		obj.nulls();
 		obj.incompatibleType();
+		obj.normalObjectTest();
+		obj.stringObjectTest();
 
 	}
 }

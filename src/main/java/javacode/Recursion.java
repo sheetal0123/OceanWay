@@ -2,7 +2,7 @@ package javacode;
 
 /*
  * recursion call itself again and again, if stmt is very imp so that at one point method start returning something
- * else method enters in infinite loop
+ * otherwise method enters into infinite loop
  */
 public class Recursion {
 

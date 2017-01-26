@@ -8,7 +8,7 @@ package classes.innerclasses;
  * 
  * Class files : WhyAnonymous.class, Parent.class, Child.class
  */
-public class WhyAnonymous {
+public class WhyAnonymousClass {
 
 	public static void main(String [] args){
 		Parent p =new Child();
@@ -24,7 +24,7 @@ class Parent {
 	}
 }
 
-//new code
+//new class added which will extent legacy class
 class Child extends Parent{
 	@Override
 	public void show(){

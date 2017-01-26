@@ -5,8 +5,8 @@ package classes.staticvar;
  * Final class cannot be extended
 
  * Constant never get a default value (be an instance or static constant)
- * Constant cannot be used before initialization (be an instance or static
- * constant) Either initialized at declaration time or in constructor
+ * Constant cannot be used before initialization (be an instance or static constant) 
+ * Either initialized at declaration time or in constructor
  */
 
 

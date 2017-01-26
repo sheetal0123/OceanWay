@@ -103,6 +103,7 @@ Before Groups
 Before Method
 test 2
 After Method
+
 Before Method
 test 3
 After Method

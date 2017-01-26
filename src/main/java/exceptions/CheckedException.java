@@ -6,8 +6,8 @@ import java.io.IOException;
  * Checked CAN BE checked by compiler and hence called checked e.g. SQL, IO
  * Checked exception has to be handle using try-catch or method can declare using 'throws' keyword
  * Unchecked exception not mandatory to handle using try-catch or to declare it using 'throws' keyword
- * catch block try to recover program and resume but not always
- * Any exception can be throw using 'throw' keyword
+ * In both the case checked/unchecked: catch block try to recover program and resume but not always
+ * Both exception can be throw using 'throw' keyword from inside method and 'throws' from method declaration
  *  
  * -- Checked exception can't propagates and have to be handled at the point of generation 
  * -- Checked exception can be throw using 'throw' keyword but have to handle immediately
@@ -49,7 +49,7 @@ method1
 method2
 method3
 Exception Handled
-catch recovered from exception sucessfully
+catch recovered from exception successfully
 	
 	
 */

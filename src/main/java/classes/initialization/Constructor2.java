@@ -1,6 +1,6 @@
 package classes.initialization;
 
-public class PlainClassWOConst {
+public class Constructor2 {
 
 	int x, y;
 
@@ -15,7 +15,7 @@ public class PlainClassWOConst {
 	}
 
 	public static void main(String[] args) {
-		PlainClassWOConst obj = new PlainClassWOConst(); // obj is useless as of now
+		Constructor2 obj = new Constructor2(); // obj is useless as of now
 		obj.set(10, 20); // obj now become functional
 		System.out.println("Sum is: " + obj.add()); // Sum is: 30
 

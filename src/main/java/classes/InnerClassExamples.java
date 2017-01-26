@@ -21,10 +21,13 @@ class OuterClass {
 	}
 }
 
+
+
 public class InnerClassExamples {
 	public static void main(String[] args) {
 		OuterClass obj=new OuterClass();
 		obj.outMethod();
+		
 //		InnerClass in=new InnerClass();  InnerClass is only know to OuterClass not outside world
 	}
 }

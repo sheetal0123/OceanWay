@@ -9,10 +9,11 @@ package classes.innerclasses;
  * ParentYou.class
  */
 
-public class AnonymousClass {
+public class WhyAnonymousClassSolution {
 	
 	public static void main(String [] args){
 		
+		//Using anonymous class no need to add new class which will extent legacy classes
 		ParentYou obj = new ParentYou(){
 			public void show(){
 				System.out.println("show me videos");

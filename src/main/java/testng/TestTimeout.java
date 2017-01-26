@@ -4,16 +4,19 @@ import org.testng.annotations.Test;
 
 public class TestTimeout {
 
-	@Test(timeOut = 5000)  // time in ms
+	/**
+	 * This method will fail as we expect it to finished in 5 sec but test took 10sec
+	 */
+	@Test(timeOut = 5000)  
 	public void test1() throws InterruptedException {
-		Thread.sleep(4000);
+		Thread.sleep(10000);
 		System.out.println("test1");
 	}
 
-	@Test(timeOut = 1000)
-	public void test2() {
-		while (true)
-			;
+	@Test(timeOut = 5000)
+	public void test2() throws InterruptedException  {
+		Thread.sleep(1000);
+		System.out.println("test2");
 	}
 
 }

@@ -10,18 +10,21 @@ public class InitBlock {
 		System.out.println("Static Block");
 	}
 
+	
 	{
-		System.out.println("Block");
+		System.out.println("Normal Block");
 	}
 
+	
 	public InitBlock() {
 		System.out.println("Default Constructor");
 	}
+	
+
 
 	public static void main(String[] args) {
 		InitBlock obj1 = new InitBlock();
 		InitBlock obj2 = new InitBlock();
-		InitBlock obj3 = new InitBlock();
 	}
 
 }
@@ -29,12 +32,9 @@ public class InitBlock {
 /*
 Static Block
 
-Block
+Normal Block
 Default Constructor
 
-Block
-Default Constructor
-
-Block
+Normal Block
 Default Constructor
 */

@@ -1,9 +1,9 @@
 package classes.initialization;
 
-public class PlainClassWithConst {
+public class Constructor3 {
 	int x, y;
 
-	public PlainClassWithConst(int m, int n) {
+	public Constructor3(int m, int n) {
 		x = m;
 		y = n;
 	}
@@ -13,8 +13,8 @@ public class PlainClassWithConst {
 	}
 
 	public static void main(String[] args) {
-		PlainClassWithConst obj1 = new PlainClassWithConst(10, 20);
-		PlainClassWithConst obj2 = new PlainClassWithConst(100, 200);
+		Constructor3 obj1 = new Constructor3(10, 20);
+		Constructor3 obj2 = new Constructor3(100, 200);
 
 		System.out.println("Sum is: " + obj1.add()); // Sum is: 30
 		System.out.println("Sum is: " + obj2.add()); // Sum is: 300

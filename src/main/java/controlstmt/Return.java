@@ -1,6 +1,7 @@
 package controlstmt;
 
 /*
+ * return also break the loop
  * return take control back to calling method line
  */
 public class Return {

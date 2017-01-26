@@ -28,6 +28,7 @@ class Demo implements Serializable {
 		this.i = i;
 	}
 
+	@Override
 	public String toString() {
 		return "s:" + s + ", i:" + i;
 	}

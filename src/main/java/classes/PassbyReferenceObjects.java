@@ -18,7 +18,7 @@ class Modify {
 	}
 }
 
-public class PassbyReference {
+public class PassbyReferenceObjects {
 	public static void main(String[] args) {
 		Modify obj = new Modify(10, 20);
 		System.out.println("Initial values: " + obj.a + ", " + obj.b); 

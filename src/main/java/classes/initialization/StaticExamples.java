@@ -42,7 +42,7 @@ public class StaticExamples{
 		System.out.println(obj2.a); //51
 		
 		obj1.b=50;   // b=50
-		obj2.b=obj2.b+1;  // b=20+1ß
+		obj2.b=obj2.b+1;  // b=20+1
 		System.out.println(obj1.b);  // 50
 		System.out.println(obj2.b);  // 21
 	}

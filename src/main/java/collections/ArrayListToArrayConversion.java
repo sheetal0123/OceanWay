@@ -1,6 +1,8 @@
 package collections;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class ArrayListToArrayConversion {
 
@@ -41,12 +43,33 @@ public class ArrayListToArrayConversion {
 		for (String str : arr)
 			System.out.print(str + ", "); // 100, 200, 300, null, null, null, null, null, null,
 	}
+	
+	
+	
+	
+	public void convertArrayListToString(){
+		List<String> arrList = new ArrayList<>();
+		arrList.add("apple");
+		arrList.add("mango");
+		arrList.add("orange");
+		
+		Object [] arr= arrList.toArray();
+		System.out.println(arr);   				//Not readable    [Ljava.lang.Object;@7852e922
+		
+		String newStr = Arrays.toString(arrList.toArray());
+		print(newStr);
+	}
+	
 
+	public void print(String str){
+		System.out.println(">>>  "+ str); 		// [apple, mango, orange]
+	}
 	
 	public static void main(String [] args){
 		ArrayListToArrayConversion obj=new ArrayListToArrayConversion();
-		obj.manualWayArrayListToArray();
-		obj.convertingArrayListToArrays();
+		//obj.manualWayArrayListToArray();
+		//obj.convertingArrayListToArrays();
+		obj.convertArrayListToString();
 	}
 	
 	

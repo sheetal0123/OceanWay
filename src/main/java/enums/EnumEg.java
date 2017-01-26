@@ -4,7 +4,7 @@ enum BeerTypes {
 	rice, wheat, grapes // all values are implicitly public static
 }
 
-public class EnumIteration {
+public class EnumEg {
 
 	public static void main(String[] args) {
 		BeerTypes[] allTypes = BeerTypes.values();

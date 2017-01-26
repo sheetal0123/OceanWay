@@ -1,7 +1,7 @@
 package exceptions;
 
 /**
- * Tp create a custom exception extends Exception class which further extends Throwable class
+ * To create a custom exception extends Exception class which further extends Throwable class
  */
 class MyOwnException extends Exception {
 	
@@ -20,6 +20,10 @@ public class UserDefinedException {
 		throw new MyOwnException(); // call constructor
 	}
 
+	
+	/**
+	 * Handling custom exception
+	 */
 	public void apple() {
 
 		try {

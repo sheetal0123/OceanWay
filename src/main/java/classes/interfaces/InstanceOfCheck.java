@@ -4,7 +4,7 @@ package classes.interfaces;
  * How can we check if an Interface is present in class hierarchy
  * i.e. if some super class etc has already implemented it
  *
- *	Class implementing an Interface pass IS-A test d
+ *	Class implementing an Interface pass IS-A test
  */
 
 interface unknowninterface {

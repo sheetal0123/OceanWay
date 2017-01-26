@@ -13,6 +13,7 @@ class Base {
 }
 
 class Audi extends Base {
+	@Override
 	public void speed() {
 		System.out.println("Child speed");
 	}

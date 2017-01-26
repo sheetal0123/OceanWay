@@ -3,6 +3,7 @@ package javacode;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -18,11 +19,14 @@ public class QuesSet4 {
 		List<String> ls = new ArrayList<>();
 		ls.add("beer");
 		ls.add("apple");
-		ls.add("prange");
+		ls.add("orange");
 		ls.add("grapes");
 		
 		System.out.println(ls); // [beer, apple, prange, grapes]
 		
+		Collections.reverse(ls);
+		
+		System.out.println(ls);
 		
 		List<String> ls2 = new ArrayList<>();
 		for(String str : ls){

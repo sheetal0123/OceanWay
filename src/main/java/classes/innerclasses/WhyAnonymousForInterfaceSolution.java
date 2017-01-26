@@ -8,7 +8,7 @@ package classes.innerclasses;
  *  using lambda expression we can improve the performance + some clean code (less code)
  *
  */
-public class AnonymousClassForInterface {
+public class WhyAnonymousForInterfaceSolution {
 
 	public static void main(String [] args){
 		joggable obj = new joggable() {

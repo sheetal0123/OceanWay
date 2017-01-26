@@ -4,16 +4,19 @@ package classes;
  * Any primitive passing are always passed by value i.e. we pass a copy of variables
  * any change/modification will not affect original copy of variables
  */
-public class PassbyValue {
-
+public class PassbyValuePrimitives {
+	
+	static int a,b;
+	
 	public void change(int a, int b) {
-		a = a + 10;
-		b = b + 10;
+		a = a + 100;
+		b = b + 100;
+		System.out.println("Inside method values: " + a + ", " + b);   // 110 120
 	}
 
 	public static void main(String[] args) {
-		PassbyValue obj = new PassbyValue();
-		int a = 10, b = 20;
+		PassbyValuePrimitives obj = new PassbyValuePrimitives();
+		a = 10; b = 20;
 		System.out.println("Intial values: " + a + ", " + b); // Initial values: 10, 20
 
 		obj.change(a, b); // copy passed

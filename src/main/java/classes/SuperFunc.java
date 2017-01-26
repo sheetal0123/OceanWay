@@ -7,6 +7,7 @@ class ParentClass {
 	int a, b, c;
 
 	ParentClass() {
+		System.out.println("Super class called");
 		a = 10;
 		b = 20;
 		c = 100;
@@ -16,6 +17,10 @@ class ParentClass {
 public class SuperFunc extends ParentClass {
 	int c = 50;
 
+	public SuperFunc(){
+		super();
+	}
+	
 	public void sum() {
 		// super will always refer to parent member
 		int sum = a + b + super.c;

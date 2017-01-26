@@ -38,14 +38,28 @@ public class _ISA {
 		child.parentMethod();
 		child.childMethod();
 		
-		Fruits obj = new Mango(); // Parent Reference but Child Object
-		// parent method called
-		// if override then child method will be called, preference always to
-		// Child as this is more specific
+		Fruits obj = new Mango();	 // Parent Reference but Child Object
+		
+		/**
+		 * parent method called, if override then child method will be called,
+		 * preference always to Child as this is more specific
+		 */
 		obj.parentMethod();
-		// obj.child(); compiler error - Parent reference can only see parent methods - IMP!
 
-		// Mango m=new Fruits(); compiler error - parent object cannot fit into child
+		
+		/**
+		 * Reference should have the visibility of called method 
+		 * Object class's method will be called as they are more specific in nature 
+		 * 
+		 * compiler error - Parent reference can only see parent methods - IMP!
+		 */
+		//obj.childMethod(); 	
+
+		
+		/**
+		 * compiler error - parent object cannot fit into child
+		 */
+		//Mango m=new Fruits(); 
 
 	}
 }

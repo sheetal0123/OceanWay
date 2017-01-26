@@ -9,40 +9,40 @@ class Parent {
 class Child extends Parent {
 	Child() {
 		// super(); -> added implicitly by compiler
-		System.out.println("Child constructor");
+		System.out.println("Child default constructor");
 	}
 	
-	//Param parent const never called
+	//Param parent const never called 
 	Child(int a){
 		System.out.println("Child Param Const");
 	}
 }
 
-public class ConstructorFunc extends Child {
+public class Constructor1 extends Child {
 
-	public ConstructorFunc() {
+	public Constructor1() {
 		// super(); // -> added implicitly by compiler
 		System.out.println("Grand Child Default constructor");
 	}
 
-	public ConstructorFunc(int a) {
+	public Constructor1(int a) {
 		// super(); // Imp: Parameterized const also called default super constructor rather parameterized super const
 		System.out.println("Grand Child Param constructor");
 	}
 
 	public static void main(String[] args) {
-		new ConstructorFunc();
-		new ConstructorFunc(10);
+		//new ConstructorFunc();
+		new Constructor1(10);
 	}
 }
 
 
 /*
 Parent constructor
-Child constructor
+Child default constructor
 Grand Child Default constructor
 
 Parent constructor
-Child constructor
+Child default constructor
 Grand Child Param constructor
 */

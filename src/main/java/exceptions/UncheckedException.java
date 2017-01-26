@@ -37,7 +37,7 @@ public class UncheckedException {
 
 	public static void main(String[] args) {
 		UncheckedException obj = new UncheckedException();
-		// obj.compilerDontBother();
+		//obj.compilerDontBother();
 		obj.catchRuntimeException();
 		obj.freeToDeclareRuntimeException();
 

@@ -5,7 +5,7 @@ package classes.oops;
  * In Arrays we can pass Dog array into Animal array
  * Compiler will not object to it
  * But we may get Runtime exception if we try to add Cat into Dog
- * Runtime JVM saved us atleast
+ * Runtime JVM saved us at least
  * 
  * Lets see same scenarios with Array Lists
  */
@@ -45,8 +45,8 @@ public class PolymorphicArrays {
 	 */
 	public void badAnimal(Animal [] animal){
 		animal[0] = new Dog();
-		animal[0] = new Cat();  // Adding a Cat into Dog array
-		animal[0] = new Animal(); // Adding Parent Animal object into Child Dog array
+		animal[1] = new Cat();  // Adding a Cat into Dog array
+		animal[2] = new Animal(); // Adding Parent Animal object into Child Dog array
 		
 		for(Animal a: animal){
 			a.eat();
@@ -59,10 +59,10 @@ public class PolymorphicArrays {
 		Animal [] a = {new Animal(), new Animal(), new Animal()};
 		Dog [] d = {new Dog(), new Dog(), new Dog()};
 		
-		obj.goodAnimal(a);
-		obj.goodAnimal(d);
+		//obj.goodAnimal(a);
+		//obj.goodAnimal(d);
 		
-		obj.badAnimal(a); // fine
+		//obj.badAnimal(a); // fine
 		obj.badAnimal(d); // run time exception ArrayStoreException
 		
 	}

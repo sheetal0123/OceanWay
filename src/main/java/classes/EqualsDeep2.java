@@ -29,11 +29,11 @@ public class EqualsDeep2 {
 			System.out.println("DIFFERENT PERSON");  // DIFFERENT PERSON
 		
 		//how to do this using deep
-		if(DeepEquals(obj1,obj2))
-			System.out.println("SAME PERSON");
-		else
-			System.out.println("DIFFERENT PERSON");  // DIFFERENT PERSON
-		
+//		if(DeepEquals(obj1,obj2))
+//			System.out.println("SAME PERSON");
+//		else
+//			System.out.println("DIFFERENT PERSON");  // DIFFERENT PERSON
+//		
 		
 
 	}
