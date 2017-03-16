@@ -21,7 +21,7 @@ public class QuesSet3 {
 	}
 
 	public static void main(String[] args) {
-//		QuesSet3 obj = new QuesSet3();
-//		int a = obj.abc();
+		QuesSet3 obj = new QuesSet3();
+		obj.abc();
 	}
 }

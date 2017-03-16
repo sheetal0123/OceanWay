@@ -2,7 +2,7 @@ package collections.hash;
 
 /**
  * Hashcode is an integer referring to an object
- * Object.java parent class has default behaviour that every new object on heap will have different hashcode 
+ * Object.java parent class has default behavior that every new object on heap will have different hashcode 
  *	
  */
 public class Hashcode1 extends Object {

@@ -10,6 +10,24 @@ package classes.innerclasses;
  * Here to use walk() method we have to create a new class, implements interface and then make class object 
  * All this task can be avoided using anonymous inner classes
  */
+
+
+
+@FunctionalInterface
+interface walkable{
+	void walk();
+}
+
+
+class Walky implements walkable{
+	public void walk() {
+		System.out.println("I am walking");
+	}
+}
+
+
+
+
 public class WhyAnonymousForInterface {
 
 	public static void main(String [] args){
@@ -19,13 +37,3 @@ public class WhyAnonymousForInterface {
 	}
 }
 
-@FunctionalInterface
-interface walkable{
-	void walk();
-}
-
-class Walky implements walkable{
-	public void walk() {
-		System.out.println("I am walking");
-	}
-}

@@ -9,6 +9,15 @@ package classes.innerclasses;
  * ParentYou.class
  */
 
+//legacy code
+class ParentYou{
+	public void show(){
+		System.out.println("show pictures");
+	}
+}
+
+
+//new code
 public class WhyAnonymousClassSolution {
 	
 	public static void main(String [] args){
@@ -27,8 +36,4 @@ public class WhyAnonymousClassSolution {
 }
 
 
-class ParentYou{
-	public void show(){
-		System.out.println("show pictures");
-	}
-}
+
