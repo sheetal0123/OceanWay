@@ -11,6 +11,7 @@ public class DriversRepo {
 	static WebDriver driver;
 
 	public static WebDriver getMozillaDriver() {
+		//System.setProperty("webdriver.gecko.driver", "/Users/sheetalsingh/Downloads/geckodriver");
 		return new FirefoxDriver();
 	}
 

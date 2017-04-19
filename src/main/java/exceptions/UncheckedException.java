@@ -9,7 +9,7 @@ package exceptions;
 public class UncheckedException {
 
 	/**
-	 * No need to catch or declare. If catched, program would have been saved
+	 * No need to catch or declare. If catched, program could have been saved
 	 */
 	public void compilerDontBother() {
 		int i = 100 / 0;

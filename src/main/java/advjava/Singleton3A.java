@@ -31,6 +31,10 @@ public class Singleton3A implements Serializable {
 	/*
 	 * readResolve can be used to change the data that is serialized through readObject method
 	 * this method called after readObject() and we can change things here
+	 * 
+	 * When we read object back from serialization using readObject() method, then readResolve() get called and it replaces the 
+	 * current read object with singleton instance we have, hence singleton pattern maintains
+	 * 
 	 * http://stackoverflow.com/questions/1168348/java-serialization-readobject-vs-readresolve
 	 */
 	private Object readResolve() throws ObjectStreamException{

@@ -9,6 +9,8 @@ public class Switch {
 		Scanner s = new Scanner(System.in);
 		System.out.println("Enter any no 1 to 5, and press q to exit");
 		int i = -1;
+		
+		//while loop keep checking next int and stop if non int comes
 		while (s.hasNextInt()) {
 			i = s.nextInt();
 		}

@@ -1,6 +1,7 @@
 package collections;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -31,7 +32,7 @@ public class HashMapExamples {
 		
 		Set<String> set=hm.keySet();
 		for(String key:set){
-			System.out.print(key+":"+hm.get(key)+"  "); // null:Big Joe  1:One  A:Apple  2:Two  B:Boy  4:null  5:null 
+			System.out.print(key+":"+hm.get(key)+"  ");  // null:Big Joe  1:One  A:Apple  2:Two  B:Boy  4:null  5:null 
 		}
 		
 		System.out.println("");
@@ -44,6 +45,19 @@ public class HashMapExamples {
 		for(Entry<String,String> ent:entires){
 			System.out.print(ent.getKey()+":"+ent.getValue()+"  "); // null:Big Joe  1:One  A:Apple  2:Two  B:Boy  4:null  5:null 
 		}
+		
+		
+		/**
+		 * Following way Map can be iterate using Iterator way
+		 * Map can't be iterated using iterator as they are not Collection
+		 */
+		System.out.println("");
+		Iterator<Entry<String, String>> itr = hm.entrySet().iterator();
+		while(itr.hasNext()){
+			Map.Entry<String, String> pair= itr.next();
+			System.out.print(pair.getKey()+":"+pair.getValue()+"  "); // null:Big Joe  1:One  A:Apple  2:Two  B:Boy  4:null  5:null 
+		}
+		
 		
 	}
 	

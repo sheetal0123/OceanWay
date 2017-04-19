@@ -35,9 +35,13 @@ public class ArraysToArrayListConversion {
 	//ArrayList<String> al = new ArrayList<String>(Arrays.asList("Jan","Feb", "Mar", "Apr", "May")); 
 
 	
-	//Object Array can only be converted as collection can not handle primitives
+	
+	/**
+	 * Object Array can only be converted as collection, it can not handle primitives
+	 */
 	public void convertingArraysIntoList(){
-		Integer [] arr=new Integer[3]; // array of objects not primitives
+		Integer [] arr=new Integer[3];
+		//int [] arr=new int[3]; // primitives array will get compiler error
 		arr[0]=1000;
 		arr[1]=2000;
 		arr[2]=3000;

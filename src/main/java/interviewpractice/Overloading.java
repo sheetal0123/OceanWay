@@ -1,4 +1,4 @@
-package javacode;
+package interviewpractice;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,9 +6,10 @@ import java.util.List;
 
 /**
  *  Overloading cannot be done by changing return type
+ *  parameter has to be changed
  *
  */
-public class QuesSet3 {
+public class Overloading {
 
 	
 //	public void abc(){
@@ -21,7 +22,7 @@ public class QuesSet3 {
 	}
 
 	public static void main(String[] args) {
-		QuesSet3 obj = new QuesSet3();
+		Overloading obj = new Overloading();
 		obj.abc();
 	}
 }

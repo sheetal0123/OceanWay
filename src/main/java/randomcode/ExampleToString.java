@@ -1,4 +1,4 @@
-package javacode;
+package randomcode;
 
 /**
  * Whenever a object is printed it implicitly call obj.toString()
@@ -9,13 +9,9 @@ package javacode;
  *
  */
 public class ExampleToString {
-
 	public static void main(String [] args){
-		
 		Student obj = new Student (10, "Ram");
 		System.out.println(obj);  //implicitly it is calling "obj.toString()" and o/p will be "javacode.Student@7852e922"
-		
-		
 		System.out.println(obj);  // now we have overridden toString(), so the o/p will be: "After overriding output will be: 10 - Ram"
 	}
 	

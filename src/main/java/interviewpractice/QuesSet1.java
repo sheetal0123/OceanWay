@@ -1,4 +1,4 @@
-package javacode;
+package interviewpractice;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,21 +11,20 @@ public class QuesSet1 {
 	 * different heights. How many tree will be visible?
 	 */
 	public void treeView() {
-		Integer[] treeHeights = { 5, 10, 5, 9, 12, 5 };
-		// Integer[] treeHeights = { 5, 10, 5, 11 }; // 3 - working
+		Integer[] treeHeights = { 5, 10, 5, 9, 12, 5, 14, 15 };
 		List<Integer> ls = new ArrayList<Integer>(Arrays.asList(treeHeights));
 
 		int count = 1;
-		int a = 0, b = 0, max = 0;
+		int tree1 = 0, tree2 = 0, maxTree = 0;
 		for (int i = 0; i < ls.size(); i++) {
 			if (i == ls.size() - 1)
 				break;          // last loop not require as we get index out of range at b=ls.get(i+1)
 
-			a = ls.get(i);
-			b = ls.get(i + 1);
-			if (b > a && b > max) {
+			tree1 = ls.get(i);
+			tree2 = ls.get(i + 1);
+			if (tree2 > tree1 && tree2 > maxTree) {
 				count++;
-				max = b;
+				maxTree = tree2;
 			}
 		}
 		System.out.println(count);

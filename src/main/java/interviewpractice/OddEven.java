@@ -1,14 +1,16 @@
-package javacode;
+package interviewpractice;
 
 import java.util.Scanner;
 
 /*
  * How to find a no is even or odd w/o using % operator
  */
-public class EvenOdd {
+public class OddEven {
 
-	public void basicFunc() {
+	public void findevenodd1() {
 		Scanner sc = new Scanner(System.in);
+		System.out.println("Please enter a number...");
+		
 		int input = sc.nextInt();
 
 		if (input % 2 == 0)
@@ -18,8 +20,13 @@ public class EvenOdd {
 
 	}
 
-	public void findevenodd() {
+	/**
+	 * Find odd even w/o using reminder operator
+	 */
+	public void findevenodd2() {
 		Scanner sc = new Scanner(System.in);
+		System.out.println("Please enter a number: ");
+		
 		int input = sc.nextInt();
 
 		while (input >= 2) {
@@ -34,9 +41,9 @@ public class EvenOdd {
 	}
 
 	public static void main(String[] args) {
-		EvenOdd obj = new EvenOdd();
-		obj.basicFunc();
-		obj.findevenodd();
+		OddEven obj = new OddEven();
+		obj.findevenodd1();
+		//obj.findevenodd2();
 	}
 
 }

@@ -32,6 +32,7 @@ public class Helper {
 
 	public WebDriver getDriver() {
 		if (drv.equals("firefox")) {
+			System.setProperty("webdriver.gecko.driver", "/Users/sheetalsingh/Downloads/geckodriver");
 			return new FirefoxDriver();
 		} else if (drv.equals("chrome")) {
 			return new ChromeDriver();

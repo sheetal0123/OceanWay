@@ -6,7 +6,7 @@ import java.lang.reflect.InvocationTargetException;
 /**
  * This is the perfect single ton class
  * for thread hack see: https://www.youtube.com/watch?v=GH5_lhFShfU
- * using synchronized we can stop multiple thread to access getinstance() and hence block thread hack
+ * using synchronized we can stop multiple thread to access getInstance() and hence block thread hack
  */
 
 public class Singleton5 {
@@ -16,13 +16,13 @@ public class Singleton5 {
 	
 	//private const make sure no one can create other obj using new keyword
 	private Singleton5(){
-		if(instance != null){
+		if(instance != null){   //this will stop reflection attack
 			throw new RuntimeException("One instance already created cant create other");
 		}		
 		System.out.println("I am private constructor");
 	}
 	
-	//to handle reflection hack
+	
 	//add synchronized keyword here to stop multiple thread accessing it
 	public static Singleton5 getInstance(){
 		if(instance == null){
@@ -31,13 +31,13 @@ public class Singleton5 {
 		return instance;
 	}
 
-	//to handle serialization hack
+	//to handle serialization attack
 	private Object readResolve() throws ObjectStreamException{
 		System.out.println("READ RESOLVE...");
 		return instance;
 	}
 	
-	//to handle clone hack
+	//to handle clone attack
 	@Override
 	protected Object clone() throws CloneNotSupportedException {
 		throw new CloneNotSupportedException("Clonning not supported as this is a singleton class");

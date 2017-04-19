@@ -14,11 +14,13 @@ import java.io.IOException;
  */
 public class CheckedException {
 
+	//method 3 got an exception, but it throws rather handling it using catch
 	public void method3() throws IOException{
 		System.out.println("method3");
 		throw new IOException(); 
 	}
 	
+	//exception comes to method2 from method3, this method also not handled it
 	public void method2() throws IOException{
 		System.out.println("method2");
 		method3(); 

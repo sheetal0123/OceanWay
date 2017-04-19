@@ -1,5 +1,8 @@
 package controlstmt;
 
+/**
+ * break loop will break the flow of for/while loop and control go to next statement written after loops
+ */
 public class Break {
 
 	public void breakForLoop() {

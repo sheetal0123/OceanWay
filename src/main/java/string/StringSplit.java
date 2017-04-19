@@ -14,6 +14,7 @@ public class StringSplit {
 		
 		//to read digits as int we have two approaches
 		String [] arr1 = str1.split(" ");
+		System.out.println(arr1);
 		System.out.println(arr1.toString());  //  [Ljava.lang.String;@7852e922
 		System.out.println(Arrays.toString(arr1)); // [Hi, i, am, learning, 44]
 		

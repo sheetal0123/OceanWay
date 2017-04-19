@@ -14,6 +14,7 @@ public class Singleton2A {
 	
 	/**
 	 * In private constr we check if instance already initialized and then if someone call this constructor then we throw exception
+	 * Check in private constructor will block reflection, which made constructor public on runtime
 	 */
 	private Singleton2A(){
 		if(instance != null){

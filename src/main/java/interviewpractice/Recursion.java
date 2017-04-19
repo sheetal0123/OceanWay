@@ -1,4 +1,4 @@
-package javacode;
+package interviewpractice;
 
 /*
  * recursion call itself again and again, if stmt is very imp so that at one point method start returning something
@@ -7,15 +7,11 @@ package javacode;
 public class Recursion {
 
 	public int fact(int n) {
-		System.out.println("n = " + n);
-		int result;
-
+		
 		if (n == 1)
 			return 1;
 		
-		result = fact(n - 1) * n;
-		System.out.println("------");
-		return result;
+		return fact(n - 1) * n;
 	}
 
 	public static void main(String[] args) {

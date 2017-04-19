@@ -20,6 +20,7 @@ public class TreeSetExamples {
 		ts.add("30");
 		ts.add("50");
 		ts.add("20");
+		ts.add("20"); //duplicate get removed
 		System.out.println(ts); // [10, 20, 30, 40, 50]
 		System.out.println("Is set empty: " + ts.isEmpty()); // false
 		System.out.println(ts.size()); // 5
@@ -45,25 +46,9 @@ public class TreeSetExamples {
 
 	}
 
-	public void removeDuplicateEntryFromStringArray() {
-		String[] arr = { "5", "7", "2", "3", "1", "2", "3" };
-		List<String> ls = Arrays.asList(arr);
-		System.out.println(ls); // [5, 7, 2, 3, 1, 2, 3]
+	
 
-		TreeSet<String> ts = new TreeSet<String>(ls);
-		System.out.println(ts); // [1, 2, 3, 5, 7]
-	}
-
-	public void getDuplicateEntryFromStringArray() {
-		String[] arr = { "one", "three", "two", "five", "three", "one", "six" };
-		HashSet<String> hs = new HashSet<String>();
-		for (String str : arr) {
-			boolean flag = hs.add(str); // duplicate entry will not be added and give false value
-			if (!flag) {
-				System.out.print(str + " , "); // three , one ,
-			}
-		}
-	}
+	
 
 	public void constructorWithSortedSet(){
 		SortedSet<String> ss=new TreeSet<String>();
@@ -79,8 +64,6 @@ public class TreeSetExamples {
 		TreeSetExamples obj = new TreeSetExamples();
 		obj.basicOperations();
 		obj.listToTreeSet();
-		obj.removeDuplicateEntryFromStringArray();
-		obj.getDuplicateEntryFromStringArray();
 		obj.constructorWithSortedSet();
 	}
 }

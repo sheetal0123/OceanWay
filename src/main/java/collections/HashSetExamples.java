@@ -64,7 +64,7 @@ public class HashSetExamples {
 		
 		//HashSet to Array
 		System.out.println("");
-		String[] strArray = new String[size];
+		String[] strArray = new String[1];  // array will grow dynamically
 		
 		strArray=hashSet.toArray(strArray);
 		for (String str : strArray) {
