@@ -5,7 +5,7 @@ import java.util.Scanner;
 /*
  * How to prove that String are immutable
  */
-public class Strings {
+public class StringsImmutability {
 	
 	public void howToProveStringsAreImmutable(){
 		String a = "KAAVYA";
@@ -19,7 +19,7 @@ public class Strings {
 	
 	
 	public static void main(String[] args) {
-		Strings s = new Strings();
+		StringsImmutability s = new StringsImmutability();
 		s.howToProveStringsAreImmutable();
 		
 	}
