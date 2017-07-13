@@ -62,10 +62,10 @@ public class StringEquals {
 
 	public static void main(String[] args) {
 		StringEquals obj = new StringEquals();
-//		obj.verifyStringReferences();
-//		obj.verifyStringObject();
+		obj.verifyStringReferences();
+		obj.verifyStringObject();
 
-		obj.objVariables(name);
+//		obj.objVariables(name);
 
 //		obj.concatString();
 
