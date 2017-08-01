@@ -10,7 +10,12 @@ package classes.oops;
  * - Car internal details has been abstracted and we can use it using steering, brakes, gear etc
  * 
  * todo: explain all this with examples
- *
+ * imp interview questions:
+ * 1. Abstract class may or may not have abstract method as both are different concept
+ * 2. Abstract class means it cannot be instantiated, thats it
+ * 3. Abstract method means it will be defined in subclass
+ * 4. Abstract class can have main method and can instantiate other classes
+ * 5. Abstract class can have constructor https://stackoverflow.com/questions/260666/can-an-abstract-class-have-a-constructor
  */
 
 abstract class VehicleAbstract {
@@ -18,6 +23,10 @@ abstract class VehicleAbstract {
 
 	public void stop() {
 		System.out.println("Stopping Vehicle in abstract class");
+	}
+	
+	public VehicleAbstract() {
+		//i am a constructor
 	}
 }
 

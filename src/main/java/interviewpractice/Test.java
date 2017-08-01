@@ -1,41 +1,28 @@
 package interviewpractice;
 
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Arrays;
 import java.util.HashSet;
-import java.util.List;
+import java.util.LinkedList;
 import java.util.Scanner;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class Test {
 
+	public static void main(String [] args){
 	
-	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String str = sc.nextLine();
+		int n=10;
 		
-		//new Job();
+		while(n>=2){
+			n = n-2;
+		}
 		
-		
-		String s="Hi";
-		
-		
-	}
-}
-
-
-
-class Job implements Runnable{
-
-	Thread t;
+		if(n==0){
+			
+		}
 	
-	public Job(){
-		t= new Thread(this, "hi");
-		t.start();
-	}
-	
-	@Override
-	public void run() {
-		// TODO Auto-generated method stub
-		System.out.println("New Thread started"+ t.getName());
 	}
 	
 }

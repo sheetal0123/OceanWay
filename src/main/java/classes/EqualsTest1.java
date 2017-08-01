@@ -79,12 +79,12 @@ public class EqualsTest1 {
 	
 	/**
 	 * In case of String object equals works better than ==
-	 * here it will check content of object and as object are same because of string pool
-	 * we will get TRUE o/p
+	 * here it will check content of object i.e. xyz
+	 * Remember both are created in different memory location still o/p will be true
 	 */
 	public void stringObjectTest() {
 		String obj1 = new String("xyz");
-		String obj2 = new String("xyz");
+		String obj2 = "xyz";
 
 		if (obj1.equals(obj2))
 			System.out.println("TRUE"); // TRUE
@@ -98,11 +98,11 @@ public class EqualsTest1 {
 
 	public static void main(String[] args) {
 		EqualsTest1 obj = new EqualsTest1();
-		obj.primitive();
+		//obj.primitive();
 		// obj.nulls();
-		obj.incompatibleType();
+		//obj.incompatibleType();
 
-		obj.normalObjectTest();
+		//obj.normalObjectTest();
 		obj.stringObjectTest();
 
 	}

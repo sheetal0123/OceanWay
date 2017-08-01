@@ -26,7 +26,7 @@ public class CollectionsQuestions {
 		ls.add("grapes");
 		System.out.println(ls); // [beer, apple, orange, grapes]
 
-		Collections.reverse(ls);
+		//Collections.reverse(ls);
 		System.out.println(ls); // [grapes, orange, apple, beer]
 
 		//now reverse every element in AL
@@ -88,7 +88,7 @@ public class CollectionsQuestions {
 
 	public void howToGetTop5ElementFromArray() {
 		// style 1
-		int[] arr = new int[] { 10, 20, 5, 15, 40, 50 };
+		int[] arr = { 10, 20, 5, 15, 40, 50 };
 		Arrays.sort(arr); // sort in ascending order
 		int[] top5 = Arrays.copyOfRange(arr, arr.length - 5, arr.length); // (arr,
 																			// 1,
@@ -96,7 +96,7 @@ public class CollectionsQuestions {
 		System.out.println(Arrays.toString(top5));
 
 		// style 2
-		int[] arr2 = new int[] { 10, 20, 5, 15, 40, 50 };
+		int[] arr2 = { 10, 20, 5, 15, 40, 50 };
 		Arrays.sort(arr2);
 		for (int i = arr2.length - 5; i < arr2.length; i++) {
 			System.out.print(arr2[i] + " ");
@@ -124,8 +124,8 @@ public class CollectionsQuestions {
 		Set<String> set2 = new HashSet<String>();
 		set2.addAll(ls2);
 
-		// set1.removeAll(set2); // give unique value in ls1
-		set1.retainAll(set2); // give duplicate values in ls1
+		 set1.removeAll(set2); // give unique value in ls1
+		//set1.retainAll(set2); // give duplicate values in ls1
 
 		for (String str : set1) {
 			System.out.println(str.toString());
@@ -133,7 +133,7 @@ public class CollectionsQuestions {
 	}
 
 	/**
-	 * Reverse a LL todo: but w/o using reverse func ??
+	 * Reverse a LL 
 	 */
 	public void reverseLL() {
 		// style 1:
@@ -165,13 +165,13 @@ public class CollectionsQuestions {
 
 	public static void main(String[] args) {
 		CollectionsQuestions obj = new CollectionsQuestions();
-		 obj.reverseAListContent();
+		// obj.reverseAListContent();
 		// obj.getDuplicateEntryFromStringArray();
 		// obj.removeDuplicateEntryFromStringArray();
 		// obj.howToAddElementInMiddleOfAL();
 		// obj.howToGetTop5ElementFromArray();
 		// obj.howToGetDuplicateAndUniqueValueAmoungList();
-		//obj.reverseLL();
+		obj.reverseLL();
 
 	}
 }

@@ -24,7 +24,7 @@ public class Singleton5 {
 	
 	
 	//add synchronized keyword here to stop multiple thread accessing it
-	public static Singleton5 getInstance(){
+	public synchronized static Singleton5 getInstance(){
 		if(instance == null){
 			instance = new Singleton5();
 		}

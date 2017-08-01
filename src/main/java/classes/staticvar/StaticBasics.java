@@ -1,8 +1,7 @@
 package classes.staticvar;
 
 /**
- * Need to check how many object a class has
- * each new() will call constructor
+ * demo to show static var (j) is being used by all objects
  * 
  * i will not give correct result as each object has its own copy of i
  * j will give correct results as j is class variable and shared among all objects

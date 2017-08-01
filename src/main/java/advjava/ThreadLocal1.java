@@ -35,19 +35,19 @@ public class ThreadLocal1 {
 			}
 		};
 		
-		System.out.println(tl.get()); // null
+		System.out.println(tl.get()); // abc
 
 		tl.set("personal copy for main thread");
 		System.out.println(tl.get()); // personal copy for main thread
 
 		tl.remove();
-		System.out.println(tl.get()); // null
+		System.out.println(tl.get()); // abc
 	}
 	
 	
 	public static void main(String[] args) {
 		ThreadLocal1 obj = new ThreadLocal1();
-		obj.defaultValues();
+		//obj.defaultValues();
 		obj.initialValues();
 	}
 
