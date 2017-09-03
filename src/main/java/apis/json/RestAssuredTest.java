@@ -2,8 +2,6 @@ package apis.json;
 
 import org.testng.annotations.Test;
 
-import com.jayway.restassured.response.Response;
-
 import groovy.json.JsonException;
 
 /**

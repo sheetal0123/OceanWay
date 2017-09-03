@@ -1,16 +1,9 @@
 package file;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-
 import java.io.FileNotFoundException;
 import java.io.InterruptedIOException;
 import java.util.List;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 
 /**

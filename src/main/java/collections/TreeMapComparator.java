@@ -6,6 +6,7 @@ import java.util.TreeMap;
 
 class LastNameComparator implements Comparator<String> {
 
+	@Override
 	public int compare(String a, String b) {
 		int i, j, k;
 		String subA, subB;

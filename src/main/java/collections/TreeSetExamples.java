@@ -1,12 +1,10 @@
 package collections;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.SortedSet;
 import java.util.TreeSet;
-import java.util.Arrays;
 
 /*
  * TreeSet: ordered by natural order(not insertion order) + sorted by natural order

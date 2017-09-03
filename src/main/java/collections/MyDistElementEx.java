@@ -37,7 +37,8 @@ class Price{
         this.price = pr;
     }
      
-    public int hashCode(){
+    @Override
+	public int hashCode(){
         System.out.println("In hashcode");
         int hashcode = 0;
         hashcode = price*20;
@@ -45,7 +46,8 @@ class Price{
         return hashcode;
     }
      
-    public boolean equals(Object obj){
+    @Override
+	public boolean equals(Object obj){
         System.out.println("In equals");
         if (obj instanceof Price) {
             Price pp = (Price) obj;
@@ -68,7 +70,8 @@ class Price{
         this.price = price;
     }
      
-    public String toString(){
+    @Override
+	public String toString(){
         return "item: "+item+"  price: "+price;
     }
 }

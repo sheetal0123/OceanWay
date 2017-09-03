@@ -1,7 +1,5 @@
 package interviewpractice;
 
-import java.util.Scanner;
-
 /*
  * How to prove that String are immutable
  */

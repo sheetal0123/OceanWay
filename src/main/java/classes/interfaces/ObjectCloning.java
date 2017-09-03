@@ -20,7 +20,7 @@ public class ObjectCloning implements Cloneable {
 
 	@Override
 	public Object clone() throws CloneNotSupportedException {
-		return (ObjectCloning) super.clone();
+		return super.clone();
 	}
 
 	public static void main(String[] args) {

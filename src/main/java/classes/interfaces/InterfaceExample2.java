@@ -17,6 +17,7 @@ abstract class Games implements Durable{
 		//non abstract method
 	}
 	
+	@Override
 	public void size(){
 		System.out.println("I am size");
 	}
@@ -27,10 +28,12 @@ abstract class Games implements Durable{
 //Non Abstract class has to implement interface methods
 public class InterfaceExample2 extends Games{
 	
+	@Override
 	public void cure(){
 		//implemented - Curable method
 	}
 	
+	@Override
 	public void basketball(){
 		System.out.println("I am basketball");
 	}

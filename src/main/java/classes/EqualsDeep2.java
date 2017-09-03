@@ -1,7 +1,5 @@
 package classes;
 
-import java.util.Arrays;
-
 public class EqualsDeep2 {
 
 	String firstname, lastname;

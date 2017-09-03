@@ -42,6 +42,7 @@ public class Deadlock implements Runnable {
 		obj1.One(obj2);
 	}
 
+	@Override
 	public void run() {
 		try {
 			obj2.Jan(obj1);

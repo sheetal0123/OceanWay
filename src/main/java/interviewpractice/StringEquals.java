@@ -46,9 +46,9 @@ public class StringEquals {
 	static String name = "mango";
 	public void objVariables(String name) {
 		System.out.println("Current Name: "+name); 
-		this.name = "orange";
+		StringEquals.name = "orange";
 		System.out.println(name);        // mango
-		System.out.println(this.name);   // orange
+		System.out.println(StringEquals.name);   // orange
 	}
 
 	

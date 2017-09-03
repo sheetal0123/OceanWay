@@ -23,6 +23,7 @@ public class TreeSetComparator {
 
 class MyComp implements Comparator<String> {
 
+	@Override
 	public int compare(String str1, String str2) {
 //		return str1.compareTo(str2); //[1, 2, 3, 4]
 		return str2.compareTo(str1); //[4, 3, 2, 1]

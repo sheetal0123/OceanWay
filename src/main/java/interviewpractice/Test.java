@@ -1,11 +1,6 @@
 package interviewpractice;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.LinkedList;
 import java.util.Scanner;
-import java.util.Set;
-import java.util.TreeSet;
 
 public class Test {
 

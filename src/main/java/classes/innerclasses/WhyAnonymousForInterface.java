@@ -20,6 +20,7 @@ interface walkable{
 
 
 class Walky implements walkable{
+	@Override
 	public void walk() {
 		System.out.println("I am walking");
 	}

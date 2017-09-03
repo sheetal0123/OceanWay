@@ -12,7 +12,7 @@ public class WhyAnonymousClass {
 
 	public static void main(String [] args){
 		Parent p =new Child();
-		p.show();  // show videos
+		p.show();  // show pictures and videos
 	}
 }
 
@@ -28,6 +28,6 @@ class Parent {
 class Child extends Parent{
 	@Override
 	public void show(){
-		System.out.println("show videos");
+		System.out.println("show pictures and videos");
 	}
 }

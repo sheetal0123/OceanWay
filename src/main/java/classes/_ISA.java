@@ -15,6 +15,7 @@ class Fruits {
 
 class Mango extends Fruits {
 
+	@Override
 	public void parentMethod() {
 		System.out.println("override: child parent method");
 	}

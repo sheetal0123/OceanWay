@@ -5,7 +5,6 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 import java.util.PriorityQueue;
-import java.util.Queue;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
@@ -153,6 +152,7 @@ public class PriorityQueueExamples {
 }
 
 class MyCompPQ implements Comparator<Integer> {
+	@Override
 	public int compare(Integer a, Integer b) {
 		int z=b.compareTo(a);
 		System.out.println("<>"+b+","+a+","+z);

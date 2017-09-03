@@ -23,6 +23,7 @@ public class Reflection1 implements Interface1 {
 		return "i am private method with values: "+ a+" & "+ b;
 	}
 
+	@Override
 	public void abc() {
 		System.out.println("I am interface method");
 	}

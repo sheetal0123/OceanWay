@@ -12,7 +12,7 @@ public class CallingMain {
 	
 	public static void callme(CallingMain obj){
 		System.out.println("I am in Method");
-		obj.iamstatic();
+		CallingMain.iamstatic();
 		
 		//String [] arr = {};
 		//obj.main(arr);  // also work fine but get into a loop
@@ -25,7 +25,7 @@ public class CallingMain {
 	public static void main(String [] args){
 		CallingMain obj = new CallingMain();
 		System.out.println("I am in Main");
-		obj.callme(obj);	
+		CallingMain.callme(obj);	
 	}
 	
 }

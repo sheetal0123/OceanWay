@@ -36,10 +36,10 @@ public class StaticExamples{
 		StaticExamples obj2=new StaticExamples();
 		obj1.method2();
 		
-		obj1.a=50; // a=50
-		obj2.a=a+1; // a=50+1
-		System.out.println(obj1.a); //51
-		System.out.println(obj2.a); //51
+		StaticExamples.a=50; // a=50
+		StaticExamples.a=a+1; // a=50+1
+		System.out.println(StaticExamples.a); //51
+		System.out.println(StaticExamples.a); //51
 		
 		obj1.b=50;   // b=50
 		obj2.b=obj2.b+1;  // b=20+1

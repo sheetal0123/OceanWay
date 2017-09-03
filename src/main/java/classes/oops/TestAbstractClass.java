@@ -17,16 +17,19 @@ abstract class AbstractClass implements TestInterface {
 		System.out.println("Abstract Constructor");
 	}
 	abstract int getRateOfInterest();
+	@Override
 	public void abc(){} //method defined, now child don't have to define it
 }
 
 class SBI extends AbstractClass {
+	@Override
 	int getRateOfInterest() {
 		return 7;
 	}
 }
 
 class PNB extends AbstractClass {
+	@Override
 	int getRateOfInterest() {
 		return 8;
 	}

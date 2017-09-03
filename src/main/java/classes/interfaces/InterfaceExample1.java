@@ -20,6 +20,7 @@ interface Runnable {
 class InterfaceExample1 implements Runnable {
 
 	// implementing method has to be public
+	@Override
 	public void run() {
 		//TON = 200; - final variable cannot be reassigned
 		System.out.println("I am run: " + TON);

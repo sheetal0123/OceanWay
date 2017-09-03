@@ -1,7 +1,5 @@
 package string;
 
-import java.util.Arrays;
-
 /**
  * for formating we need to use "printf" rather "println"
  */

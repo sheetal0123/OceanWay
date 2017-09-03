@@ -13,6 +13,7 @@ class DemoThread3 implements Runnable {
 		t.start();
 	}
 
+	@Override
 	public void run() {
 		for (int i = 1; i <= 5; i++) {
 			System.out.println(Thread.currentThread() + " - " + i);

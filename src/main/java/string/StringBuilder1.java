@@ -1,7 +1,5 @@
 package string;
 
-import java.util.Arrays;
-
 /**
  * String Builder is not thread safe
  * String Buffer is thread safe i.e. synchronize

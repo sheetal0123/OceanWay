@@ -13,6 +13,7 @@ public class WhyAnonymousForInterfaceSolution {
 	public static void main(String [] args){
 		joggable obj = new joggable() {
 			
+			@Override
 			public void jog() {
 				System.out.println("I am jogging");
 			}

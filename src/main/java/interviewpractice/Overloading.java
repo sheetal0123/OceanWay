@@ -1,9 +1,5 @@
 package interviewpractice;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 /**
  *  Overloading cannot be done by changing return type
  *  parameter has to be changed

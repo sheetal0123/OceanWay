@@ -24,6 +24,7 @@ public class WhyAnonymousClassSolution {
 		
 		//Using anonymous class no need to add new class which will extent legacy classes
 		ParentYou obj = new ParentYou(){
+			@Override
 			public void show(){
 				System.out.println("show me videos");
 			}
