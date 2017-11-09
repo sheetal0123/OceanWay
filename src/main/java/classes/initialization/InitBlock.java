@@ -5,22 +5,22 @@ package classes.initialization;
  * normal block executes when any obj get created before constructor
  */
 public class InitBlock {
-
+	//once
 	static {
 		System.out.println("Static Block");
 	}
 
 	
+	//multiple times
 	{
 		System.out.println("Normal Block");
 	}
 
-	
+	//multiple times	
 	public InitBlock() {
 		System.out.println("Default Constructor");
 	}
 	
-
 
 	public static void main(String[] args) {
 		InitBlock obj1 = new InitBlock();

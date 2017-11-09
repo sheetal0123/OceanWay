@@ -21,6 +21,8 @@ class ParentYou{
 public class WhyAnonymousClassSolution {
 	
 	public static void main(String [] args){
+
+		//Class obj = new Class(){//code};
 		
 		//Using anonymous class no need to add new class which will extent legacy classes
 		ParentYou obj = new ParentYou(){
@@ -29,8 +31,7 @@ public class WhyAnonymousClassSolution {
 				System.out.println("show me videos");
 			}
 		};
-		
-		
+
 		obj.show(); // show me videos
 	}
 

@@ -10,6 +10,8 @@ package classes.innerclasses;
  */
 public class WhyAnonymousForInterfaceSolution {
 
+	
+	//interface obj = new interface(){};
 	public static void main(String [] args){
 		joggable obj = new joggable() {
 			

@@ -1,19 +1,20 @@
 package classes;
 
-public class EqualsDeep2 {
+public class EqualsTest2 {
 
-	String firstname, lastname;
+	private String firstname, lastname;
 	
-	public EqualsDeep2(String f, String l){
+	//initializing members using constructor rather setters
+	public EqualsTest2(String f, String l){
 		firstname = f;
 		lastname = l;
 	}
 	
 	
 	public static void main(String [] args){
-		EqualsDeep2 obj1 = new EqualsDeep2("john","cobb");
-		EqualsDeep2 obj2 = new EqualsDeep2("john","cobb");
-		EqualsDeep2 obj3 = new EqualsDeep2("will","cobb");
+		EqualsTest2 obj1 = new EqualsTest2("john","cobb");
+		EqualsTest2 obj2 = new EqualsTest2("john","cobb");
+		EqualsTest2 obj3 = new EqualsTest2("will","cobb");
 		
 		
 		/**
@@ -25,14 +26,7 @@ public class EqualsDeep2 {
 			System.out.println("SAME PERSON");
 		else
 			System.out.println("DIFFERENT PERSON");  // DIFFERENT PERSON
-		
-		//how to do this using deep
-//		if(DeepEquals(obj1,obj2))
-//			System.out.println("SAME PERSON");
-//		else
-//			System.out.println("DIFFERENT PERSON");  // DIFFERENT PERSON
-//		
-		
+	
 
 	}
 }

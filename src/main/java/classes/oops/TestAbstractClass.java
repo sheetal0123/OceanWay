@@ -38,11 +38,11 @@ class PNB extends AbstractClass {
 public class TestAbstractClass {
 	public static void main(String args[]) {
 		//AbstractClass b = new AbstractClass();
-		AbstractClass b;
-		b = new SBI();
-		System.out.println("Rate of Interest is: " + b.getRateOfInterest() + " %");
-		b = new PNB();
-		System.out.println("Rate of Interest is: " + b.getRateOfInterest() + " %");
+		AbstractClass b1 = new SBI();
+		AbstractClass b2 = new PNB();
+		
+		System.out.println("Rate of Interest is: " + b1.getRateOfInterest() + "%");
+		System.out.println("Rate of Interest is: " + b2.getRateOfInterest() + "%");
 		
 	}
 }

@@ -10,6 +10,7 @@ public class ArrayClass {
 	
 	//Following two static element are going to be used in : classes.staticvar.StaticImport.java
 	public static int testimport = 100;
+	public static int testimport2 = 200;
 
 	public static void testimportmethod(){
 		System.out.println("Statically import me to access w/o class name");

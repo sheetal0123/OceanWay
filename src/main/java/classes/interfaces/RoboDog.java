@@ -11,6 +11,12 @@ abstract class Robot {
 
 public class RoboDog extends Robot implements Pet {
 
+	@Override
+	public String toString() {
+		return "I AM A : " + this.getClass();
+	}
+
+	
 	public static void main(String[] args) {
 		// code
 	}

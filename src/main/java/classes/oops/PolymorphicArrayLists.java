@@ -1,6 +1,7 @@
 package classes.oops;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Polymorphic Array List
@@ -18,10 +19,20 @@ class BigAnimal{
 
 class BigDog extends BigAnimal{
 	public void bark(){}
+	
+	@Override
+	public void eat(){
+		System.out.println("BigDog eating");
+	}
 }
 
 class BigCat extends BigAnimal{
 	public void meow(){}
+	
+	@Override
+	public void eat(){
+		System.out.println("BigCat eating");
+	}
 }
 
 public class PolymorphicArrayLists {
@@ -30,9 +41,11 @@ public class PolymorphicArrayLists {
 	 * Polymorphic method for ArrayList
 	 * It will except only Animal type, no Dog type, no Cat type array list .... no polymorphism
 	 */
-	public void goodBigAnimal(ArrayList<BigAnimal> BigAnimal){
+	public void goodBigAnimal(List<BigAnimal> list){
 		
-		for(BigAnimal a: BigAnimal){
+		//list.add(new BigCat()); //added a cat to the list 
+		
+		for(BigAnimal a: list){
 			a.eat();
 		}
 		
@@ -42,26 +55,22 @@ public class PolymorphicArrayLists {
 	public static void main(String [] args){
 		PolymorphicArrayLists obj = new PolymorphicArrayLists();
 		
-		//Animal array list
-		ArrayList<BigAnimal> a = new ArrayList<>();
-		a.add(new BigAnimal());
-		a.add(new BigDog());
-		a.add(new BigCat());
-		obj.goodBigAnimal(a);
+		//Animal array list - can contains any animal and its sub type
+		List<BigAnimal> ls1 = new ArrayList<>();
+		ls1.add(new BigAnimal());
+		ls1.add(new BigDog());
+		ls1.add(new BigCat());
+		//obj.goodBigAnimal(ls1);
 		
 
-		//Dog array list
-		ArrayList<BigDog> d = new ArrayList<>();
-		d.add(new BigDog());
-		d.add(new BigDog());
-		d.add(new BigDog());
-		//obj.goodBigAnimal(d);  // compiler error
-	
-//		We get compiler error because as in case of Arrays example
-//		In goodBigAnimal methods we could have used
-//		BigAnimal.add(new BigCat());
-//		And we would have get Runtime exception		
+		//Dog array list - can contains only dog type
+		List<BigDog> ls2 = new ArrayList<>();
+		ls2.add(new BigDog());
+		ls2.add(new BigDog());
+		ls2.add(new BigDog());
+		//obj.goodBigAnimal(ls2);  // compiler error 
 		
+		//java stopped developer at compiler time else we may get runtime exception if someone added "list.add(new BigCat())" in method (line 46)
 	}
 	
 }

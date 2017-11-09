@@ -1,15 +1,16 @@
 package appium;
 
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
+
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
 
 /*
  * https://discuss.appium.io/t/not-able-to-open-the-chrome-browser-in-android-emulator/3940/2

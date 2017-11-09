@@ -1,6 +1,7 @@
 package exceptions;
 
 import java.io.FileNotFoundException;
+import java.util.logging.Logger;
 
 /**
  * finally block generally used for clean up purposes like closing a connection etc
@@ -57,14 +58,29 @@ public class TryCatchFinally {
 		}
 	}
 	
+	public void testExceptionMessage(){
+		
+		try{
+			int i = 100/0;
+			System.out.println(i);
+		}catch(Exception e){
+			//e.printStackTrace(); //show complete trail of exceptions
+			//System.out.println(e.getMessage());  //  show only one liner message:   / by zero
+			//System.out.println(e);
+			
+		}
+		
+	}
+	
 	
 
 	public static void main(String[] args) throws FileNotFoundException {
 		TryCatchFinally obj = new TryCatchFinally();
 		//obj.finallyCode();
 		//obj.returnCode();
-		obj.mustDeclareIfNotCatching();
+		//obj.mustDeclareIfNotCatching();
 		//obj.noFinallyExecutionCase();
+		obj.testExceptionMessage();
 		
 	}
 }

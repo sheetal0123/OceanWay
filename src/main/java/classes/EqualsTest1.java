@@ -9,8 +9,8 @@ package classes;
 
 
 class NewDuck {
-	int weight;
-	NewDuck(int w) {
+	String weight;
+	NewDuck(String w) {
 		weight = w;
 	}
 }
@@ -19,15 +19,16 @@ class NewDuck {
 public class EqualsTest1 {
 
 	
-	public void primitive() {
-		int a = 10;
-		int b = 10;
-
+//	compiler error	
+//	public void primitive() {
+//		int a = 10;
+//		int b = 10;
+//
 //		if (a.equals(b)) 
 //			System.out.println("TRUE"); 
 //		else
 //			 System.out.println("FALSE");
-	}
+//	}
 
 	
 	/**
@@ -54,31 +55,10 @@ public class EqualsTest1 {
 		else
 			System.out.println("FALSE"); // FALSE
 	}
-	
-	
-	/**
-	 * In normal case == and equals showing same behavior
-	 */
-	public void normalObjectTest() {
-		NewDuck d1 = new NewDuck(50);
-		NewDuck d2 = d1;
-		NewDuck d3 = new NewDuck(50);
 
-		if (d1.equals(d2))
-			System.out.println("Duck are same"); // Duck are same
-		else
-			System.out.println("Duck are diff"); 
-		
-		
-		if (d1.equals(d3))
-			System.out.println("Duck are same");
-		else
-			System.out.println("Duck are diff"); // Duck are diff
-	}
-	
 	
 	/**
-	 * In case of String object equals works better than ==
+	 * In case of String equals works better than ==
 	 * here it will check content of object i.e. xyz
 	 * Remember both are created in different memory location still o/p will be true
 	 */
@@ -94,6 +74,29 @@ public class EqualsTest1 {
 
 
 
+	
+	/**
+	 * In normal case == and equals showing same behavior
+	 */
+	public void normalObjectTest() {
+		NewDuck d1 = new NewDuck("50");
+		NewDuck d2 = d1;
+		NewDuck d3 = new NewDuck("50");
+
+		if (d1.equals(d2))
+			System.out.println("Duck D1 D2 are same"); // Duck are same
+		else
+			System.out.println("Duck are diff"); 
+		
+		
+		if (d1.equals(d3))
+			System.out.println("Duck are same");
+		else
+			System.out.println("Duck D1 D3 are diff"); // Duck are diff
+	}
+	
+	
+
 
 
 	public static void main(String[] args) {
@@ -102,8 +105,9 @@ public class EqualsTest1 {
 		// obj.nulls();
 		//obj.incompatibleType();
 
-		//obj.normalObjectTest();
-		obj.stringObjectTest();
+		//obj.stringObjectTest();
+		obj.normalObjectTest();
+		
 
 	}
 }

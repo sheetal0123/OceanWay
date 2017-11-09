@@ -25,7 +25,7 @@ public class EqualToTest {
 	}
 
 	/**
-	 * null exists in objects only as primitives have default values
+	 * null exists in only objects; as primitives have default values
 	 */
 	public void nulls() {
 		Integer a = null;
@@ -47,6 +47,28 @@ public class EqualToTest {
 		// System.out.println("a != b");
 	}
 
+	
+	
+	public void stringObjectTest() {
+		String obj1 = new String("xyz");
+		String obj2 = obj1;
+		String obj3 = new String("xyz");
+
+		if (obj1 == obj2)
+			System.out.println("Obj: obj1 == obj2"); // obj1 == obj2
+		else
+			System.out.println("obj1 != obj2");
+
+		/**
+		 * obj 1 and obj 3 are having two diff memory location but pointing same obj on heap
+		 */
+		if (obj1 == obj3)
+			System.out.println("obj1 == obj3");
+		else
+			System.out.println("Obj: obj1 != obj3"); // obj1 != obj3
+	}
+	
+	
 	
 	/**
 	 * In objects if "new" keyword is come then == cannot pass that thing
@@ -71,24 +93,7 @@ public class EqualToTest {
 
 	
 	
-	public void stringObjectTest() {
-		String obj1 = new String("xyz");
-		String obj2 = obj1;
-		String obj3 = new String("xyz");
 
-		if (obj1 == obj2)
-			System.out.println("Obj: obj1 == obj2"); // obj1 == obj2
-		else
-			System.out.println("obj1 != obj2");
-
-		/**
-		 * obj 1 and obj 3 are having two diff memory location but pointing same obj on heap
-		 */
-		if (obj1 == obj3)
-			System.out.println("obj1 == obj3");
-		else
-			System.out.println("Obj: obj1 != obj3"); // obj1 != obj3
-	}
 
 	
 	public static void main(String[] args) {
@@ -97,8 +102,8 @@ public class EqualToTest {
 		obj.primitiveReferences();
 		obj.nulls();
 		obj.incompatibleType();
-		obj.normalObjectTest();
 		obj.stringObjectTest();
+		obj.normalObjectTest();
 
 	}
 }

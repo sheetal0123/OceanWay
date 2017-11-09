@@ -17,7 +17,7 @@ public class FileExample {
 		File dir = new File("FDIR");
 		boolean flag = dir.mkdir();
 		
-		// true is dir not present initially else false
+		// 'true' if 'dir' is not present and mkdir actually make a directory 
 		System.out.println(flag); 
 		
 		//get path

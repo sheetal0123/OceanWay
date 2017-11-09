@@ -2,9 +2,11 @@ package classes.initialization;
 
 /*
  * static var share common copy for all class object
- * static method can directly access only static methods/variables
  * all static member executed in sequence they appear
  * this(), super() cannot be used inside static methods
+ * 
+ * 
+ * one rule to remember: static method like main() require obj to access non static methods/variables
  */
 
 public class StaticExamples{
@@ -13,27 +15,29 @@ public class StaticExamples{
 	int b=20;
 	
 	static{
-		System.out.println("i am a static block:"+a);
+		System.out.println("Block: i am a static block:"+a);
 	}
 	
-	public static void method1(){
-		System.out.println("I am a static method:"+a);
+	public static void method1(StaticExamples obj){
+		System.out.println("SM: I am a static method:"+a);
 //		this.a=a;  // compiler error
 //		method2(); // compiler error
 //		System.out.println("b="+b); // compiler error
+		System.out.println("SM: Using obj i can access non-static members: "+obj.b); // compiler error
 	}
 	
 	public void method2(){
-		System.out.println("I am a non static method:"+a);
-		System.out.println("I can access non static var:"+b);
+		System.out.println("M: I am a non static method:"+a);
+		System.out.println("M: I can access non static var:"+b);
 	}
 	
 	public static void main(String [] args){
-		method1();
-		System.out.println("I can access static var w/o obj:"+a);
+		
+		System.out.println("Main: I can access static var w/o obj:"+a);
 
 		StaticExamples obj1=new StaticExamples();
 		StaticExamples obj2=new StaticExamples();
+		method1(obj1);
 		obj1.method2();
 		
 		StaticExamples.a=50; // a=50

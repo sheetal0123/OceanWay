@@ -2,7 +2,7 @@ package classes;
 
 import java.util.Arrays;
 
-public class EqualsDeep1 {
+public class EqualsDeep {
 
 	/**
 	 * equals compare two obj content which is same here
@@ -59,7 +59,7 @@ public class EqualsDeep1 {
 	
 	
 	public static void main(String [] args){
-		EqualsDeep1 obj = new EqualsDeep1();
+		EqualsDeep obj = new EqualsDeep();
 		obj.compareSimpleArray();
 		obj.compareComplexArray();
 		obj.compareComplexArrayUsingDeepArrays();

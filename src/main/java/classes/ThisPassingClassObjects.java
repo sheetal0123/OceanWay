@@ -9,11 +9,10 @@ public class ThisPassingClassObjects {
 	public static void main(String [] args){
 		
 		Apple a = new Apple();
-		a = a.abc("green");
+		a = a.getInstance("green");
 		System.out.println("Apple Color: "+a.getFruit());  // Apple Color: green
 
 	}
-
 }
 
 
@@ -29,7 +28,7 @@ class Apple{
 		fruit = fr;
 	}
 
-	public Apple abc(String color){
+	public Apple getInstance(String color){
 		setFruit(color);
 		return this;    // return Apple object reference who access abc()
 	}

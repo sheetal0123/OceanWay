@@ -58,11 +58,30 @@ public class HashMapExamples {
 			System.out.print(pair.getKey()+":"+pair.getValue()+"  "); // null:Big Joe  1:One  A:Apple  2:Two  B:Boy  4:null  5:null 
 		}
 		
-		
 	}
+
+	
+	/**
+	 * If invalid key is asked to a Map then it will simply return null
+	 */
+	public void test2(){
+		Map<String,String> hm=new HashMap<String,String>();
+		hm.put("1", "One");
+		hm.put("2", "Two");
+		hm.put("3", "Three");
+		
+		Map<Integer,String> hm2=new HashMap<Integer,String>();
+		
+		System.out.println(hm.get("4"));
+		System.out.println(hm2.get(4));
+		
+		System.out.printf("Using printf formating: value is = %s", hm.get("1"));
+	}
+	
 	
 	public static void main(String [] args){
 		HashMapExamples obj=new HashMapExamples();
-		obj.methodsOfHashMap();
+		//obj.methodsOfHashMap();
+		obj.test2();
 	}
 }

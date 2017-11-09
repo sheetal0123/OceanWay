@@ -4,6 +4,10 @@ class Parent {
 	Parent() {
 		System.out.println("Parent constructor");
 	}
+	
+	Parent(int a) {
+		System.out.println("P: Never called");
+	}
 }
 
 class Child extends Parent {
@@ -14,7 +18,7 @@ class Child extends Parent {
 	
 	//Param parent const never called 
 	Child(int a){
-		System.out.println("Child Param Const");
+		System.out.println("C: Never Called");
 	}
 }
 
@@ -26,12 +30,12 @@ public class Constructor1 extends Child {
 	}
 
 	public Constructor1(int a) {
-		// super(); // Imp: Parameterized const also called default super constructor rather parameterized super const
+		// super(); // Imp: Parameterized const also call "default super constructor" rather "parameterized super const"
 		System.out.println("Grand Child Param constructor");
 	}
 
 	public static void main(String[] args) {
-		//new ConstructorFunc();
+		new Constructor1();
 		new Constructor1(10);
 	}
 }

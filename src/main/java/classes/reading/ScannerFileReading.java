@@ -7,9 +7,10 @@ import java.util.Scanner;
 public class ScannerFileReading {
 
 	public static void main(String[] args) {
+
 		try {
-			FileReader fr = new FileReader(
-					"/Users/sheetalsingh/Documents/workspace/OceanWay/src/main/java/classes/reading/scanner.txt");
+			FileReader fr = new FileReader(System.getProperty("user.dir")
+					+ "/src/main/java/classes/reading/scanner.txt");
 
 			Scanner sc = new Scanner(fr);
 			int sum = 0, counter = 0;

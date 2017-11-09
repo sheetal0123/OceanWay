@@ -44,6 +44,7 @@ public class PolymorphicArrays {
 	 * But at runtime we passed a Dog array
 	 */
 	public void badAnimal(Animal [] animal){
+		//updating current array with new elements
 		animal[0] = new Dog();
 		animal[1] = new Cat();  // Adding a Cat into Dog array
 		animal[2] = new Animal(); // Adding Parent Animal object into Child Dog array

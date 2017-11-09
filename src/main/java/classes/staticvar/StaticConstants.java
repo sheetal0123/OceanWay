@@ -2,9 +2,8 @@ package classes.staticvar;
 
 /**
  * Constant never get a default value (be an instance or static constant)
- * Constant cannot be used before initialization (be an instance or static
- * constant) Static constant has to be initialized at declaring time or in
- * static block
+ * Constant cannot be used before initialization (be an instance or static constant) 
+ * Static constant has to be initialized at declaring time or in static block
  * 
  * Static variable/method get executed in order they appear in class from top to bottom
  *
