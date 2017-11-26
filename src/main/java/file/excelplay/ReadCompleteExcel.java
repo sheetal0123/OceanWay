@@ -15,10 +15,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * testdata1.xls : primary key/test_case_id is present in main sheet and
+ * DataInMultipleSheet.xls : primary key/test_case_id is present in main sheet and
  * respective single data is present in multiple sheets
  * 
- * testdata2.xls : primary key/test_case_id is present in main sheet and
+ * DataInFullSingleSheet.xls : primary key/test_case_id is present in main sheet and
  * respective multiple data is present in single sheet
  * 
  * testdata3.xls : primary key/test_case_id is present in main sheet and
@@ -26,11 +26,26 @@ import org.slf4j.LoggerFactory;
  * 
  *
  */
-public class ReadExcelSheet1 {
+public class ReadCompleteExcel {
 
 	HashMap<String, HashMap<String, String>> entireTestData;
 	private File file;
-	final Logger logger = LoggerFactory.getLogger(ReadExcelSheet1.class);
+	final Logger logger = LoggerFactory.getLogger(ReadCompleteExcel.class);
+
+
+	public static void main(String[] args) {
+		ReadCompleteExcel obj = new ReadCompleteExcel();
+		String dataFile = "\\src\\main\\java\\file\\excelplay\\DataInMultipleSheet.xls";
+		String sheetToBeRead = "master_students_list"; // master_students_list,class_details
+		String testCaseIdToBeRead = "tc5";
+
+		Map<String, HashMap<String, String>> bigHashMap = obj
+				.readCompleteExcelDataSheet(dataFile, sheetToBeRead);
+		Map<String, String> smallHaspMap = obj.readSingleExcelRow(bigHashMap,testCaseIdToBeRead);
+		obj.printSingleExcelRow(smallHaspMap);
+	}
+
+
 
 	/**
 	 * { 1={student_id=1, last_name=sharma, middle_name=pink, first_name=sara},
@@ -43,7 +58,7 @@ public class ReadExcelSheet1 {
 
 	/**
 	 * Method will accept sheet name to be read and return all excel data with
-	 * key as test case id and small HashMap will be <title,value> pair
+	 * key as test case id(string) and small HashMap will be <title,value> pair
 	 */
 	public HashMap<String, HashMap<String, String>> readCompleteExcelDataSheet(
 			String dataFile, String sheetName) {
@@ -57,6 +72,7 @@ public class ReadExcelSheet1 {
 
 		Sheet excelSheet;
 
+		//try with resources used here, no need to close resources opened
 		try (
 			FileInputStream inputStream = new FileInputStream(file);
 			HSSFWorkbook excelWB = new HSSFWorkbook(inputStream);) 
@@ -66,12 +82,12 @@ public class ReadExcelSheet1 {
 			logger.info("Sheet Name to be read:" + excelSheet.getSheetName());
 
 			int rowCount = excelSheet.getLastRowNum();
-			logger.info("Row count in sheet: " + rowCount);
+			//logger.info("Row count in sheet: " + rowCount);
 
 			// read title and add into a list
 			Row headerRow = excelSheet.getRow(0);
 			int columnCount = headerRow.getLastCellNum();
-			logger.info("Column count in sheet: " + columnCount);
+			//logger.info("Column count in sheet: " + columnCount);
 
 			for (int i = 0; i < columnCount; i++) {
 				headerList.add(i, headerRow.getCell(i).getStringCellValue());
@@ -106,29 +122,26 @@ public class ReadExcelSheet1 {
 		return entireTestData;
 	}
 
+
+	/**
+	 * @param bigHashMap it will accept complete data from excel sheet
+	 * @param testCaseIdToBeRead row id which need to be fetched from big hash map
+	 * @return small hash map which contains single row <heading, value> pair
+	 */
+	public Map<String, String> readSingleExcelRow(Map<String, HashMap<String, String>> bigHashMap, String testCaseIdToBeRead) {
+		Map<String, String> map;
+		map = bigHashMap.get(testCaseIdToBeRead);
+		return map;
+	}
+
+
 	/**
 	 * method will print single test case data from big hash map
 	 */
-	public void printSingleRowDataFromBigHashmap(
-			Map<String, HashMap<String, String>> bigHashMap,
-			String testCaseIdToBeRead) {
-		Map<String, String> map;
-		map = bigHashMap.get(testCaseIdToBeRead);
+	public void printSingleExcelRow(Map<String, String> map) {
 		for (String key : map.keySet()) {
-			logger.info(key + "		"+map.get(key));
+			logger.info(key + "	 =	"+map.get(key));
 		}
 	}
 
-	public static void main(String[] args) {
-		ReadExcelSheet1 obj = new ReadExcelSheet1();
-
-		String dataFile = "\\src\\main\\java\\file\\excelplay\\testdata1.xls";
-		String sheetToBeRead = "master_students_list"; // master_students_list,class_details
-		String testCaseIdToBeRead = "tc1";
-
-		Map<String, HashMap<String, String>> bigHashMap = obj
-				.readCompleteExcelDataSheet(dataFile, sheetToBeRead);
-		obj.printSingleRowDataFromBigHashmap(bigHashMap, testCaseIdToBeRead);
-
-	}
 }
