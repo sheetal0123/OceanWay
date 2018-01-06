@@ -1,10 +1,8 @@
 package collections;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 import java.util.Map.Entry;
-import java.util.Set;
+
 /*
  * HashMap - unique key only, one null key allowed, multiple null value allowed, unsorted + unordered
  */
@@ -45,7 +43,9 @@ public class HashMapExamples {
 		for(Entry<String,String> ent:entires){
 			System.out.print(ent.getKey()+":"+ent.getValue()+"  "); // null:Big Joe  1:One  A:Apple  2:Two  B:Boy  4:null  5:null 
 		}
-		
+
+
+		Collection<String> a = hm.values();
 		
 		/**
 		 * Following way Map can be iterate using Iterator way
@@ -77,11 +77,50 @@ public class HashMapExamples {
 		
 		System.out.printf("Using printf formating: value is = %s", hm.get("1"));
 	}
-	
+
+
+
+	public void impMethods(){
+		Map<String,String> hm=new HashMap<String,String>();
+		hm.put("1", "One");
+		hm.put("2", "Two");
+		hm.put("3", "Three");
+
+		//Contains
+		boolean flag1 = hm.containsKey("2");
+		boolean flag2 = hm.containsValue("Two");
+		System.out.printf("Contains function = %s and %s", flag1, flag2);
+		System.out.println("");
+
+		//Values
+		Collection<String> list = hm.values();
+		System.out.printf("Values function = %s", list);  //Values function = [One, Two, Three]
+		System.out.println("");
+
+		//GetorDefault Value
+		String val1 = hm.getOrDefault("3","Mango");
+		String val2 = hm.getOrDefault("100","Mango");
+		System.out.println("Value1:"+ val1+ "   Value2:"+ val2);
+
+	}
+
+	public void impMethods2() {
+		HashMap<String, String> hashMap = new HashMap<>();
+		hashMap.put("M","Mango");
+		hashMap.put("N","Nest");
+
+		HashMap<String, HashMap<String, String>> bigHashMap = new HashMap<>();
+		bigHashMap.put("set1",hashMap);
+
+		//HashMap<String, String> hm = bigHashMap.values();
+
+	}
 	
 	public static void main(String [] args){
 		HashMapExamples obj=new HashMapExamples();
 		//obj.methodsOfHashMap();
-		obj.test2();
+		//obj.test2();
+		//obj.impMethods();
+		obj.impMethods2();
 	}
 }
