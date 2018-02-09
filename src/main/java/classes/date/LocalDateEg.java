@@ -25,8 +25,13 @@ public class LocalDateEg {
 		boolean futureFlag = LocalDate.parse(futureDate).isAfter(LocalDate.now());
 		boolean backFlag = LocalDate.parse(backDate).isBefore(LocalDate.now());
 		
-		logger.info("Future: "+futureFlag);
-		logger.info("Back: "+backFlag);
+		logger.info("Future: {}",futureFlag);
+		logger.info("Back: {}",backFlag);
+		
+		
+		//Eg 3
+		String strDate=LocalDate.now().toString();
+		logger.info("Date in string: {} ",strDate);
 	}
 
 }
