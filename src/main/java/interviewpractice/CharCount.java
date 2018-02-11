@@ -33,7 +33,7 @@ public class CharCount {
 
 	public void characterCountInString() {
 		String inputString = "hello world";
-		HashMap<Character, Integer> map = new HashMap<Character, Integer>();
+		HashMap<Character, Integer> map = new HashMap<>();
 		char[] arr = inputString.toCharArray();
 
 		// checking each char of strArray

@@ -165,16 +165,20 @@ public class HashMapExamples {
 			System.out.print(pair.getKey() + ":" + pair.getValue() + "  ");
 		}
 
-	}
 
-	public static void main(String [] args){
-		HashMapExamples obj=new HashMapExamples();
-		//obj.hashMapUnderstanding();
-		//obj.testInvalidKeysInHashMap();
-		//obj.impMethods();
+   }
+   
+   
+   public static void main(String [] args){
+      HashMapExamples obj=new HashMapExamples();
+      //obj.hashMapUnderstanding();
+      //obj.testInvalidKeysInHashMap();
+      //obj.impMethods();
 
-		//obj.iterateHashMap();
-		//obj.getHashMapValues();
-		//obj.iterateMapUsingIterator();
-	}
+      //obj.iterateHashMap();
+      //obj.getHashMapValues();
+      //obj.iterateMapUsingIterator();
+   }
+	
+
 }
