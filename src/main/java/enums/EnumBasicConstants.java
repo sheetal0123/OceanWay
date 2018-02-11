@@ -22,7 +22,7 @@ public class EnumBasicConstants {
 		//Iterating on enum constants
 		Directions[] obj = Directions.values();
 		for (Directions d : obj) {
-			System.out.println(d);
+			System.out.println(d + ", index:"+ d.ordinal());
 		}
 
 

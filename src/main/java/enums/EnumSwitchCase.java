@@ -7,8 +7,7 @@ enum Beer {
 public class EnumSwitchCase {
 
 	public static void main(String[] args) {
-		Beer obj;
-		obj = Beer.kingfisher;
+		Beer obj = Beer.kingfisher;
 		System.out.println(obj); // kingfisher
 
 		obj = Beer.godfather;
