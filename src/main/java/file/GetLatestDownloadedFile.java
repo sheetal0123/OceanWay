@@ -11,7 +11,9 @@ import com.google.common.base.Throwables;
 public class GetLatestDownloadedFile {
 
 	
-	
+	/**
+	 * This method will return latest downloaded file(with given extention) in given folder
+	 */
 	public String getTheNewestFilePath(String typeOfFile) {
 		try {
 			String filePath = getUserDownloadPath();
