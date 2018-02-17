@@ -87,8 +87,17 @@
 			<artifactId>itextpdf</artifactId>
 			<version>${itextpdf.version}</version>
 		</dependency>
-
-
+		
+		<!-- https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15on
+		Need to download jar from http://www.bouncycastle.org/latest_releases.html
+		Following dependency is not working for pdf > ReadPDFContent.java
+		
+		<dependency>
+			<groupId>org.bouncycastle</groupId>
+			<artifactId>bcprov-jdk15on</artifactId>
+			<version>${bouncycastle.version}</version>
+		</dependency>
+		 -->
 
 	</dependencies>
 
