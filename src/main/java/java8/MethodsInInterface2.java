@@ -27,7 +27,8 @@ public class MethodsInInterface2 implements mango, orange{
     }
 
     public static void main(String [] args){
-        MethodsInInterface obj = new MethodsInInterface();
+        MethodsInInterface2 obj = new MethodsInInterface2();
+        obj.commonName();
     }
 
 }
