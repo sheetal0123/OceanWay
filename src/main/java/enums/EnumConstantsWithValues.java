@@ -22,8 +22,7 @@ enum Mango {
 	}
 
 	public double getWholeSalePrice(int price){
-		double discount = price * 0.20;
-		return price - discount;
+		return price * 0.80;
 	}
 }
 
@@ -37,13 +36,14 @@ public class EnumConstantsWithValues {
 
 		//Calling methods of enum
 		System.out.println(Mango.SAFEDA);
-		System.out.println(Mango.SAFEDA.getWholeSalePrice(Mango.SAFEDA.getPrice()));
+		int safedaPrice = Mango.SAFEDA.getPrice();
+		System.out.println(Mango.SAFEDA.getWholeSalePrice(safedaPrice));
 		System.out.println("");
 
 
 		//Iterating on enum values
 		for (Mango obj : Mango.values()) {
-			System.out.println(obj + " : " + obj.getPrice() );
+			System.out.println(obj + " : " + obj.getPrice() + " : "+ obj.getWholeSalePrice(obj.getPrice()) );
 		}
 				
 	}

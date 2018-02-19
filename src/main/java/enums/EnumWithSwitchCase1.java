@@ -2,7 +2,7 @@ package enums;
 
 /**
  * We are using common method for every enum
- * Disadvantage is we need to throw stmt
+ * Disadvantage is we need to use throw stmt
  */
 enum Operation{
     PLUS, MINUS, MULTIPLY, DIVIDE;
@@ -19,6 +19,8 @@ enum Operation{
 }
 
 public class EnumWithSwitchCase1 {
+
+
     public static void main(String [] ars){
         System.out.println("Plus: "+Operation.PLUS.applyOperations(10,20));
     }
