@@ -8,8 +8,8 @@ package lambdas;
 public class A_BasicSyntaxWithLambdaMultiArgument {
 
 	public static void main(String[] args) {
-		Addable lambda = (int a, int b) -> a + b;
-		System.out.println("Sum: " + lambda.getAddition(50, 100));
+		Addable add = (int a, int b) -> a + b;
+		System.out.println("Sum: " + add.getAddition(50, 100));
 	}
 }
 
