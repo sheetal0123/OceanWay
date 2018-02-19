@@ -54,6 +54,13 @@ public class Java8_LocalDate {
 		LocalDate hundredDay2014 = LocalDate.ofYearDay(2014, 100);
 		logger.info("100th day of 2014="+hundredDay2014);  // 2014-04-10
 
+		
+				
+		//Eg 6
+		String strDate=LocalDate.now().toString();
+		logger.info("Date in string: {} ",strDate);		
+		
+		
 	}
 
 }
