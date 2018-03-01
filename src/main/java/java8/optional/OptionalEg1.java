@@ -1,4 +1,4 @@
-package java8;
+package java8.optional;
 
 import java.util.Arrays;
 import java.util.List;
@@ -29,14 +29,6 @@ public class OptionalEg1 {
 
 	public static void main(String[] args) {
 		OptionalEg1 obj = new OptionalEg1();
-		//obj= null;
-		//obj.sample1();
-		
-		
-		Optional<OptionalEg1> opt = Optional.ofNullable(obj);
-//		Optional<OptionalEg1> opt = Optional.of(obj);
-		
-			
-
+		obj.sample1();
 	}
 }
