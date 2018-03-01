@@ -1,12 +1,25 @@
 package classes.string;
 
+import java.text.DecimalFormat;
+
 /**
  * for formating we need to use "printf" rather "println"
  */
 public class StringFormating {
 
+	
+	public void convertStringToTwoDecimalPlaces(String amt) {
+		DecimalFormat df = new DecimalFormat("0.00");
+		df.setMaximumFractionDigits(2);
+		System.out.println("String to two decimal places >>"+ df.format(Float.parseFloat(amt)).trim());
+    }
+	
+	
 
 	public static void main(String [] args){
+		StringFormating obj = new StringFormating();
+		obj.convertStringToTwoDecimalPlaces("100.506");
+		
 		
 		// tab
 		System.out.println("I am cop \t and i am on my duty");  // I am cop	  and i am on my duty
