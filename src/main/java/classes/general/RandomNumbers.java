@@ -51,12 +51,14 @@ public class RandomNumbers {
 		
 	}
 
+
 	public static void main(String[] args) {
 		RandomNumbers obj = new RandomNumbers();
 		//obj.getRandomNumberRange1(8);
 		//obj.getRandomNumberRange2(1000);
 		//obj.getRandomNumberRange3(5000);
-		obj.getRandomNumberWithFixLength(10);
+		//obj.getRandomNumberWithFixLength(10);
+		
 	}
 
 }

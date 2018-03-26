@@ -61,6 +61,17 @@ public class Java8_LocalDate {
 		logger.info("Date in string: {} ",strDate);		
 		
 		
+		//Eg 7 : Convert String to LocalDate obj
+		String strDateEg = "2018-03-23";
+		LocalDate ld1 = LocalDate.parse(strDateEg);
+		logger.info(">>> ="+ ld1);
+		
+		//Eg 8 : Convert String to LocalDate obj using Formatter
+		String strDateEg2 = "23-Mar-2018";
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MMM-yyyy");
+		LocalDate ld2 = LocalDate.parse(strDateEg2,formatter);
+		logger.info(">>>>>>>> ="+ ld2);
+		
 	}
 
 }
