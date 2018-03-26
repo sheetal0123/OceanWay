@@ -2,8 +2,8 @@ package java8.lambdas;
 
 /**
  * - lambda argument should always match interface method signature lambda 
- * - can only work with functional interface because if if have two method inside
- * 	 interface with same arg then lambda will get confuse
+ * - can only work with functional interface because if we have two method inside
+ * 	 interface with same arg then lambda will get confused
  */
 public class A_BasicSyntaxWithLambdaMultiArgument {
 

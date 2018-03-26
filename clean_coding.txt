@@ -1,0 +1,6 @@
+#Clean Coding:
+- The best place to make local variable is where we have to use them. Shd have min scope.
+- Try to use for-each loop over normal for loop and iterator
+- Never use float and double to money related calculation. Use BigDecimal.
+
+

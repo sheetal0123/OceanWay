@@ -5,15 +5,14 @@ package java8.lambdas;
  *  
  */
 
-public class A_BasicSyntax {
 
-	public static void main(String[] args) {
-		Greet g = new Greet();
-		System.out.println("Length: "+g.getLength("Hello Lamdas"));;
-	}
-
+//interface
+interface Greeting {
+	public int getLength(String s);
 }
 
+
+//standard class implementing interface
 class Greet implements Greeting {
 
 	@Override
@@ -23,6 +22,16 @@ class Greet implements Greeting {
 
 }
 
-interface Greeting {
-	public int getLength(String s);
+
+//Test Class using interface
+public class A_BasicSyntax {
+
+	public static void main(String[] args) {
+		Greet g = new Greet();
+		System.out.println("Length: "+g.getLength("Hello Lamdas"));;
+	}
+
 }
+
+
+
