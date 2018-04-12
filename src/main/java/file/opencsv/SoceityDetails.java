@@ -4,7 +4,8 @@ import com.opencsv.bean.CsvBindByName;
 
 public class SoceityDetails {
 	
-	@CsvBindByName(column = "Scty-Name")
+	//column not required as member name is same as csv column name
+	@CsvBindByName
 	String soceityName;
 	
 	@CsvBindByName(column = "Scty-Age")

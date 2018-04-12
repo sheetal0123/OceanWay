@@ -16,7 +16,7 @@ import com.opencsv.bean.CsvToBeanBuilder;
  * 
  * https://www.callicoder.com/java-read-write-csv-file-opencsv/
  */
-public class ReadCSVAsBean {
+public class ReadCSVAsBeanWithoutAnnotations {
 	
 	@SuppressWarnings("unchecked")
 	public void readCSVAsAJavaBean() throws IOException{
@@ -50,7 +50,7 @@ public class ReadCSVAsBean {
 	
 	public static void main(String [] args) throws IOException{
 		
-		ReadCSVAsBean obj = new ReadCSVAsBean();
+		ReadCSVAsBeanWithoutAnnotations obj = new ReadCSVAsBeanWithoutAnnotations();
 		obj.readCSVAsAJavaBean();
 		
 	}
