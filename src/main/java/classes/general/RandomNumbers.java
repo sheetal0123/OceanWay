@@ -2,7 +2,8 @@ package classes.general;
 
 import java.util.Random;
 
-import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.commons.lang.RandomStringUtils;
+import org.apache.commons.lang.StringUtils;
 
 public class RandomNumbers {
 
@@ -50,6 +51,20 @@ public class RandomNumbers {
 		System.out.println("Length: " + randNos.length());
 		
 	}
+	
+	
+	/**
+	 * Best method we can use, issue coming in import
+	 */
+	public String getRandomNumberWithAnyLength(int length){
+		String randomNumber=RandomStringUtils.random(length, false, true);	
+		if(randomNumber.charAt(0)=='0'){
+			randomNumber = randomNumber.replace(randomNumber.charAt(0), '5');
+		}
+		System.out.println("Random Number:"+ randomNumber + " ,with length as :"+ randomNumber.length());
+		return randomNumber;
+	}
+
 
 
 	public static void main(String[] args) {
@@ -58,6 +73,8 @@ public class RandomNumbers {
 		//obj.getRandomNumberRange2(1000);
 		//obj.getRandomNumberRange3(5000);
 		//obj.getRandomNumberWithFixLength(10);
+		
+		obj.getRandomNumberWithAnyLength(20); // will generate 20 digit random number
 		
 	}
 
