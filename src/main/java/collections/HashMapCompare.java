@@ -12,12 +12,12 @@ public class HashMapCompare {
 
 	static Logger logger = LoggerFactory.getLogger(HashMapCompare.class);
 	
-	
 	/**
-	 * Requirement: all values of map1(actual) should present in map2(actual)
-	 * map2 is expected and bigger than map1
+	 * Requirement: 
+	 * all values of map1 should present in map2
+	 * map2 is bigger map than map1
 	 */
-	public boolean compareTwoHashMap() {
+	public boolean compareMap1PresentIntoMap2() {
 
 		Map<String, String> map1 = new HashMap<>();
 		map1.put("A", "Apple");
@@ -27,8 +27,6 @@ public class HashMapCompare {
 		map2.put("A", "Apple");
 		map2.put("B", "Boy");
 		map2.put("C", "Cat");
-		
-		
 		
 		boolean flag = true;
 		int failCount = 0;
@@ -78,7 +76,7 @@ public class HashMapCompare {
 	
 	public static void main(String [] args){
 		HashMapCompare obj = new HashMapCompare();
-		boolean flag = obj.compareTwoHashMap();
+		boolean flag = obj.compareMap1PresentIntoMap2();
 		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>> "+flag);
 		
 	}

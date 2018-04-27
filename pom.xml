@@ -10,6 +10,7 @@
 	<properties>
 		<itextpdf.version>5.5.11</itextpdf.version>
 		<poi.version>3.12</poi.version>
+		<jsch.version>0.1.54</jsch.version>
 	</properties>
 
 	<dependencies>
@@ -107,6 +108,11 @@
     		<version>2.6</version>
 		</dependency>
 
+		<dependency>
+        	<groupId>com.jcraft</groupId>
+            <artifactId>jsch</artifactId>
+            <version>${jsch.version}</version>       
+        </dependency> 
 
 		<!-- https://mvnrepository.com/artifact/com.opencsv/opencsv 
 		<dependency>

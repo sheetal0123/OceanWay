@@ -8,10 +8,14 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import com.google.common.base.Throwables;
 
 public class ReadExcelAsListOfList {
 
@@ -63,10 +67,29 @@ public class ReadExcelAsListOfList {
 		}
 
 	}
-
+	
+	
+	public static List<String> readParticularColumnInExcel(String excelPath, int sheetIndex, int columnIndex) {
+		List<String> values = new ArrayList<>();
+		File file = new File(excelPath);
+		
+		try(Workbook wb = new HSSFWorkbook(new FileInputStream(file))) {
+			org.apache.poi.ss.usermodel.Sheet sheet = wb.getSheetAt(sheetIndex);
+			
+			for(Row row : sheet){
+				Cell cell = row.getCell(columnIndex);
+				values.add(cell.getStringCellValue());
+			}			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return values;
+	}
 	public static void main(String[] args) throws IOException {
 		ReadExcelAsListOfList obj = new ReadExcelAsListOfList();
 		obj.readExcel();
+		obj.readParticularColumnInExcel("file path",0,5);
 	}
 
 }
