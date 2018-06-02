@@ -1,6 +1,9 @@
 #Clean Coding:
 - The best place to make local variable is where we have to use them. Shd have min scope.
-- Try to use for-each loop over normal for loop and iterator
+- Try to use for-each loop over normal for loop and iterator to iterate an array or collection.
+	for-each has many adv specially in case of nested loops.
 - Never use float and double to money related calculation. Use BigDecimal.
+- Always try to use Primitive over Boxed Primitive(Integer,Long,Boolean etc) wherever possible
+- 
 
 
