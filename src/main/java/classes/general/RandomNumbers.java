@@ -5,6 +5,12 @@ import java.util.Random;
 import org.apache.commons.lang.RandomStringUtils;
 import org.apache.commons.lang.StringUtils;
 
+/**
+ * This is the most trusted method as of now to generate random number : random.nextInt(max number)
+ * Note: It will generate random number b/w 0 to (max-1)
+ * But will not generate fix length random number
+ *
+ */
 public class RandomNumbers {
 
 	//Here we pass max digits
@@ -70,11 +76,11 @@ public class RandomNumbers {
 	public static void main(String[] args) {
 		RandomNumbers obj = new RandomNumbers();
 		//obj.getRandomNumberRange1(8);
-		//obj.getRandomNumberRange2(1000);
+		obj.getRandomNumberRange2(2);
 		//obj.getRandomNumberRange3(5000);
 		//obj.getRandomNumberWithFixLength(10);
 		
-		obj.getRandomNumberWithAnyLength(20); // will generate 20 digit random number
+		//obj.getRandomNumberWithAnyLength(20); // will generate 20 digit random number
 		
 	}
 

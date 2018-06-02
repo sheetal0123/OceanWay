@@ -2,7 +2,7 @@ package classes.string;
 
 /**
  * String Builder is not thread safe
- * String Buffer is thread safe i.e. synchronize
+ * String Buffer is thread safe i.e. synchronize and also obsolete now
  * Both are more efficient in handling String as both are mutable
  * Use these when we have to do lot of operation with strings as they are memory efficient and hence faster
  */
