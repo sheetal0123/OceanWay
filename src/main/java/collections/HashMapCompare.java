@@ -5,8 +5,7 @@ import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import classes.date.CalendarEg;
+import org.testng.Assert;
 
 public class HashMapCompare {
 
@@ -30,40 +29,33 @@ public class HashMapCompare {
 		
 		boolean flag = true;
 		int failCount = 0;
+		logger.info("Map1 Size: {}",map1.size());
+		logger.info("Map2 Size: {}",map2.size());
+		
+		Assert.assertTrue(map2.size()>=map1.size(),"Map2 size shd be greater or equal else stop here");
 
-		if (map1.size() != map2.size()) {
-			logger.info("Size of map1 is :{}",map1.size());
-			logger.info("Size of map2 is :{}",map2.size());
-			logger.error("Size of both map's is NOT equal");
-		}
-
-		// verify if ALL Key's of map 1 are present in map2
+		// check that all keys in map 1 shd present in map2
 		for (String key : map1.keySet()) {
 			try {
 				if (!map2.containsKey(key)) {
-					logger.error("Key missing in map2:{}", key);
+					logger.error("map2 does not contains key:{}", key);
 					flag = false;
 					failCount++;
-				} else {// As key is present now we will compare values of both
-						// HahMaps
+				} else {
 					if (map1.get(key).equals(map2.get(key))) {
 						flag = true;
 					} else {
-						logger.error("For Key :{}", key);
-						logger.error("Value of map 1 is: {}", map1.get(key));
-						logger.error("Which is not Equal value in map2 :{}",
-								map2.get(key));
+						System.out.println("Key:"+key+", Value in Map1:"+map1.get(key)+", Value in Map2:"+map2.get(key));
 						flag = false;
 						failCount++;
 					}
 				}
 			} catch (NullPointerException e) {
 				logger.error("NullPointerException  " + e + e.getMessage());
-				logger.error("map2 does not contain a value present in map1");
+				logger.error("Value mismatch in both maps");
 			}
 		}
 		if (failCount > 0) {
-			logger.error("Unmatched counter (Key and values) {} ", failCount);
 			flag = false;
 		}
 		return flag;
