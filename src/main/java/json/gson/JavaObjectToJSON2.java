@@ -7,7 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
+//Convert Java Object to Json File
 public class JavaObjectToJSON2 {
 
 	//Initialize Employee Object
@@ -29,7 +31,7 @@ public class JavaObjectToJSON2 {
 		return obj;
 	}
 
-	public static void main(String[] args)  {
+	public static void main(String[] args) {
 		JavaObjectToJSON2 javaObjectToJSON = new JavaObjectToJSON2();
 
 		// initialize Employee obj with data
@@ -41,15 +43,16 @@ public class JavaObjectToJSON2 {
 		// file writer
 		String file = ".\\src\\main\\java\\json\\gson\\emp.json";
 		FileWriter fw = null;
+		
 		try {
 			fw = new FileWriter(file);
+			gson.toJson(obj, fw);
+			fw.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		System.out.println("Creating file:");
-		System.out.println(obj.toString());
-		
-		gson.toJson(obj,fw);
+		System.out.println("File created succesfully");
+
 	}
 
 }

@@ -6,14 +6,30 @@ import java.util.Random;
 
 
 public class TestClass {
-
+	
+	public String getInstitutionId(String completeInstitutionName){
+		return completeInstitutionName.split("\\[")[1].replaceAll("\\]","").trim();
+	}
+	
 
     public static void main(String [] args){
-    	String abc = "abcdefghij";
-    	System.out.println(abc.charAt(1));
-    	//6_8
-    	System.out.println(abc.substring(5,8));
-
+    	
+    	TestClass obj = new TestClass();
+    	
+    	System.out.println(obj.getInstitutionId("AutoFullDCC [204648]"));
+    	
+//    	String institution = "AutoFullDCC [204648]";
+//		String[] str1= institution.split("\\[");
+//		str1[1]=str1[1].replaceAll("\\]","");
+//		System.out.println(str1[1].trim());
+		
+		
+//		String institution = "AutoFullDCC [204648]";
+//		String str1= institution.split("\\[")[1].replaceAll("\\]","").trim();
+//		System.out.println(str1);
+    	
+    	
+    	
     }
 
 }
