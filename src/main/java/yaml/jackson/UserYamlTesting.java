@@ -15,7 +15,7 @@ public class UserYamlTesting {
 		
 		try {
 			File file = new File(".\\src\\main\\java\\yaml\\jackson\\userjack.yaml");
-			User user = objectMapper.readValue(file, User.class));
+			User user = objectMapper.readValue(file, User.class);
 		}catch(Exception e) {
 			e.printStackTrace();
 		}

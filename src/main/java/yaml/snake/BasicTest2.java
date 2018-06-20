@@ -19,7 +19,7 @@ public class BasicTest2 {
 				System.out.println("Class Type: " + o.getClass());
 				System.out.println(o);
 			}
-
+			in.close();
 		}
 
 	}
