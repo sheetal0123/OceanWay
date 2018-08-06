@@ -29,18 +29,18 @@ public class ReadCSVAsBeanUsingAnnotations {
 			
 				//setting up CSV Bean
 				@SuppressWarnings("rawtypes")
-	            CsvToBean<SoceityDetails> csvToBean = new CsvToBeanBuilder(reader)
-	                    .withType(SoceityDetails.class)
+	            CsvToBean<SocietyDetails> csvToBean = new CsvToBeanBuilder(reader)
+	                    .withType(SocietyDetails.class)
 	                    .withIgnoreLeadingWhiteSpace(true)
 	                    .build();
 				
 				//Iterator saving objects
-	            Iterator<SoceityDetails> csvUserIterator = csvToBean.iterator();
+	            Iterator<SocietyDetails> csvUserIterator = csvToBean.iterator();
 
 
 	            //Print each object
 	            while (csvUserIterator.hasNext()) {
-	            	SoceityDetails soceityDetails = csvUserIterator.next();
+	            	SocietyDetails soceityDetails = csvUserIterator.next();
 	                System.out.println("S Name : " + soceityDetails.getSoceityName());
 	                System.out.println("S Age : " + soceityDetails.getSoceityAge());
 	                System.out.println("S Flat Count : " + soceityDetails.getSoceityFlatCount());
@@ -63,16 +63,16 @@ public class ReadCSVAsBeanUsingAnnotations {
 		Reader reader = Files.newBufferedReader(Paths.get(path));
 		
 		//setting up CSV Bean
-		CsvToBean<SoceityDetails> csvToBean = new CsvToBeanBuilder(reader)
-        .withType(SoceityDetails.class)
+		CsvToBean<SocietyDetails> csvToBean = new CsvToBeanBuilder(reader)
+        .withType(SocietyDetails.class)
         .withIgnoreLeadingWhiteSpace(true)
         .build();
 		
 		//Saving objects in Memory i.e. List of objects
-		List<SoceityDetails> csvUsers = csvToBean.parse();
+		List<SocietyDetails> csvUsers = csvToBean.parse();
 
 		//print objects
-	    for(SoceityDetails soceityDetails: csvUsers) {
+	    for(SocietyDetails soceityDetails: csvUsers) {
                System.out.println("S Name : " + soceityDetails.getSoceityName());
                System.out.println("S Age : " + soceityDetails.getSoceityAge());
                System.out.println("S Flat Count : " + soceityDetails.getSoceityFlatCount());
