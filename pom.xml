@@ -11,6 +11,9 @@
 		<itextpdf.version>5.5.11</itextpdf.version>
 		<poi.version>3.12</poi.version>
 		<jsch.version>0.1.54</jsch.version>
+		<commonsio.version>2.6</commonsio.version>
+		<jacksondatabind.version>2.9.6</jacksondatabind.version>
+		<jacksondataformatxml.version>2.9.6</jacksondataformatxml.version>
 	</properties>
 
 	<dependencies>
@@ -63,12 +66,8 @@
 
 		<!-- For rest api testing -->
 		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind 
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId>
-			<version>2.8.1</version>
-		</dependency>
-		-->
+			<dependency> <groupId>com.fasterxml.jackson.core</groupId> <artifactId>jackson-databind</artifactId> 
+			<version>2.8.1</version> </dependency> -->
 
 		<!-- https://mvnrepository.com/artifact/com.jayway.restassured/rest-assured -->
 		<dependency>
@@ -89,83 +88,90 @@
 			<artifactId>itextpdf</artifactId>
 			<version>${itextpdf.version}</version>
 		</dependency>
-		
-		<!-- https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15on
-		Need to download jar from http://www.bouncycastle.org/latest_releases.html
-		Following dependency is not working for pdf > ReadPDFContent.java
-		
-		<dependency>
-			<groupId>org.bouncycastle</groupId>
-			<artifactId>bcprov-jdk15on</artifactId>
-			<version>${bouncycastle.version}</version>
-		</dependency>
-		 -->
+
+		<!-- https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15on 
+			Need to download jar from http://www.bouncycastle.org/latest_releases.html 
+			Following dependency is not working for pdf > ReadPDFContent.java <dependency> 
+			<groupId>org.bouncycastle</groupId> <artifactId>bcprov-jdk15on</artifactId> 
+			<version>${bouncycastle.version}</version> </dependency> -->
 
 		<!-- https://mvnrepository.com/artifact/commons-lang/commons-lang -->
 		<dependency>
-    		<groupId>commons-lang</groupId>
-    		<artifactId>commons-lang</artifactId>
-    		<version>2.6</version>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.6</version>
 		</dependency>
 
 		<dependency>
-        	<groupId>com.jcraft</groupId>
-            <artifactId>jsch</artifactId>
-            <version>${jsch.version}</version>       
-        </dependency> 
+			<groupId>com.jcraft</groupId>
+			<artifactId>jsch</artifactId>
+			<version>${jsch.version}</version>
+		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/com.opencsv/opencsv --> 
+		<!-- https://mvnrepository.com/artifact/com.opencsv/opencsv -->
 		<dependency>
 			<groupId>com.opencsv</groupId>
 			<artifactId>opencsv</artifactId>
 			<version>4.1</version>
 		</dependency>
-       
-       <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+
+		<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
 			<version>2.8.5</version>
 		</dependency>
-       
-       <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml -->
+
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml -->
 		<dependency>
-    		<groupId>com.fasterxml.jackson.dataformat</groupId>
-    		<artifactId>jackson-dataformat-yaml</artifactId>
-    		<version>2.9.5</version>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-yaml</artifactId>
+			<version>2.9.5</version>
 		</dependency>
-       
+
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-xml -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-xml</artifactId>
+			<version>${jacksondataformatxml.version}</version>
+		</dependency>
+
+
 		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
 		<dependency>
-    		<groupId>com.fasterxml.jackson.core</groupId>
-    		<artifactId>jackson-databind</artifactId>
-    		<version>2.9.5</version>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jacksondatabind.version}</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
 		<dependency>
-    		<groupId>org.apache.commons</groupId>
-    		<artifactId>commons-lang3</artifactId>
-    		<version>3.7</version>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.7</version>
 		</dependency>
-		
+
 		<!-- https://mvnrepository.com/artifact/org.yaml/snakeyaml -->
 		<dependency>
-    		<groupId>org.yaml</groupId>
-    		<artifactId>snakeyaml</artifactId>
-    		<version>1.21</version>
+			<groupId>org.yaml</groupId>
+			<artifactId>snakeyaml</artifactId>
+			<version>1.21</version>
 		</dependency>
-		
+
 		<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
 		<dependency>
-    		<groupId>com.google.guava</groupId>
-    		<artifactId>guava</artifactId>
-    		<version>25.1-jre</version>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>25.1-jre</version>
 		</dependency>
-		
-		
-		
-		
+
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>${commonsio.version}</version>
+		</dependency>
+
+
 	</dependencies>
 
 	<build>
