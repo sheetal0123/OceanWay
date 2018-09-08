@@ -6,7 +6,7 @@ import java.util.Map.Entry;
 /*
  * HashMap - unique key only, one null key allowed, multiple null value allowed, unsorted + unordered
  */
-public class HashMapExamples {
+public class HashMapIteration {
 
 	public void hashMapUnderstanding(){
 		HashMap<String,String> hm=new HashMap<String,String>();
@@ -170,7 +170,7 @@ public class HashMapExamples {
    
    
    public static void main(String [] args){
-      HashMapExamples obj=new HashMapExamples();
+      HashMapIteration obj=new HashMapIteration();
       //obj.hashMapUnderstanding();
       //obj.testInvalidKeysInHashMap();
       //obj.impMethods();

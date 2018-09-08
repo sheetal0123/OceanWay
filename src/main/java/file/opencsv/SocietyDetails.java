@@ -2,7 +2,7 @@ package file.opencsv;
 
 import com.opencsv.bean.CsvBindByName;
 
-public class SoceityDetails {
+public class SocietyDetails {
 	
 	//column not required as member name is same as csv column name
 	@CsvBindByName
