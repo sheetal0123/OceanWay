@@ -1,4 +1,4 @@
-package advjava;
+package reflection;
 
 public interface Interface1 {
 

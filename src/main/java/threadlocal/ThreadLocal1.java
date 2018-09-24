@@ -1,4 +1,4 @@
-package advjava;
+package threadlocal;
 
 /**
  * ThreadLocal is personal data for every thread Kind of alternative to

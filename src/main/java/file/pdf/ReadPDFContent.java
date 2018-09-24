@@ -1,36 +1,35 @@
-package pdf;
+package file.pdf;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
 
 import org.slf4j.LoggerFactory;
-
-import com.google.common.base.Throwables;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.PdfStamper;
 import com.itextpdf.text.pdf.parser.PdfTextExtractor;
 
+/**
+ * image.pdf: its an image kind pdf hence not able to read content
+ *
+ */
 public class ReadPDFContent {
 
 	private static final org.slf4j.Logger logger = LoggerFactory.getLogger(ReadPDFContent.class);
 
-	public void readNormalPDF() {
-		String pdfPath = System.getProperty("user.dir")+"\\src\\main\\java\\pdf\\sample2.pdf";
+	public void readNormalPDF(String filename) {
+		String pdfPath = System.getProperty("user.dir")+"\\src\\main\\java\\file\\pdf\\"+filename+".pdf";
 
 		String firstPageContent = "";
 		try {
 			PdfReader pdfReader = new PdfReader(pdfPath);
 			int pageCount = pdfReader.getNumberOfPages();
-
 			System.out.println("pages count:"+ pageCount);
 
-			firstPageContent = PdfTextExtractor.getTextFromPage(pdfReader, 1);
-
+			firstPageContent = PdfTextExtractor.getTextFromPage(pdfReader, 1); // page count
 			pdfReader.close();
 		} catch (Exception e) {
-			logger.info("Failed to read pdf file ", e);
-			throw Throwables.propagate(e);
+			e.printStackTrace();
 		}
 		System.out.println("Text:\n"+ firstPageContent);
 	}
@@ -41,8 +40,8 @@ public class ReadPDFContent {
 	 * Need to add external jar from http://www.bouncycastle.org/latest_releases.html
 	 * Not able to get proper maven dependency
 	 */
-	public void readPasswordProtectedPDF(String password){
-		String pdfPath = System.getProperty("user.dir")+"\\src\\main\\java\\pdf\\sample3_pwd_AUTO0127.pdf";
+	public void readPasswordProtectedPDF(String filename, String password){
+		String pdfPath = System.getProperty("user.dir")+"\\src\\main\\java\\file\\pdf\\"+filename+".pdf";
 
 		PdfReader.unethicalreading = true;
 		PdfReader pdfReader = null;
@@ -88,9 +87,10 @@ public class ReadPDFContent {
 	public static void main(String[] args) {
 
 		ReadPDFContent obj = new ReadPDFContent();
-		//obj.readNormalPDF();
-		obj.readPasswordProtectedPDF("AUTO0127");
-
+		obj.readNormalPDF("simplepdf");
+		obj.readPasswordProtectedPDF("Stmt_Pwd_PAN","MY_PAN");
+		
+		
 	}
 
 }

@@ -8,7 +8,7 @@ import org.apache.commons.lang.StringUtils;
  * For detailed list refer following link
  * https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html
  */
-public class StringUtilsExamples {
+public class StringFormatUsingStringUtilsLib {
 
 	public void repeatChar(){
 		System.out.println("--------------------Repeat----------------------------");
@@ -100,7 +100,7 @@ public class StringUtilsExamples {
 	}
 	
 	public static void main(String[] args) {
-		StringUtilsExamples obj = new StringUtilsExamples();
+		StringFormatUsingStringUtilsLib obj = new StringFormatUsingStringUtilsLib();
 		obj.repeatChar();
 		obj.repeatWithSeparator();
 		obj.rightPad();

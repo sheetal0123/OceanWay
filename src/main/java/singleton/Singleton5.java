@@ -1,4 +1,4 @@
-package advjava;
+package singleton;
 
 import java.io.ObjectStreamException;
 import java.lang.reflect.InvocationTargetException;

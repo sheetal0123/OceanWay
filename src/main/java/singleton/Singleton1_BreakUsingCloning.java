@@ -1,4 +1,4 @@
-package advjava;
+package singleton;
 
 /**
  * As we can see obj3 has different hashcode and hence cannot pass equals

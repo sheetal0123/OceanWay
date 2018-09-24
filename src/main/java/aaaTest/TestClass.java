@@ -1,35 +1,45 @@
 package aaaTest;
 
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.Random;
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 
-
+//name updated
 public class TestClass {
 	
-	public String getInstitutionId(String completeInstitutionName){
-		return completeInstitutionName.split("\\[")[1].replaceAll("\\]","").trim();
+
+	public String getHalfAmount(String amt)
+	{
+		int intAmt = Integer.parseInt(amt);
+		double decimalAmt = intAmt * 0.01;
+		double halfAmount = decimalAmt * 0.5;
+		DecimalFormat decFormat = new DecimalFormat("###.##");
+		decFormat.setMaximumFractionDigits(2);
+		decFormat.setMinimumFractionDigits(2);
+		decFormat.setRoundingMode(RoundingMode.DOWN);
+		String str = decFormat.format(halfAmount).replace(".", "");
+		return prefixPadding(str, "-", 12);
 	}
 	
-
+	
+	public String prefixPadding(String cnt, String pad, int len)
+	{		
+		String strCount = cnt;
+		try {
+			 while (strCount.length() < len)
+				 strCount = pad + strCount;
+			return strCount;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		  return null;
+	}
+	
     public static void main(String [] args){
-    	
     	TestClass obj = new TestClass();
     	
-    	System.out.println(obj.getInstitutionId("AutoFullDCC [204648]"));
-    	
-//    	String institution = "AutoFullDCC [204648]";
-//		String[] str1= institution.split("\\[");
-//		str1[1]=str1[1].replaceAll("\\]","");
-//		System.out.println(str1[1].trim());
+    	String str = obj.getHalfAmount("400.60");
+    	System.out.println(str);
 		
-		
-//		String institution = "AutoFullDCC [204648]";
-//		String str1= institution.split("\\[")[1].replaceAll("\\]","").trim();
-//		System.out.println(str1);
-    	
-    	
-    	
     }
 
 }

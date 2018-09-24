@@ -1,4 +1,4 @@
-package advjava;
+package singleton;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

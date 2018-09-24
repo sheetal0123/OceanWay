@@ -15,6 +15,7 @@
 		<jacksondatabind.version>2.9.6</jacksondatabind.version>
 		<jacksondataformatxml.version>2.9.6</jacksondataformatxml.version>
 		<antjsch.version>1.10.5</antjsch.version>
+		<jxl.version>2.6.12</jxl.version>
 	</properties>
 
 	<dependencies>
@@ -178,7 +179,11 @@
 			<artifactId>ant-jsch</artifactId>
 			<version>${antjsch.version}</version>
 		</dependency>
-
+		<dependency>
+			<groupId>net.sourceforge.jexcelapi</groupId>
+			<artifactId>jxl</artifactId>
+			<version>${jxl.version}</version>
+		</dependency>	
 
 	</dependencies>
 

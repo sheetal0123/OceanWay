@@ -1,4 +1,4 @@
-package advjava;
+package singleton;
 
 /**
  * One of the design pattern

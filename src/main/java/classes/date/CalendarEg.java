@@ -9,12 +9,31 @@ import org.slf4j.LoggerFactory;
 public class CalendarEg {
 	
 	static Logger logger = LoggerFactory.getLogger(CalendarEg.class);
-	static final SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+	
+	public static void getDateTime() {
+		Calendar cal = Calendar.getInstance();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+		logger.info("Date Time: "+sdf.format(cal.getTime()));
+	}
+	
+	
+	public static void getDateDDMMYY() {
+		Calendar cal = Calendar.getInstance();
+		SimpleDateFormat sdf = new SimpleDateFormat("DDMMYY");
+		logger.info("Date: "+sdf.format(cal.getTime()));
+	}
+
+	public static void getTimeHHMMSS() {
+		Calendar cal = Calendar.getInstance();
+		SimpleDateFormat sdf = new SimpleDateFormat("HHMMSS");
+		logger.info("Time: "+ sdf.format(cal.getTime()));
+	}
+
 	
 	public static void main(String [] args){
-		Calendar calendar = Calendar.getInstance();
-		String formattedDate = sdf.format(calendar.getTime()); 
-		logger.info(formattedDate);  //2018/01/05 12:50:02
+		getDateTime();
+		getDateDDMMYY();
+		getTimeHHMMSS();
 	}
 
 }

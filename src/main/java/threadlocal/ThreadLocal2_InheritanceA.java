@@ -1,4 +1,4 @@
-package advjava;
+package threadlocal;
 
 /**
  * 1. As we know every thread has its own thread local space where all data saved

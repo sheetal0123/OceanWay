@@ -1,21 +1,21 @@
-package advjava;
+package singleton;
 
 
 /**
  * Using cloning also we can break simple singleton logic	
  */
 
-public class Singleton4A implements Cloneable {
+public class Singleton4 implements Cloneable {
 	
-	private static Singleton4A instance = null;
+	private static Singleton4 instance = null;
 	
-	private Singleton4A(){
+	private Singleton4(){
 		
 	}
 	
-	public static Singleton4A getInstance(){
+	public static Singleton4 getInstance(){
 		if(instance == null){
-			instance = new Singleton4A();
+			instance = new Singleton4();
 		}
 		return instance;
 	}
@@ -23,22 +23,22 @@ public class Singleton4A implements Cloneable {
 	
 	@Override
 	protected Object clone() throws CloneNotSupportedException {
-		throw new CloneNotSupportedException("Clonning not supported as this is a singleton class");
+		return super.clone();
 	}
 }
 
 
 
-class TestClass4A{
+class TestClass4{
 
-	public static void printme(String name, Singleton4A obj){
+	public static void printme(String name, Singleton4 obj){
 		System.out.println(name +", "+ obj.hashCode());
 	}
 	
 	public static void main(String [] args) throws CloneNotSupportedException {
 		//Singleton obj1 = new Singleton();  - compiler error as constr is private and cannot be used from outside class
-		Singleton4A obj1 = Singleton4A.getInstance();
-		Singleton4A obj2 = Singleton4A.getInstance();
+		Singleton4 obj1 = Singleton4.getInstance();
+		Singleton4 obj2 = Singleton4.getInstance();
 		
 		printme("obj1", obj1);    // 	obj1, 2018699554
 		printme("obj2", obj2);    // 	obj2, 2018699554
@@ -47,7 +47,7 @@ class TestClass4A{
 		
 		
 		//Breaking singleton code using cloning:
-		Singleton4A obj3 = (Singleton4A) obj1.clone();
+		Singleton4 obj3 = (Singleton4) obj1.clone();
 		
 		printme("obj3", obj3);   //     obj3, 1311053135
 		System.out.println(obj1.equals(obj3));   // false

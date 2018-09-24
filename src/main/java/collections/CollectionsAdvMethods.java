@@ -1,6 +1,7 @@
 package collections;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -81,12 +82,23 @@ public class CollectionsAdvMethods {
 		Collections.shuffle(al1);
 		System.out.println(al1); // [4, 3, 0, 1, 2, 5]
 	}
+	
+	public void countGivenWord(String sentence, String word){
+		
+		String [] arr = sentence.split(" ");
+		List<String> ls = Arrays.asList(arr);
+		int count = Collections.frequency(ls, word);
+		System.out.println("Count of '"+word+"' in given sentence is "+ count);
+		
+	}
 
 	public static void main(String[] args) {
 		CollectionsAdvMethods obj = new CollectionsAdvMethods();
-		obj.setOfMethods1();
-		obj.setOfMethods2();
-		obj.setOfMethods3();
+		//obj.setOfMethods1();
+		//obj.setOfMethods2();
+		//obj.setOfMethods3();
+		obj.countGivenWord("Hello how are you where are you going","you");
+		
 	}
 
 }

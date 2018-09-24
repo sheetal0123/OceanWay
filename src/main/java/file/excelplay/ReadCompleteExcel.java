@@ -28,6 +28,7 @@ import org.slf4j.LoggerFactory;
  */
 public class ReadCompleteExcel {
 
+	//imp: for utility class, instance member are a bad idea, always create a local member refer ReadExcelGenericNew.java
 	HashMap<String, HashMap<String, String>> entireTestData;
 	private File file;
 	final Logger logger = LoggerFactory.getLogger(ReadCompleteExcel.class);
