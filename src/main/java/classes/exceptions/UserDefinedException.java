@@ -1,44 +1,36 @@
 package classes.exceptions;
 
-/**
- * To create a custom exception extends Exception class which further extends Throwable class
- */
-class MyOwnException extends Exception {
-	
-	// constructor
-	public MyOwnException() {
-		System.out.println("I am a user defined exception");
-	}
-}
+
 
 public class UserDefinedException {
 
-	/**
-	 * I am throwing a custom exception
-	 */
-	public void customException() throws MyOwnException {
-		throw new MyOwnException(); // call constructor
-	}
-
-	
-	/**
-	 * Handling custom exception
-	 */
-	public void apple() {
-
-		try {
-			customException();
-		} catch (MyOwnException e) {
-			//code
+	//use default constructor exception
+	public void mango(String colour) throws MyOwnException  {
+		if(!colour.equalsIgnoreCase("yellow")){
+			throw new MyOwnException(); 
+		}else{
+			System.out.println("mango has rippened with colour: "+ colour);
 		}
-		System.out.println("program recovered");
-
 	}
 
-	public static void main(String[] args) {
-		UserDefinedException obj = new UserDefinedException();
-		obj.apple();
+	//use single param constructor exception	
+	public void apple(int price) throws MyOwnException  {
+		if(price < 0){
+			throw new MyOwnException(price); 
+		}else{
+			System.out.println("price is: "+ price);
+		}
+	}
+	
 
+	public static void main(String[] args) throws MyOwnException {
+		UserDefinedException obj = new UserDefinedException();
+		//obj.mango("yellow");
+		//obj.mango("red");
+		
+		//obj.apple(100);
+		//obj.apple(-10);
+				
 	}
 }
 

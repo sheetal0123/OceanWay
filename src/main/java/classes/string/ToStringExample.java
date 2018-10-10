@@ -8,7 +8,7 @@ package classes.string;
  * To overco
  *
  */
-public class ExampleToString {
+public class ToStringExample {
 	public static void main(String [] args){
 		Student obj = new Student (10, "Ram");
 		System.out.println(obj);  //implicitly it is calling "obj.toString()" and o/p will be "javacode.Student@7852e922"

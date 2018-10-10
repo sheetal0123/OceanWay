@@ -6,7 +6,10 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.time.LocalTime;
 
-public class PerformanceTest {
+/**
+ * String builder is better when too much string operation is required
+ */
+public class StringPerformanceTest {
 
 	
 	public void useString() throws IOException {
@@ -48,7 +51,7 @@ public class PerformanceTest {
 	}
 	
 	public static void main(String[] args) throws IOException {
-		PerformanceTest obj = new PerformanceTest();
+		StringPerformanceTest obj = new StringPerformanceTest();
 		obj.useString();
 		System.out.println("-------------------------------");
 		obj.useStringBuilder();

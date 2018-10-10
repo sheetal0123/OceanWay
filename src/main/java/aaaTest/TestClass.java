@@ -37,9 +37,13 @@ public class TestClass {
     public static void main(String [] args){
     	TestClass obj = new TestClass();
     	
-    	String str = obj.getHalfAmount("400.60");
-    	System.out.println(str);
+    	//String str = obj.getHalfAmount("400.60");
+    	//System.out.println(str);
 		
+    	System.out.println(String.format("%-145s", "*"));
+    	System.out.println(String.format("%-1s", "6         5"));
+    	
+    	
     }
 
 }

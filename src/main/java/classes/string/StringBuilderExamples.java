@@ -7,7 +7,7 @@ package classes.string;
  * Use these when we have to do lot of operation with strings as they are memory efficient and hence faster
  */
 
-public class StringBuilder1 {
+public class StringBuilderExamples {
 
 
 	public static void main(String [] args){
