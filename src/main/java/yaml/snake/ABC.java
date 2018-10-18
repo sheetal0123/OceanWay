@@ -9,7 +9,7 @@ public class ABC {
 	public static void main(String[] args) throws IOException {
 //		Yaml yaml = new Yaml();
 //
-//		InputStream in = ABC.class.getResourceAsStream("C:\\Users\\e075583\\Documents\\myworkspace\\OceanWay\\src\\main\\java\\yaml\\snake\\abc.yaml");
+//		InputStream in = ABC.class.getResourceAsStream(".\\src\\main\\java\\yaml\\snake\\abc.yaml");
 //		Object obj = yaml.load(in);
 //		System.out.println("Loaded object type:" + obj.getClass());
 //		String strYAML = obj.toString();
@@ -26,9 +26,12 @@ public class ABC {
         Yaml yaml = new Yaml();
         try(InputStream in = ClassLoader.getSystemResourceAsStream("set1.yml")) {
             user = yaml.loadAs(in, User.class);
+            System.out.println(user.getAge());
         } catch(Exception ex) {
             ex.printStackTrace();
         }
+        
+        
         
        
 	}
