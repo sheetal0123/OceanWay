@@ -1,7 +1,7 @@
 package solutions.readingexcel;
 
 /**
- * This class represent a small unit
+ * This class represent a smallest unit
  *	
  *	k1:v1 > k2:v2 > k3:v3
  *

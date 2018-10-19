@@ -10,14 +10,14 @@ import java.util.List;
  */
 public class ExcelPojo {
 
-	String scenarioId;
+	String testCaseId;
 	List<KeyValuePojo> listKeyValuePojo;  // scenario1 > scenario2 
 	
-	public String getScenarioId() {
-		return scenarioId;
+	public String getTestCaseId() {
+		return testCaseId;
 	}
-	public void setScenarioId(String scenarioId) {
-		this.scenarioId = scenarioId;
+	public void setTestCaseId(String testCaseId) {
+		this.testCaseId = testCaseId;
 	}
 	public List<KeyValuePojo> getListKeyValuePojo() {
 		return listKeyValuePojo;

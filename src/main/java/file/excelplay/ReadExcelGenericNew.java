@@ -23,10 +23,10 @@ public class ReadExcelGenericNew {
 	 * @return : this method will return complete excel without filtering anything
 	 */
 	public static Map<String, Map<String, String>> readCompleteExcelSheetData(
-			String filePath, String sheetName, int headerRowNum,
-			int keyColNum) throws IOException {
+			String filePath, String sheetName, int headerRowNumber,
+			int keyColumnNumber) throws IOException {
 
-		String msg = String.format("Reading content from given sheet(%s) "+ "with Header Column as (%s) and BigHashMapKey Column number as (%s)",sheetName, headerRowNum, keyColNum);
+		String msg = String.format("Reading content from given sheet(%s) "+ "with Header Column as (%s) and BigHashMapKey Column number as (%s)",sheetName, headerRowNumber, keyColumnNumber);
 		System.out.println(msg);
 
 		Map<String, Map<String, String>> sheetBigMapData = new LinkedHashMap<>();
@@ -45,9 +45,9 @@ public class ReadExcelGenericNew {
 		Sheet sheet = excelWB.getSheet(sheetName);
 		excelWB.close();
 		int rowCount = sheet.getLastRowNum();
-		Row headerRow = sheet.getRow(headerRowNum);
+		Row headerRow = sheet.getRow(headerRowNumber);
 		
-		for (int i = headerRowNum + 1; i <= rowCount; i++) {
+		for (int i = headerRowNumber + 1; i <= rowCount; i++) {
 			Map<String, String> singleRowContent = new LinkedHashMap<>();
 			Row row = sheet.getRow(i);
 
@@ -64,7 +64,7 @@ public class ReadExcelGenericNew {
 				}
 			}
 
-			String key = row.getCell(keyColNum).getStringCellValue();
+			String key = row.getCell(keyColumnNumber).getStringCellValue();
 			sheetBigMapData.put(key, singleRowContent);
 		}
 
@@ -81,10 +81,10 @@ public class ReadExcelGenericNew {
 	 * @return : this method will return complete excel without filtering anything
 	 */
 	public static Map<String, Map<String, String>> readExcelSheetWithYesFlag(
-			String filePath, String sheetName, int headerRowNum,
+			String filePath, String sheetName, int headerRowNumber,
 			int keyColumnNumber, String yesNoFlagColumnName) throws IOException {
 
-		Map<String, Map<String, String>> bigHashMap = readCompleteExcelSheetData(filePath, sheetName, headerRowNum, keyColumnNumber);
+		Map<String, Map<String, String>> bigHashMap = readCompleteExcelSheetData(filePath, sheetName, headerRowNumber, keyColumnNumber);
 		Map<String, Map<String, String>> bigFlaggedHashMap = new LinkedHashMap<>();
 
 		for (String key : bigHashMap.keySet()) {

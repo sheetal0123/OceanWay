@@ -21,7 +21,7 @@ public class ExecuteCode {
 		Map<String, Map<String,String>> bigmap = ReadExcelGenericNew.readCompleteExcelSheetData(file, sheetName, 0, 0);
 		System.out.println("BIG HashMap: "+bigmap);
 		
-		List<ExcelPojo> bigListOfAllScenariosInExcel = new ArrayList<>();
+		List<ExcelPojo> bigListOfAllTestCasesInExcel = new ArrayList<>();
 
 		for(int i = 1 ; i <= bigmap.size() ; i++){
 			
@@ -29,10 +29,10 @@ public class ExecuteCode {
 			Map<String, String> smallmap = bigmap.get(tcid);  //map contains one complete test case row e.g. TC1
 			System.out.println(tcid+" # "+smallmap);
 			
-			String scenarioRaw= smallmap.get("Scenario Descriptions");
+			String scenarioRaw= smallmap.get("TestCase Descriptions");
 			String [] scenarioListRaw = scenarioRaw.split(">");
 			
-			List<KeyValuePojo> scenarioList = new ArrayList<>();
+			List<KeyValuePojo> listOfKeyValuePairs = new ArrayList<>();
 			
 			for(int j=0 ; j < scenarioListRaw.length ;j++ ){
 				String keyvaluepair = scenarioListRaw[j];
@@ -42,19 +42,19 @@ public class ExecuteCode {
 				keyValuePojo.setKey(keyval[0].trim());
 				keyValuePojo.setValue(keyval[1].trim());
 
-				scenarioList.add(keyValuePojo);
+				listOfKeyValuePairs.add(keyValuePojo);
 			}
-			//after for loop get finished 'scenarioList' will get populated with small k1:v1 > k2:v2 etc lists of specific TC1
+			//after for loop get finished 'listOfKeyValuePairs' will get populated with small k1:v1 > k2:v2 etc lists of specific TC1
 			
 			ExcelPojo excelPojo = new ExcelPojo();
-			excelPojo.setScenarioId(tcid);
-			excelPojo.setListKeyValuePojo(scenarioList);
+			excelPojo.setTestCaseId(tcid);
+			excelPojo.setListKeyValuePojo(listOfKeyValuePairs);
 			//excelPojo contains TC1 and its respective all data in POJO form
 			
-			bigListOfAllScenariosInExcel.add(excelPojo);
+			bigListOfAllTestCasesInExcel.add(excelPojo);
 		}
 		
-		return bigListOfAllScenariosInExcel;
+		return bigListOfAllTestCasesInExcel;
 	}
 	
 	
@@ -66,7 +66,7 @@ public class ExecuteCode {
 		for(int i = 0 ; i < bigJavaObj.size() ; i ++){
 			ExcelPojo excelPojo = bigJavaObj.get(i);
 			
-			System.out.println("-------------Scenario ID ---------------- "+excelPojo.getScenarioId());
+			System.out.println("------------- Test Case ID : "+excelPojo.getTestCaseId());
 			
 			for(int j=0;j<excelPojo.getListKeyValuePojo().size() ; j++){
 				
@@ -81,8 +81,8 @@ public class ExecuteCode {
 	
 	
 	public static void main(String[] args) throws IOException {
-		String dataFilePath = "\\src\\main\\java\\solutions\\readingexcel\\Scenarios.xls";
-		String sheetName = "ScenarioList";
+		String dataFilePath = "\\src\\main\\java\\solutions\\readingexcel\\TestCaseSheet.xls";
+		String sheetName = "TestCaseList";
 		List<ExcelPojo> allExcelScenariosInJavaObj =  fetchExcelDataAndCreateJavaObject(dataFilePath, sheetName);
 		executeOnUIOneByOne(allExcelScenariosInJavaObj);
 	}

@@ -4,6 +4,7 @@
 	for-each has many adv specially in case of nested loops.
 - Never use float and double to money related calculation. Use BigDecimal.
 - Always try to use Primitive over Boxed Primitive(Integer,Long,Boolean etc) wherever possible
-- 
+- A utility class should always have a private constructor, so that no object can be created in class.
+- A utility class should not have any class level variables, all variables should be local to methods otherwise it can impact other codes.
 
 
