@@ -1,4 +1,4 @@
-package advjava.copy;
+package classes.concepts.objcopy;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -6,29 +6,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
-/**
- * Deep clone:
- * - One way is to use serialization 
- *
- */
-class Student implements Serializable{
-	
-	int rollno;
-	String name;
-	int age;
-	
-	Student(int r, String n, int a){
-		this.rollno = r;
-		this.name = n;
-		this.age = a;
-	}
-
-	@Override
-	public String toString() {
-		return "Student [rollno=" + rollno + ", name=" + name + ", age=" + age + "]";
-	}
-	
-}
+import org.yaml.snakeyaml.Yaml;
 
 
 
@@ -37,9 +15,9 @@ public class DeepCopyExample2 {
 
 	
 	/**
-	 * Makes a deep copy of any Java object that is passed.
+	 * Makes a deep copy of any Java object that is passed using serialization
 	 */
-	 private static Object deepCopy(Object object) {
+	 private static Object deepCopyUsingSerialization(Object object) {
 	   try {
 	     ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 	     ObjectOutputStream outputStrm = new ObjectOutputStream(outputStream);
@@ -55,18 +33,33 @@ public class DeepCopyExample2 {
 	 }
 	
 	
+	 
+	/**
+	 *  Makes a deep copy of any Java object that is passed using YAML
+	 */
+	@SuppressWarnings("unchecked")
+	public static <T> T deepCopyUsingYaml(T inputObj) {
+		Yaml yaml = new Yaml();
+		String str = yaml.dump(inputObj);
+		
+		T newObj = (T) yaml.load(str);
+		return newObj;
+	}
 	
 	public static void main(String[] args) {
 		Student s1 = new Student(1, "John", 10);
 		System.out.println("First Original Copy: "+ s1);
 		
-		Student s2 = (Student)deepCopy(s1);
+		//Student s2 = (Student)deepCopyUsingSerialization(s1);
+		Student s2 = (Student)deepCopyUsingYaml(s1);
+		
 		System.out.println("Second Original Copy: "+ s2);
 		s2.rollno = 2;
 		s2.name = "Dan";
 		System.out.println("Second Updated Copy: "+ s2);
 		
 		System.out.println("First Copy Status: "+ s1);
+
 	}
 
 }

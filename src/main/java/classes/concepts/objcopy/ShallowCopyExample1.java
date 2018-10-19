@@ -1,4 +1,4 @@
-package advjava.copy;
+package classes.concepts.objcopy;
 
 import java.util.Arrays;
 /**
