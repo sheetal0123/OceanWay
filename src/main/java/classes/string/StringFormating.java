@@ -18,7 +18,10 @@ public class StringFormating {
 	 * 
 	 * 
 	 */
+	
+	
 	public static void stringDotFormat(){
+		
 		
 		//simple case
 		String s1 = String.format("Hello my name is %s and my age is %d","John", 33);
