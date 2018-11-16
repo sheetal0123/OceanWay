@@ -1,4 +1,4 @@
-package solutions.readingexcel;
+package solutions.run_tc_from_excel;
 
 import java.util.List;
 
