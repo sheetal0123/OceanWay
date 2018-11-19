@@ -81,7 +81,7 @@ public class ExecuteCode {
 	
 	
 	public static void main(String[] args) throws IOException {
-		String dataFilePath = "\\src\\main\\java\\solutions\\readingexcel\\TestCaseSheet.xls";
+		String dataFilePath = "\\src\\main\\java\\solutions\\run_tc_from_excel\\TestCaseSheet.xls";
 		String sheetName = "TestCaseList";
 		List<ExcelPojo> allExcelScenariosInJavaObj =  fetchExcelDataAndCreateJavaObject(dataFilePath, sheetName);
 		executeOnUIOneByOne(allExcelScenariosInJavaObj);

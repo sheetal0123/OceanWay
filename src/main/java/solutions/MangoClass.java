@@ -1,6 +1,5 @@
 package solutions;
 
-import com.mastercard.pts.integrated.acquiring.domain.institution.SearchViewTransaction;
 
 public class MangoClass {
 

@@ -47,7 +47,8 @@ public class MangoObjectComparison {
 	
 	public static void main(String[] args) {
 		MangoObjectComparison m = new MangoObjectComparison();
-		m.compareTwoObjectsOfSameClass();
+		boolean flag = m.compareTwoObjectsOfSameClass();
+		System.out.println("Are object same: "+ flag);
 	}
 
 }
