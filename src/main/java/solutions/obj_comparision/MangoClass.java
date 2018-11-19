@@ -1,4 +1,4 @@
-package solutions;
+package solutions.obj_comparision;
 
 
 public class MangoClass {
