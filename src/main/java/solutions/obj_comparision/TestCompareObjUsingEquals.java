@@ -13,8 +13,8 @@ package solutions.obj_comparision;
 public class TestCompareObjUsingEquals {
 
 	//expected
-	public MangoClass getObjectOne(){
-		MangoClass mango = new MangoClass();
+	public Mango getObjectOne(){
+		Mango mango = new Mango();
 		mango.setId(1);
 		mango.setName("alpha");
 		mango.setColor("golden");
@@ -23,8 +23,8 @@ public class TestCompareObjUsingEquals {
 	}
 	
 	//actual 1
-	public MangoClass getObjectTwo(){
-		MangoClass mango = new MangoClass();
+	public Mango getObjectTwo(){
+		Mango mango = new Mango();
 		mango.setId(1);
 		mango.setName("alpha");
 		mango.setColor("golden");
@@ -34,12 +34,12 @@ public class TestCompareObjUsingEquals {
 	
 	
 	/**
-	 * If Actual object is of diff class i.e. OrangeClass But data is almost same and common data need to verify
-	 * Then fetch data from OrangeClass and update domain of Mango and then compare using current solution
+	 * If Actual object is of diff class i.e. Orange But data is almost same and common data need to verify
+	 * Then fetch data from Orange and update domain of Mango and then compare using current solution
 	 */
-	public MangoClass getObjectTwoFromDiffClass(){
+	public Mango getObjectTwoFromDiffClass(){
 		//object from some diff class
-		OrangeClass orange = new OrangeClass();
+		Orange orange = new Orange();
 		orange.setId("1");
 		orange.setName("alpha");
 		orange.setColor("golden");
@@ -47,7 +47,7 @@ public class TestCompareObjUsingEquals {
 		orange.setState("maha"); //extra, not to be compared
 		
 		//convert orange to mango so that equals can be used
-		MangoClass mango = new MangoClass();
+		Mango mango = new Mango();
 		mango.setId(Integer.valueOf(orange.getId())); // convert string to int
 		mango.setName(orange.getName());
 		mango.setColor(orange.getColor());
@@ -58,9 +58,9 @@ public class TestCompareObjUsingEquals {
 	
 	
 	public boolean compareTwoObjectsOfSameClass(){
-		MangoClass oneExpected = getObjectOne();
-		//MangoClass twoActual = getObjectTwo();
-		MangoClass twoActual = getObjectTwoFromDiffClass();
+		Mango oneExpected = getObjectOne();
+		//Mango twoActual = getObjectTwo();
+		Mango twoActual = getObjectTwoFromDiffClass();
 		
 		if (!oneExpected.equals(twoActual)) {
 			System.out.println("Mismatch Data from Expected"+ oneExpected);

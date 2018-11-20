@@ -1,6 +1,6 @@
 package solutions.obj_comparision;
 
-public class OrangeClass {
+public class Orange {
 
 	String id;
 	String name;
@@ -42,7 +42,7 @@ public class OrangeClass {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("OrangeClass [id=").append(id).append(", name=")
+		builder.append("Orange [id=").append(id).append(", name=")
 				.append(name).append(", color=").append(color)
 				.append(", taste=").append(taste).append(", state=")
 				.append(state).append("]");

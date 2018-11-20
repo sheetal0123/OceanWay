@@ -1,7 +1,7 @@
 package solutions.obj_comparision;
 
 
-public class MangoClass {
+public class Mango {
 
 	int id;
 	String name;
@@ -37,9 +37,9 @@ public class MangoClass {
 	
 	@Override
 	public boolean equals(Object obj) {
-		MangoClass actual;
-		if (obj instanceof MangoClass) {
-			actual = (MangoClass) obj;
+		Mango actual;
+		if (obj instanceof Mango) {
+			actual = (Mango) obj;
 		} else {
 			return false;
 		}
@@ -55,7 +55,7 @@ public class MangoClass {
 	/**
 	 *  this will represent expected obj as expected obj calls equals method
 	 */
-	public boolean verifyData(MangoClass actual) {
+	public boolean verifyData(Mango actual) {
 		return actual.getId() == this.getId()
 			&& actual.getName().equals(this.getName())
 			&& actual.getColor().equals(this.getColor())
