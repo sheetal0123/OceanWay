@@ -8,6 +8,8 @@
 	<description>all test code</description>
 
 	<properties>
+		<!-- <selenium.version>2.53.0</selenium.version> -->
+		<selenium.version>3.141.59</selenium.version>
 		<itextpdf.version>5.5.11</itextpdf.version>
 		<poi.version>3.12</poi.version>
 		<jsch.version>0.1.54</jsch.version>
@@ -20,12 +22,14 @@
 		<antjsch.version>1.10.5</antjsch.version>
 		<jxl.version>2.6.12</jxl.version>
 	</properties>
+	
+	
 
 	<dependencies>
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>2.53.0</version>
+			<version>${selenium.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.testng</groupId>
