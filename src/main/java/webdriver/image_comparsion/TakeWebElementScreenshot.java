@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -12,6 +13,7 @@ import org.openqa.selenium.Point;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class TakeWebElementScreenshot {
@@ -20,8 +22,11 @@ public class TakeWebElementScreenshot {
 WebDriver driver = null;
 	
 	WebDriver getDriver(){
-		if(driver == null)
-			driver = new FirefoxDriver();
+		if(driver == null){
+			//driver = new FirefoxDriver();
+			driver = new ChromeDriver();
+		}
+			
 		return driver;
 	}
 	
@@ -64,9 +69,10 @@ WebDriver driver = null;
 		TakeWebElementScreenshot obj = new TakeWebElementScreenshot();
 		obj.openPage("https://en.wikipedia.org/wiki/Buddhism");
 		
-		WebElement webelement = obj.getDriver().findElement(By.xpath("//div[@id='toc']"));
+		WebElement webelement = obj.getDriver().findElement(By.xpath("//body"));
 		String result_path = ".\\src\\main\\java\\webdriver\\image_comparsion\\element_screenshot.png";
 		obj.takeWebElementScreenshot(webelement, result_path);
+		System.out.println("Done");
 	}
 
 }
