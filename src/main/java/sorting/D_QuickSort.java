@@ -1,4 +1,4 @@
-package aaaTest;
+package sorting;
 
 import java.util.Arrays;
 
@@ -20,10 +20,10 @@ import java.util.Arrays;
  * Disadv:
  * Merge Sort, 	Bucket Sort, Radix Sort and Counting Sort are better than Quick sort
  * 
- * Imp Link: http://bigocheatsheet.com/
- * 5430   168510 prem 
+ * 
+ * 
  */
-public class QuickSort {
+public class D_QuickSort {
 	
  
 	public static void quickSort(int[] arr, int low, int high) {
@@ -67,6 +67,7 @@ public class QuickSort {
 	
 	
 	public static void main(String[] args) {
+		System.out.println("Quick Sort: ");
 		int[] arr = { 9, 2, 4, 7, 3, 8, 10 };
 		System.out.println(Arrays.toString(arr));
  

@@ -1,8 +1,11 @@
 package sorting;
 
+import java.util.Arrays;
+
 /**
  * Refer: 
  * https://www.geeksforgeeks.org/time-complexities-of-all-sorting-algorithms/
+ * http://bigocheatsheet.com/
  * 
  * Bubble Sort is the most basic and simple sorting algo
  * 
@@ -39,21 +42,14 @@ public class A_BubbleSort {
 		}
 	}
 	
-	public static void printArray(int[] arr){
-		for (int i : arr) {
-			System.out.print(i);
-			System.out.print(", ");
-		}
-		System.out.println("\n");
-	}
 
 	public static void main(String[] args) {
-		int arr[] = { 3, 60, 35, 2, 45, 320, 5 };
-		printArray(arr);
-		
-		//sorting array elements using bubble sort
-		bubbleSort(arr);
+		System.out.println("Bubble Sort: ");
+		int [] arr = { 3, 60, 35, 2, 45, 320, 5 };
+		System.out.println(Arrays.toString(arr));
 
-		printArray(arr);
+		bubbleSort(arr);
+		System.out.println(Arrays.toString(arr));
+		
 	}
 }

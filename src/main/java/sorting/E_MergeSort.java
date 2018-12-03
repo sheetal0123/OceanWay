@@ -1,4 +1,4 @@
-package aaaTest;
+package sorting;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -23,21 +23,21 @@ import java.util.Scanner;
  * Take a bit more space than Quick Sort
  * Bucket Sort, Radix Sort and Counting Sort are better than Merge sort
  * 
- * Imp Link: http://bigocheatsheet.com/
  *
  */
-public class MergeSort 
+public class E_MergeSort 
 {
-    /* Merge Sort function */
-    public static void sort(int[] a, int low, int high) 
+
+
+    public static void mergesort(int[] a, int low, int high) 
     {
         int N = high - low;         
         if (N <= 1) 
             return; 
         int mid = low + N/2; 
         // recursively sort 
-        sort(a, low, mid); 
-        sort(a, mid, high); 
+        mergesort(a, low, mid); 
+        mergesort(a, mid, high); 
         // merge two sorted subarrays
         int[] temp = new int[N];
         int i = low, j = mid;
@@ -55,18 +55,16 @@ public class MergeSort
         for (int k = 0; k < N; k++) 
             a[low + k] = temp[k];         
     }
-    /* Main method */
+    
+    
     public static void main(String[] args) 
     {
+    	System.out.println("Merge Sort: ");
     	int[] arr = { 9, 2, 4, 7, 3, 8, 10 };
     	System.out.println(Arrays.toString(arr));
+    	
     	int len = arr.length;
-
-    	sort(arr, 0, len);
-        
-    	System.out.println("\nElements after sorting ");        
-        for (int i = 0; i < len; i++)
-            System.out.print(arr[i]+" ");            
-        System.out.println();            
+    	mergesort(arr, 0, len);
+    	System.out.println(Arrays.toString(arr));  
     }    
 }

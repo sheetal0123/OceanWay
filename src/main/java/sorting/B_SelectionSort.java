@@ -1,6 +1,9 @@
 package sorting;
+
+import java.util.Arrays;
+
 /**
- * selection Sort is the most basic and simple sorting algo
+ * Selection Sort is the most basic and simple sorting algo
  * 
  * Here we find minimum element in array and swap it with left most element
  * 
@@ -38,19 +41,12 @@ public class B_SelectionSort {
 	}
 	
 	
-	public static void printArray(int[] arr){
-		for (int i : arr) {
-			System.out.print(i);
-			System.out.print(", ");
-		}
-		System.out.println("\n");
-	}
-	
 	public static void main(String a[]) {
-		System.out.println("Selection sort: ");
+		System.out.println("Selection Sort: ");
 		int[] arr1 = { 10, 34, 2, 56, 7, 67, 88, 42 };
-		printArray(arr1);
+		System.out.println(Arrays.toString(arr1));
+		
 		int[] arr2 = selectionSort(arr1);
-		printArray(arr2);
+		System.out.println(Arrays.toString(arr2));
 	}
 }
