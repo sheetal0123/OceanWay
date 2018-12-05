@@ -18,10 +18,12 @@ import java.util.Arrays;
  * 2. Take less space because of recursion 	
  *
  * Disadv:
- * Merge Sort, 	Bucket Sort, Radix Sort and Counting Sort are better than Quick sort
- * 
- * 
- * 
+ * ->Merge Sort, Heap Sort are better options
+ * ->Bucket Sort, Radix Sort and Counting Sort are better but only for small set
+ * ->Imp (interview): Worst case occur if array is already sorted in asc or desc or same element in arr and
+ *   pivot is selected as min or max element 
+ *   refer:https://www.geeksforgeeks.org/when-does-the-worst-case-of-quicksort-occur/
+ *   
  */
 public class D_QuickSort {
 	

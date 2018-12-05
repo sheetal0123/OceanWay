@@ -40,8 +40,11 @@ public class TestClass {
     	//String str = obj.getHalfAmount("400.60");
     	//System.out.println(str);
 		
-    	System.out.println(String.format("%-145s", "*"));
-    	System.out.println(String.format("%-1s", "6         5"));
+//    	System.out.println(String.format("%-145s", "*"));
+//    	System.out.println(String.format("%-1s", "6         5"));
+    	
+    	String str = "[-]";
+    	System.out.println(">"+str.split("\\[")[1].replaceAll("\\]","").trim()+"<");
     	
     	
     }
