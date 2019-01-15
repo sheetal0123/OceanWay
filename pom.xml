@@ -14,9 +14,9 @@
 		<poi.version>3.12</poi.version>
 		<jsch.version>0.1.54</jsch.version>
 		<commonsio.version>2.6</commonsio.version>
-		<jacksondatabind.version>2.9.6</jacksondatabind.version>
-		<jacksondataformatxml.version>2.9.6</jacksondataformatxml.version>
-		<jacksoncore.version>2.9.5</jacksoncore.version>
+		<jacksondatabind.version>2.9.8</jacksondatabind.version>
+		<jacksondataformatxml.version>2.9.8</jacksondataformatxml.version>
+		<jacksoncore.version>2.9.8</jacksoncore.version>
 		<opencsv.version>4.1</opencsv.version>
 		
 		<antjsch.version>1.10.5</antjsch.version>

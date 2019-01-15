@@ -1,5 +1,11 @@
 package collections;
 
+
+/**
+ * 
+ *  Diff between Arrays and ArrayList
+ *  http://www.java67.com/2012/12/difference-between-array-vs-arraylist-java.html
+ */
 public class ArraysExamples {
 
 	//Initializing Type 1

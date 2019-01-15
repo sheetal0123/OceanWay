@@ -30,10 +30,22 @@ public class CalendarEg {
 	}
 
 	
+	public static void getReducedDateTime() {
+		Calendar cal = Calendar.getInstance();
+		SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyy HH:mm:ss");
+		String currenttime = sdf.format(cal.getTime());
+		logger.info("Current Date Time: "+ currenttime);
+		
+		cal.add(Calendar.MINUTE, -60);
+		String newtime = sdf.format(cal.getTime());
+		logger.info("New Current Date Time: "+ newtime);
+	}
+	
 	public static void main(String [] args){
 		getDateTime();
 		getDateDDMMYY();
 		getTimeHHMMSS();
+		getReducedDateTime();
 	}
 
 }

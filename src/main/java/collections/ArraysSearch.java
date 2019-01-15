@@ -7,7 +7,7 @@ import java.util.Arrays;
  * 
  * Binary Search gives the index of searched item
  */
-public class ArraySearch {
+public class ArraysSearch {
 
 	
 	public static void searchUsingBinarySearch(String s1, char s2) {
@@ -61,7 +61,7 @@ public class ArraySearch {
 
 	public static void main(String[] args) {
 		//ArraySearch.searchUsingBinarySearch("mango",'m');
-		ArraySearch.test("mango","noa");
+		ArraysSearch.test("mango","noa");
 	}
 
 }
