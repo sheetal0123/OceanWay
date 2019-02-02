@@ -2,6 +2,10 @@ package aaaTest;
 
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.HashMap;
+import java.util.Map;
 
 //name updated
 public class TestClass {
@@ -43,10 +47,13 @@ public class TestClass {
 //    	System.out.println(String.format("%-145s", "*"));
 //    	System.out.println(String.format("%-1s", "6         5"));
     	
-    	String str = "[-]";
-    	System.out.println(">"+str.split("\\[")[1].replaceAll("\\]","").trim()+"<");
+    	//Map<String, String> map = new HashMap<>();
+    	
+    	//map.put("apple", "abc");
     	
     	
+    	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+    	System.out.println(LocalDate.now().format(formatter));
     }
 
 }

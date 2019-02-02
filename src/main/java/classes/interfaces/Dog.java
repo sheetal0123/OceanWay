@@ -5,43 +5,52 @@ package classes.interfaces;
  * as argument or return type. So in interface we focus on role to play rather class.
  * Pet is a role, pet can be anyone - machine, animal or alien (really - do they exists)
  */
-abstract class Animal {
-}
 
-public class Dog extends Animal implements Pet {
+public class Dog implements Pet {
 
-	Pet p;
-
-	static RoboDog rd = new RoboDog(); // Composition eg
-
-	/**
-	 * I am a polymorphic method, can take anything which is a Pet
-	 */
-	public void setPet(Pet p) {
-		System.out.println(p.toString());
+	
+	@Override
+	public String whatMyPetEats() {
+		return "Bone";
 	}
+	
+	
+//	Pet p;
+//
+//	static RoboDog rd = new RoboDog(); // Composition eg
 
-	/**
-	 * I am returning a Pet, anyone who is pet can take values from me but
-	 * please cast to you type
-	 */
-	public Pet getPet() {
-		return p;
-	}
+	
+//	/**
+//	 * I am a polymorphic method, can take anything which is a Pet
+//	 */
+//	public void setPet(Pet p) {
+//		System.out.println(p.toString());
+//	}
+//
+//	/**
+//	 * I am returning a Pet, anyone who is pet can take values from me but
+//	 * please cast to you type
+//	 */
+//	public Pet getPet() {
+//		return p;
+//	}
+
+
+//
+//	public static void main(String[] args) {
+//		Dog d = new Dog();
+//		d.setPet(d); 
+//		d = (Dog) d.getPet();
+//
+//		
+//		Dog d2 = new Dog();
+//		d2.setPet(rd); 
+//		rd = (RoboDog) d2.getPet();
+//	}
 
 	@Override
 	public String toString() {
-		return "I am a : " + this.getClass();
+		return "simple dog class : " + this.getClass();
 	}
-
-	public static void main(String[] args) {
-		Dog d = new Dog();
-		d.setPet(d); 
-		//d = (Dog) d.getPet();
-
-		
-		Dog d2 = new Dog();
-		d2.setPet(rd); 
-		//rd = (RoboDog) d2.getPet();
-	}
+	
 }
