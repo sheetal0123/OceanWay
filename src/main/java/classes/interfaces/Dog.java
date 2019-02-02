@@ -2,9 +2,8 @@ package classes.interfaces;
 
 /**
  * Two classes from completely different hierarchy can be passed to same method
- * as argument or return type. So in interface we focus on role to play rather
- * class Pet is a role, pet can be anyone - machine, animal or alien (really -
- * do they exists)
+ * as argument or return type. So in interface we focus on role to play rather class.
+ * Pet is a role, pet can be anyone - machine, animal or alien (really - do they exists)
  */
 abstract class Animal {
 }

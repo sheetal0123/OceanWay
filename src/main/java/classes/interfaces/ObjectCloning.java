@@ -8,14 +8,14 @@ package classes.interfaces;
  */
 public class ObjectCloning implements Cloneable {
 
-	private String dname;
+	private String name;
 
-	public String getDname() {
-		return dname;
+	public String getName() {
+		return name;
 	}
 
-	public void setDname(String dname) {
-		this.dname = dname;
+	public void setName(String dname) {
+		this.name = dname;
 	}
 
 	@Override
@@ -26,20 +26,22 @@ public class ObjectCloning implements Cloneable {
 	public static void main(String[] args) {
 		try {
 			ObjectCloning obj1 = new ObjectCloning();
+			obj1.setName("Dog Here");
 
-			obj1.setDname("Dog Here");
 			ObjectCloning obj2 = (ObjectCloning) obj1.clone(); // Cloning obj1 into obj2
 																 
 			// Displaying both the objects content
-			System.out.println(obj1.getDname()); // Dog Here
-			System.out.println(obj2.getDname()); // Dog Here
+			System.out.println("Before Cloning");
+			System.out.println(obj1.getName()); // Dog Here
+			System.out.println(obj2.getName()); // Dog Here
 
 			// updating obj1 value
-			obj1.setDname("New Dog Come");
+			obj1.setName("New Dog Come");
 
 			// cloned obj value will not changed because of orig obj value change
-			System.out.println(obj1.getDname()); // New Dog Come
-			System.out.println(obj2.getDname()); // Dog Here
+			System.out.println("\nAfter Cloning");
+			System.out.println(obj1.getName()); // New Dog Come
+			System.out.println(obj2.getName()); // Dog Here
 		} catch (CloneNotSupportedException e) {
 			e.printStackTrace();
 		}
