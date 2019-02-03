@@ -1,47 +1,46 @@
 pipeline {
     agent any
     stages {
+	
+	
         stage('One') {
-                steps {
-                        echo 'Hi, this is Sheetal'
-			
-                }
+            steps {
+                echo 'Hi, this is Sheetal, testing pipeline code'
+            }
         }
+		
+		
 	    stage('Two'){
-		    
-		steps {
-			input('Do you want to proceed?')
-        }
+			steps {
+				input('Do you want to proceed?')
+			}
 	    }
+		
+		
+		
         stage('Three') {
                 when {
                         not {
-                                branch "master"
+                                echo "I am in Stage 3, when-not loop"
+								branch "master"
                         }
+						echo "out of not loop...."
                 }
                 steps {
-			echo "Hello"
-                        }
+					echo "Hello, I am in Stage 3 step"
+                }
         }
+		
+		
+		
         stage('Four') {
                 parallel {
                         stage('Unit Test') {
                                 steps{
-                                        echo "Running the unit test..."
+                                        echo "Stage 4: Running the unit test..."
                                 }
                         }
-                        stage('Integration test') {
-                        agent {
-                                docker {
-                                        reuseNode false
-					image 'ubuntu'
-                                        }
-			}
-				steps {
-					echo 'Running the integration test..'
-				}
-                               
-			}  }
+                }
         }
     }
 }
