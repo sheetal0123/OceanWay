@@ -21,10 +21,8 @@ pipeline {
         stage('Three') {
                 when {
                         not {
-                                echo "I am in Stage 3, when-not loop"
-								branch "master"
+                         		branch "master"
                         }
-						echo "out of not loop...."
                 }
                 steps {
 					echo "Hello, I am in Stage 3 step"
