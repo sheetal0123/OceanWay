@@ -15,38 +15,38 @@ public class Dog implements Pet {
 	}
 	
 	
-//	Pet p;
-//
-//	static RoboDog rd = new RoboDog(); // Composition eg
+	Pet p;
+
+	static RoboDog rd = new RoboDog(); // Composition eg
 
 	
-//	/**
-//	 * I am a polymorphic method, can take anything which is a Pet
-//	 */
-//	public void setPet(Pet p) {
-//		System.out.println(p.toString());
-//	}
-//
-//	/**
-//	 * I am returning a Pet, anyone who is pet can take values from me but
-//	 * please cast to you type
-//	 */
-//	public Pet getPet() {
-//		return p;
-//	}
+	/**
+	 * I am a polymorphic method, can take anything which is a Pet
+	 */
+	public void setPet(Pet p) {
+		System.out.println(p.toString());
+	}
+
+	/**
+	 * I am returning a Pet, anyone who is pet can take values from me but
+	 * please cast to you type
+	 */
+	public Pet getPet() {
+		return p;
+	}
 
 
-//
-//	public static void main(String[] args) {
-//		Dog d = new Dog();
-//		d.setPet(d); 
-//		d = (Dog) d.getPet();
-//
-//		
-//		Dog d2 = new Dog();
-//		d2.setPet(rd); 
-//		rd = (RoboDog) d2.getPet();
-//	}
+
+	public static void main(String[] args) {
+		Dog d = new Dog();
+		d.setPet(d); 
+		d = (Dog) d.getPet();
+
+		
+		Dog d2 = new Dog();
+		d2.setPet(rd); 
+		rd = (RoboDog) d2.getPet();
+	}
 
 	@Override
 	public String toString() {

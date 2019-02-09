@@ -29,11 +29,11 @@ public class CatTest {
         // Here you are trying to add a MyCat instance (in the addMethod we create a MyCat instance). MyCat is a Cat.
         // Everything should work but the problem here is that you restricted (bounded) the type of the lists to be passed to the method to be of
         // a type that is either "Cat" or a supertype of "Cat". While "MyCat" IS a "Cat". It IS NOT a supertype of "Cat". Therefore you cannot use the method
-        catTest.addMethod(myCatList); // Doesn't compile
+//        catTest.addMethod(myCatList); // Doesn't compile
 
         // Here you are adding a MyCat instance (in the addMethod we create a MyCat instance). MyCat is a Cat. 
         // You cannot call the method here, because "Dog" is not a "Cat" or a supertype of "Cat"
-        catTest.addMethod(dogList); // Doesn't compile
+//        catTest.addMethod(dogList); // Doesn't compile
     }
 
     public void addMethod(List<? super Cat> catList) {
