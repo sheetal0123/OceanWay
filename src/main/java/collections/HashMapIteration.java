@@ -133,16 +133,23 @@ public class HashMapIteration {
 	 */
 	public void getHashMapValues() {
 		HashMap<String, String> hashMap = new HashMap<>();
-		hashMap.put("M","Mango");
-		hashMap.put("N","Nest");
+		hashMap.put("A","Apple");
+		hashMap.put("B","Ball");
 
+		HashMap<String, String> hashMap2 = new HashMap<>();
+		hashMap2.put("M","Mango");
+		hashMap2.put("N","Nest");
+
+		
 		HashMap<String, HashMap<String, String>> bigHashMap = new HashMap<>();
 		bigHashMap.put("set1",hashMap);
-
+		bigHashMap.put("set2",hashMap2);
+		
 		for(HashMap<String, String> hm : bigHashMap.values()){
 			for(Entry<String, String> entry : hm.entrySet()){
-				System.out.println(">>>"+entry.getKey()+" "+entry.getValue());
+				System.out.println(entry.getKey()+" : "+entry.getValue());
 			}
+			System.out.println("");
 		}
 
 	}
@@ -176,7 +183,7 @@ public class HashMapIteration {
       //obj.impMethods();
 
       //obj.iterateHashMap();
-      //obj.getHashMapValues();
+      obj.getHashMapValues();
       //obj.iterateMapUsingIterator();
    }
 	
