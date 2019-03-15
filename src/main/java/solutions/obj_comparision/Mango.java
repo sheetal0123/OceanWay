@@ -53,7 +53,10 @@ public class Mango {
 	}
 
 	/**
-	 *  this will represent expected obj as expected obj calls equals method
+	 *  'this' will represent expected obj as expected obj calls equals method
+	 *  
+	 *  Incase double digits come and we want to make sure 1,234.00 is same as 1234.0 
+	 *  Double.toString(Double.parseDouble(actual.getAmount().replace(",", "")))
 	 */
 	public boolean verifyData(Mango actual) {
 		return actual.getId() == this.getId()

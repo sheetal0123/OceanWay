@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>group</groupId>
@@ -8,6 +9,7 @@
 	<description>all test code</description>
 
 	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
 		<!-- <selenium.version>2.53.0</selenium.version> -->
 		<selenium.version>3.141.59</selenium.version>
 		<itextpdf.version>5.5.11</itextpdf.version>
@@ -22,11 +24,30 @@
 		<antjsch.version>1.10.5</antjsch.version>
 		<jxl.version>2.6.12</jxl.version>
 		<fillo.version>1.18</fillo.version>
+		<mockito.version>2.25.0</mockito.version>
+		<junit.version>4.12</junit.version>
 	</properties>
 
 
 
 	<dependencies>
+
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>${mockito.version}</version>
+			<scope>test</scope>
+		</dependency>
 
 		<dependency>
 			<groupId>com.codoid.products</groupId>
@@ -218,7 +239,7 @@
 
 	<build>
 		<plugins>
-			<plugin>
+		<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.5</version>
 				<configuration>
@@ -227,6 +248,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+
 	</build>
 
 </project>

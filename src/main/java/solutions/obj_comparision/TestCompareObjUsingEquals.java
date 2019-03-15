@@ -12,7 +12,7 @@ package solutions.obj_comparision;
  */
 public class TestCompareObjUsingEquals {
 
-	//expected
+	//expected Mango
 	public Mango getObjectOne(){
 		Mango mango = new Mango();
 		mango.setId(1);
@@ -22,7 +22,7 @@ public class TestCompareObjUsingEquals {
 		return mango;
 	}
 	
-	//actual 1
+	//actual Mango
 	public Mango getObjectTwo(){
 		Mango mango = new Mango();
 		mango.setId(1);
@@ -31,6 +31,35 @@ public class TestCompareObjUsingEquals {
 		mango.setTaste("wow");
 		return mango;
 	}
+	
+	/**
+	 * Compare obj of same class i.e. Mango
+	 */
+	public boolean compareTwoObjectsOfSameClass(){
+		Mango oneExpected = getObjectOne();
+		Mango twoActual = getObjectTwo();
+		//Mango twoActual = getObjectTwoFromDiffClass();
+		
+		if (!oneExpected.equals(twoActual)) {
+			System.out.println("Mismatch Data from Expected"+ oneExpected);
+			System.out.println("Mismatch Data from Actual"+ twoActual);
+			//throw new RuntimeException("Objects are not same....");
+            return false;
+        }else{
+        	return true;
+        }
+	}
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	/**
@@ -56,10 +85,11 @@ public class TestCompareObjUsingEquals {
 	}
 	
 	
-	
-	public boolean compareTwoObjectsOfSameClass(){
+	/**
+	 * Compare obj of diff class i.e. Orange
+	 */
+	public boolean compareTwoObjectsOfDifferentClass(){
 		Mango oneExpected = getObjectOne();
-		//Mango twoActual = getObjectTwo();
 		Mango twoActual = getObjectTwoFromDiffClass();
 		
 		if (!oneExpected.equals(twoActual)) {
@@ -73,10 +103,21 @@ public class TestCompareObjUsingEquals {
 	}
 	
 	
+	
 	public static void main(String[] args) {
 		TestCompareObjUsingEquals m = new TestCompareObjUsingEquals();
-		boolean flag = m.compareTwoObjectsOfSameClass();
-		System.out.println("Are object same: "+ flag);
+		
+		//same class obj comparision
+		boolean flag1 = m.compareTwoObjectsOfSameClass();
+		System.out.println("Are object same? : "+ flag1);
+		
+		
+		//diff class obj comparision		
+		boolean flag2 = m.compareTwoObjectsOfDifferentClass();
+		System.out.println("Are object same? : "+ flag2);
+		
+		
+		
 	}
 
 }
