@@ -48,7 +48,6 @@ public class StringFormating {
         String s5 = String.format("My answer is [%-15.8f]", 47.65734); 
         System.out.println(s5);
 		
-		
         
         /**
          * Concatenation using +
@@ -130,7 +129,7 @@ public class StringFormating {
 		System.out.println("");
 		
 		
-		
+			
 		// right align by 10 digit
 		System.out.println("---------------------------------------------------------------");
 		System.out.printf("Total cost:%10.2f Rs", 20.12567767);  // Total cost:     20.13 Rs          
@@ -152,9 +151,22 @@ public class StringFormating {
 	
 
 	
+	public static void stringDotFormat2() {
+		System.out.println("Int| Fixed Width | Filled with given 0 | right aligned    >"+ String.format("%04d",12)+"<");  
+		System.out.println("Int| Fixed Width | Filled with given space | right aligned    >"+ String.format("% 4d",12)+"<");
+		
+		
+		System.out.println("String| Fixed Width | Filled with default space | left aligned    >"+ String.format("%-8s","abc")+"<"); // -ve left aligned
+		System.out.println("String| Fixed Width | Filled with default space | right aligned    >"+ String.format("%8s","abc")+"<"); // +ve right aligned
+		System.out.println("String| Fixed Width | Filled with default space   >"+ String.format("%-8s","")+"<"); // -ve left aligned		
+		System.out.println("String| Fixed Width | Filled with default space   >"+ String.format("%-8s","  cd  ")+"<"); // -ve left aligned		
+	}
+	   
+	
 
 	public static void main(String [] args){
-		stringDotFormat();
+		//stringDotFormat();
+		stringDotFormat2();
 		//sysOutDotPrintf();
 		//otherGeneralFormatings();
 	}

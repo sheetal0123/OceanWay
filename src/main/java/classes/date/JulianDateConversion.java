@@ -3,6 +3,7 @@ package classes.date;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 
@@ -31,6 +32,10 @@ public class JulianDateConversion {
 		DateFormat sdfRequired = new SimpleDateFormat(requiredDateFormat);
 		String output = sdfRequired.format(date);
 		System.out.println(output);
+		
+		
+		int a = Calendar.getInstance().get(Calendar.DAY_OF_YEAR);
+		System.out.println(a);
 	}
 	
 	
@@ -40,6 +45,8 @@ public class JulianDateConversion {
 		obj.convertJulianDateIntoNormalDate("18365", "dd/MM/yyyy");  // yyddd
 		obj.convertJulianDateIntoNormalDate("18365", "yyyy-MM-dd");
 		obj.convertJulianDateIntoNormalDate("18365", "yyyy.MM.dd");
+		
+		
 	}
 
 }

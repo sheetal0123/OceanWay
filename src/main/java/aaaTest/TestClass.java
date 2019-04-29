@@ -41,8 +41,15 @@ public class TestClass {
     public static void main(String [] args){
     	TestClass obj = new TestClass();
     	
+    	String a = Double.toString(Double.parseDouble("100.00".replace(",", "")));
+		System.out.println(">>"+a);
+		
+    	//String x = "//span[contains(text(),'%s')]//ancestor::tr/td[1]/span/a";
+    	//String xpath = String.format(x, "Chargeback Posting [CP]");
+		
+    	
     	//String str = obj.getHalfAmount("400.60");
-    	//System.out.println(str);
+    	//System.out.println(xpath);
 		
 //    	System.out.println(String.format("%-145s", "*"));
 //    	System.out.println(String.format("%-1s", "6         5"));
@@ -52,8 +59,12 @@ public class TestClass {
     	//map.put("apple", "abc");
     	
     	
-    	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
-    	System.out.println(LocalDate.now().format(formatter));
+//    	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+//    	System.out.println(LocalDate.now().format(formatter));
+    	
+    	
+    	
+    	
     }
 
 }
