@@ -87,8 +87,8 @@ public class ReadPDFContent {
 	public static void main(String[] args) {
 
 		ReadPDFContent obj = new ReadPDFContent();
-		obj.readNormalPDF("simplepdf");
-		obj.readPasswordProtectedPDF("Stmt_Pwd_PAN","MY_PAN");
+		//obj.readNormalPDF("simplepdf");
+		//obj.readPasswordProtectedPDF("Stmt_Pwd_PAN","ENTER_MY_PAN");
 		
 		
 	}

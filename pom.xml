@@ -10,7 +10,6 @@
 
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
-		<!-- <selenium.version>2.53.0</selenium.version> -->
 		<selenium.version>3.141.59</selenium.version>
 		<itextpdf.version>5.5.11</itextpdf.version>
 		<poi.version>3.12</poi.version>
@@ -26,6 +25,7 @@
 		<fillo.version>1.18</fillo.version>
 		<mockito.version>2.25.0</mockito.version>
 		<junit.version>4.12</junit.version>
+		<bouncycastle.version>1.61</bouncycastle.version>
 	</properties>
 
 
@@ -139,11 +139,14 @@
 			<version>${itextpdf.version}</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15on 
-			Need to download jar from http://www.bouncycastle.org/latest_releases.html 
-			Following dependency is not working for pdf > ReadPDFContent.java <dependency> 
-			<groupId>org.bouncycastle</groupId> <artifactId>bcprov-jdk15on</artifactId> 
-			<version>${bouncycastle.version}</version> </dependency> -->
+		
+		<dependency>
+			<groupId>org.bouncycastle</groupId>
+			<artifactId>bcprov-jdk15on</artifactId>
+			<version>${bouncycastle.version}</version>
+		</dependency>
+
+
 
 		<!-- https://mvnrepository.com/artifact/commons-lang/commons-lang -->
 		<dependency>
@@ -239,7 +242,7 @@
 
 	<build>
 		<plugins>
-		<plugin>
+			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.5</version>
 				<configuration>
