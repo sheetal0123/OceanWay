@@ -74,6 +74,7 @@ public class TestConvertionToJavaObject {
 		System.out.println("Domain Map: "+javadomainmap);
 
 		verifyDomainMap(javadomainmap);
+		
 	}
 
 }

@@ -15,7 +15,7 @@ import java.util.Map.Entry;
  * Here we try sol 2
  * 
  */
-public class TestCompareObjUsingMap {
+public class CompareObjUsingMap {
 	//key constants
 	final String AUDIENCE = "AUDIENCE";
 	final String GENRE = "GENRE";
@@ -43,8 +43,8 @@ public class TestCompareObjUsingMap {
 	public Hollywood getObjectHollywood(){
 		Hollywood hollywood = new Hollywood();
 		hollywood.setAudience("multi-lang");
-		hollywood.setGenre("alla");
-		hollywood.setHitMoviewCount(1002);
+		hollywood.setGenre("all");
+		hollywood.setHitMoviewCount(100);
 		hollywood.setRevenue(1000);
 		return hollywood;
 	}
@@ -100,7 +100,7 @@ public class TestCompareObjUsingMap {
 	
 	public static void main(String[] args) {
 		//create objects
-		TestCompareObjUsingMap obj = new TestCompareObjUsingMap();
+		CompareObjUsingMap obj = new CompareObjUsingMap();
 		Bollywood expectedBollywood = obj.getObjectBollywood();
 		Hollywood actualHollywood = obj.getObjectHollywood();
 		System.out.println("Bollywood Obj: "+ expectedBollywood );

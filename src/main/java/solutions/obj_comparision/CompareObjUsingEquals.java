@@ -10,7 +10,7 @@ package solutions.obj_comparision;
  * Here we try sol 1
  * 
  */
-public class TestCompareObjUsingEquals {
+public class CompareObjUsingEquals {
 
 	//expected Mango
 	public Mango getObjectOne(){
@@ -105,7 +105,7 @@ public class TestCompareObjUsingEquals {
 	
 	
 	public static void main(String[] args) {
-		TestCompareObjUsingEquals m = new TestCompareObjUsingEquals();
+		CompareObjUsingEquals m = new CompareObjUsingEquals();
 		
 		//same class obj comparision
 		boolean flag1 = m.compareTwoObjectsOfSameClass();

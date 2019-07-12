@@ -15,7 +15,7 @@ public class JSONToJavaObject2 {
 		Reader reader = null;
 		
 		try {
-			reader = new FileReader(".\\src\\main\\java\\json\\gson\\input_json.json");
+			reader = new FileReader(".\\src\\main\\java\\json\\gson\\input_director.json");
 		}catch (IOException e) {
             e.printStackTrace();
         }

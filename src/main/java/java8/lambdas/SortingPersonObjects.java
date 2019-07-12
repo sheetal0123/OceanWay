@@ -26,7 +26,7 @@ public class SortingPersonObjects {
 		}
 	}
 	
-	
+	//sorting as per last name
 	public static void sortBeforeJava8(List<Person> ls) {
 
 		Collections.sort(ls, new Comparator<Person>() {
@@ -53,10 +53,11 @@ public class SortingPersonObjects {
 
 	
 	public static void main(String[] args) {
-		System.out.println(getListOfPerson());
+		List<Person> persons = getListOfPerson();
+		System.out.println("List Of Person: "+ persons);
 		
-		sortBeforeJava8(getListOfPerson());
-		sortWithJava8(getListOfPerson());
+		sortBeforeJava8(persons);
+		sortWithJava8(persons);
 	}
 
 }

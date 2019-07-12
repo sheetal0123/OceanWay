@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.Reader;
 
 import com.google.gson.Gson;
+import com.google.gson.stream.JsonReader;
 
 //Json to Java Object
 public class JSONToJavaObject1 {
@@ -13,8 +14,9 @@ public class JSONToJavaObject1 {
 		Gson gson = new Gson();
 		DirectorPojo dir = null;
 		
-		try (Reader reader = new FileReader(".\\src\\main\\java\\json\\gson\\input_json.json")) {
+		try (Reader reader = new FileReader(".\\src\\main\\java\\json\\gson\\input_director.json")) {
 			dir = gson.fromJson(reader, DirectorPojo.class);
+			
 		}catch (IOException e) {
             e.printStackTrace();
         }

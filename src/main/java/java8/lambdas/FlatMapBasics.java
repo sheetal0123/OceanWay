@@ -1,62 +1,62 @@
 package java8.lambdas;
 
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
+
+/**
+ * Flat Map: Generally used when we have to deal with multiple collections
+ */
 public class FlatMapBasics {
-
-	public static List<Person> getListOfPerson(){
-		List<Person> ls = Arrays.asList(
-				new Person("john", "cena", 30), 
-				new Person("kate", "winslette", 32),
-				new Person("albert", "pinto", 32), 
-				new Person("abrm", "Lincon", 32)
-				);
-				
-		return ls;
-	}
 	
-
-	public static void printAll(List<Person> ls) {
-		System.out.println("-------------------------------");
-		for (Person p : ls) {
-			System.out.println(p);
-		}
-	}
-	
-	
-	public static void sortBeforeJava8(List<Person> ls) {
-
-		Collections.sort(ls, new Comparator<Person>() {
-			@Override
-			public int compare(Person o1, Person o2) {
-				return o1.getLastname().toLowerCase().compareTo(o2.getLastname());
-			}
-		});
-
-		printAll(ls);
-	}
-	
-	
-	/**
-	 * this is also using same Collections's sort method
-	 * just we converted it into lambadas
-	 * 
-	 * In default sorting, Capitals comes before small case, hence we need to convert it into lower case
-	 */
-	public static void sortWithJava8(List<Person> ls) {
-		Collections.sort(ls, (o1, o2) -> o1.getLastname().toLowerCase().compareTo(o2.getLastname()));
-		printAll(ls);
-	}
-
-	
-	public static void main(String[] args) {
-		System.out.println(getListOfPerson());
+	//normal java8 code
+	public static void playWithMultipleListsUsingMaps() {
+		List<String> list1 = Arrays.asList("a","b");
+		List<String> list2 = Arrays.asList("c","d");
+		List<String> list3 = Arrays.asList("e","f");
 		
-		sortBeforeJava8(getListOfPerson());
-		sortWithJava8(getListOfPerson());
+		//manual process: merging all list into one
+		List<String> commonList = new ArrayList<String>();
+		commonList.addAll(list1);
+		commonList.addAll(list2);
+		commonList.addAll(list3);
+		
+		
+		List<String> capitals = commonList.stream()
+//				.map(String::toUpperCase)
+				.map(x -> x.toUpperCase())
+				.collect(Collectors.toList());
+
+		
+		System.out.println(capitals);		
+	}
+	
+
+	
+	//merging list using Stream.of func and later used flat map
+	public static void playWithMultipleListsUsingFlatMaps() {
+		List<String> list1 = Arrays.asList("a","b");
+		List<String> list2 = Arrays.asList("c","d");
+		List<String> list3 = Arrays.asList("e","f");
+
+
+		List<String> capitals = Stream.of(list1,list2,list3)
+//				.flatMap(List::stream)
+//				.map(String::toUpperCase)
+				.flatMap(ls -> ls.stream())
+				.map(x -> x.toUpperCase())
+				.collect(Collectors.toList());
+
+		System.out.println(capitals);		
+	}
+
+	
+	public static void main(String [] args) {
+		playWithMultipleListsUsingMaps();
+		playWithMultipleListsUsingFlatMaps();
 	}
 
 }

@@ -41,7 +41,7 @@ public class JavaObjectToJSON2 {
 		Gson gson = new Gson();
 
 		// file writer
-		String file = ".\\src\\main\\java\\json\\gson\\emp.json";
+		String file = ".\\src\\main\\java\\json\\gson\\output_employee.json";
 		FileWriter fw = null;
 		
 		try {
