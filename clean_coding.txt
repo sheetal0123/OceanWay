@@ -6,5 +6,14 @@
 - Always try to use Primitive over Boxed Primitive(Integer,Long,Boolean etc) wherever possible
 - A utility class should always have a private constructor, so that no object can be created in class.
 - A utility class should not have any class level variables, all variables should be local to methods otherwise it can impact other codes.
+- Extract code to new a new method if code is getting longer than 4-5 lines
+- Important method should have bare mini code, all other code shd extract to new method
+- method name is very imp and shd suite to particular functionality
+- Any user defined constant or string shd be made as constant with proper meaningful name
 
 
+
+
+
+#Imp Notes:
+- The obj who invokes equals(overridden case) method is actually passed into equals(calling obj) e.g. CompareListOfObj.java

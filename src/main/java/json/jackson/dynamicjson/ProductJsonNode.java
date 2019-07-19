@@ -1,4 +1,4 @@
-package json.dynamicjson;
+package json.jackson.dynamicjson;
 
 import com.fasterxml.jackson.databind.JsonNode;
 

@@ -1,4 +1,4 @@
-package json.dynamicjson;
+package json.jackson.dynamicjson;
 
 import java.util.Map;
 import java.util.Objects;

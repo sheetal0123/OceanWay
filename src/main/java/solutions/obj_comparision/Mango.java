@@ -36,33 +36,33 @@ public class Mango {
 	
 	
 	@Override
-	public boolean equals(Object obj) {
-		Mango actual;
-		if (obj instanceof Mango) {
-			actual = (Mango) obj;
+	public boolean equals(Object callingObject) {
+		Mango callingObj;
+		if (callingObject instanceof Mango) {
+			callingObj = (Mango) callingObject;
 		} else {
 			return false;
 		}
 		
 		
 		boolean result = false;
-		if (verifyData(actual)) {
+		if (verifyData(callingObj)) {
 			result = true;
 		}
 		return result;
 	}
 
 	/**
-	 *  'this' will represent expected obj as expected obj calls equals method
+	 *  'this' will represent expected obj
 	 *  
 	 *  Incase double digits come and we want to make sure 1,234.00 is same as 1234.0 
 	 *  Double.toString(Double.parseDouble(actual.getAmount().replace(",", "")))
 	 */
-	public boolean verifyData(Mango actual) {
-		return actual.getId() == this.getId()
-			&& actual.getName().equals(this.getName())
-			&& actual.getColor().equals(this.getColor())
-			&& actual.getTaste().equals(this.getTaste());
+	public boolean verifyData(Mango callingObj) {
+		return callingObj.getId() == this.getId()
+			&& callingObj.getName().equals(this.getName())
+			&& callingObj.getColor().equals(this.getColor())
+			&& callingObj.getTaste().equals(this.getTaste());
 	}
 	
 	

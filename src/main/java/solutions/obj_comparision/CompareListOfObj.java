@@ -51,11 +51,11 @@ public class CompareListOfObj {
 		mango2.setColor("silver");
 		mango2.setTaste("sweet");
 		
-//		Mango mango3 = new Mango();
-//		mango3.setId(3);
-//		mango3.setName("charli");
-//		mango3.setColor("iron");
-//		mango3.setTaste("sorrow");
+		Mango mango3 = new Mango();
+		mango3.setId(3);
+		mango3.setName("charli");
+		mango3.setColor("iron");
+		mango3.setTaste("sorrow");
 		
 		ls.add(mango1);
 		ls.add(mango2);
@@ -180,7 +180,7 @@ public class CompareListOfObj {
 	public static void main(String[] args) {
 		boolean isExpectedListPresentInActualLoops = compareListUsingLoop();
 		System.out.println("Using Loops:" + isExpectedListPresentInActualLoops);
-		System.out.println("-----------xxx-----------");
+//		System.out.println("-----------xxx-----------");
 		
 //		boolean isExpectedListPresentInActualContainsAll =compareListUsingContainsAll();
 //		System.out.println("Using Contails All:" + isExpectedListPresentInActualContainsAll);

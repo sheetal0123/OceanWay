@@ -1,4 +1,4 @@
-package json.dynamicjson;
+package json.jackson.dynamicjson;
 
 import java.io.IOException;
 import com.fasterxml.jackson.core.JsonParseException;
