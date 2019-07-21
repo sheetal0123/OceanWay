@@ -76,7 +76,7 @@ public class ReadCompleteExcel {
 		//try with resources used here, no need to close resources opened
 		try (
 			FileInputStream inputStream = new FileInputStream(file);
-			HSSFWorkbook excelWB = new HSSFWorkbook(inputStream);) 
+			HSSFWorkbook excelWB = new HSSFWorkbook(inputStream))
 			{
 
 			excelSheet = excelWB.getSheet(sheetName);

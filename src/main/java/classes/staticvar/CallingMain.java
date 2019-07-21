@@ -18,7 +18,7 @@ public class CallingMain {
 		System.out.println("I am in Method");
 
 		String[] arr = { "10", "20" };
-		obj.main(arr); // also work fine but get into a loop
+		main(arr); // also work fine but get into a loop
 	}
 
 	public static void main(String[] args) {
@@ -26,7 +26,7 @@ public class CallingMain {
 		System.out.println("I am in Main, array length: " + args.length);
 
 		if (counter == 0) {
-			obj.callme(obj);
+			callme(obj);
 		}
 	}
 }

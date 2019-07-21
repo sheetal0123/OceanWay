@@ -33,11 +33,7 @@ public class AssertOnMultipleConditions {
 	
 	
 	public static boolean check(){
-		if(isAnyCaseFailed){
-			isAllCasesPassed = false;
-		}else{
-			isAllCasesPassed = true;
-		}
+        isAllCasesPassed = !isAnyCaseFailed;
 		return isAllCasesPassed;
 	}
 	

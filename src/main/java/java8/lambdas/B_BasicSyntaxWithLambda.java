@@ -29,5 +29,5 @@ public class B_BasicSyntaxWithLambda {
 }
 
 interface CloudyLambda {
-	public int multiline(int i);
+	int multiline(int i);
 }

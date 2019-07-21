@@ -19,7 +19,7 @@ public class CSVReader1 {
     public static void main(String[] args) throws IOException {
         try (
             Reader reader = Files.newBufferedReader(Paths.get(SAMPLE_CSV_FILE_PATH));
-            CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
+            CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT)
         ) {
             for (CSVRecord csvRecord : csvParser) {
                 // Accessing Values by Column Index

@@ -14,7 +14,7 @@ public class FilloExcel {
 		String file = System.getProperty("user.dir") + dataFile;
 		
 		Fillo fillo = new Fillo();
-		Connection connection = (Connection) fillo.getConnection(file);
+		Connection connection = fillo.getConnection(file);
 		String strQuery="Select * from set1 where ID=3 and name='C'";
 		Recordset recordset=connection.executeQuery(strQuery);
 		

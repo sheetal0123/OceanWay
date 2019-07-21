@@ -22,7 +22,7 @@ public class Yaml1 {
 	public void testLoadFromString() {
 	    Yaml yaml = new Yaml();
 	    String document = "hello: 25";
-	    Map<String, Integer> map = (Map<String, Integer>) yaml.load(document);
+	    Map<String, Integer> map = yaml.load(document);
 	    Assert.assertEquals("{hello=25}", map.toString());
 	    Assert.assertEquals(new Integer(25), map.get("hello"));
 	    

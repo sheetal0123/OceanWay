@@ -8,7 +8,7 @@ package classes.interfaces;
  */
 
 interface tracable {
-	public void trace();
+	void trace();
 }
 
 class Park implements tracable {

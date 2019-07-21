@@ -128,11 +128,8 @@ public class FilterListUsingStream {
 		 */
 		Person gill = ls.stream()
 						.filter(x ->  {
-							if(x.getFirstname().equalsIgnoreCase("adam")) {
-								return true;
-							}
-							return false;
-						})
+                            return x.getFirstname().equalsIgnoreCase("adam");
+                        })
 						.findAny()
 						.orElse(null);
 				

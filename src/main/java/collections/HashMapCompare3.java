@@ -120,7 +120,7 @@ public class HashMapCompare3 {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return verifyCount == 0 ? true : false;
+		return verifyCount == 0;
 	}
 
 	
@@ -157,7 +157,7 @@ public class HashMapCompare3 {
 			}
 		}
 
-		return flag == 0 ? true : false;
+		return flag == 0;
 	}
 
 	public static void main(String[] args) {

@@ -24,5 +24,5 @@ public class A_BasicSyntaxWithLambda {
 
 
 interface GreetingNew {
-	public int getLength(String s);
+	int getLength(String s);
 }

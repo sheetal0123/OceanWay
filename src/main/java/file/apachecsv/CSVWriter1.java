@@ -15,7 +15,7 @@ public class CSVWriter1 {
     public static void main(String[] args) throws IOException {
         try (
             BufferedWriter writer = Files.newBufferedWriter(Paths.get(SAMPLE_CSV_FILE));
-            CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT.withHeader("ID", "Name", "Designation", "Company"));
+            CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT.withHeader("ID", "Name", "Designation", "Company"))
         ) {
             csvPrinter.printRecord("1", "Sundar Pichai", "CEO", "Google");
             csvPrinter.printRecord("2", "Satya Nadella", "CEO", "Microsoft");

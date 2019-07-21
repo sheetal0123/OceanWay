@@ -2,7 +2,7 @@ package yaml.dumpobj;
 
 
 enum Gender{
-	MALE, FEMALE;
+	MALE, FEMALE
 }
 
 public class Person {

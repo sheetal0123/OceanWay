@@ -22,7 +22,7 @@ public class WriteCSV {
 						CSVWriter.DEFAULT_SEPARATOR,
 						CSVWriter.NO_QUOTE_CHARACTER,
 						CSVWriter.DEFAULT_ESCAPE_CHARACTER,
-						CSVWriter.DEFAULT_LINE_END);) 
+						CSVWriter.DEFAULT_LINE_END))
 			{
 				//setting up data to be written
 				String[] headerRecord = { "TCName", "Title", "Description","Result" };
@@ -48,7 +48,7 @@ public class WriteCSV {
 						CSVWriter.DEFAULT_SEPARATOR,
 						CSVWriter.NO_QUOTE_CHARACTER,
 						CSVWriter.DEFAULT_ESCAPE_CHARACTER,
-						CSVWriter.DEFAULT_LINE_END);) 
+						CSVWriter.DEFAULT_LINE_END))
 			{
 				//setting up data to be written
 				String [] strArrHeader = new String []{"TCName","Title","Description","Result"};

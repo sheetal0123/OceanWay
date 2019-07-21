@@ -19,8 +19,8 @@ public class FieldsWritingInExcel {
 	// excel to be written
 	static File path = new File(".\\target\\reflection.xls");
 
-	public void writeDataToExcel(FieldsClass obj) throws RowsExceededException,
-			WriteException, IOException, IllegalArgumentException,
+	public void writeDataToExcel(FieldsClass obj) throws
+            WriteException, IOException, IllegalArgumentException,
 			IllegalAccessException {
 
 		Field[] field = obj.getClass().getDeclaredFields();
@@ -60,8 +60,8 @@ public class FieldsWritingInExcel {
 		writableWorkbook.close();
 	}
 
-	public static void main(String[] args) throws RowsExceededException,
-			WriteException, IllegalArgumentException, IllegalAccessException,
+	public static void main(String[] args) throws
+            WriteException, IllegalArgumentException, IllegalAccessException,
 			IOException {
 
 		

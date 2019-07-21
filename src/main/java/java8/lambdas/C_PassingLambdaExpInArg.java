@@ -24,5 +24,5 @@ public class C_PassingLambdaExpInArg {
 
 @FunctionalInterface
 interface Expresso {
-	public int getExpressLength(String s);
+	int getExpressLength(String s);
 }

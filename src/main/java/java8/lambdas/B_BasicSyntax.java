@@ -23,5 +23,5 @@ class Cloud implements Cloudy {
 }
 
 interface Cloudy {
-	public int multiline(int i);
+	int multiline(int i);
 }

@@ -23,7 +23,7 @@ public class CSVReader2 {
                     //.withHeader("SrNo","Name", "Designation", "Country", "Mobile")  //this is also correct
             		.withFirstRecordAsHeader()
                     .withIgnoreHeaderCase()
-                    .withTrim());
+                    .withTrim())
         ) {
             for (CSVRecord csvRecord : csvParser) {
                 // Accessing values by the names assigned to each column

@@ -71,9 +71,7 @@ public class BeanPropertyMatcher<T> extends TypeSafeDiagnosingMatcher<T> {
 	private boolean matchProperty(Object bean, String propertyName, Description mismatchDescription) 
 			throws Exception {
 		Method readMethod = findReadMethod(bean, propertyName, mismatchDescription);
-		return (readMethod != null) 
-						? matchPropertyValue(bean, readMethod, mismatchDescription) 
-						: false;
+		return (readMethod != null) && matchPropertyValue(bean, readMethod, mismatchDescription);
 	}
 
 	private boolean matchPropertyValue(Object bean, Method readMethod, Description mismatchDescription) 

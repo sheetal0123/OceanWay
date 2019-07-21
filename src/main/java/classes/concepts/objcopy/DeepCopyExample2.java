@@ -42,7 +42,7 @@ public class DeepCopyExample2 {
 		Yaml yaml = new Yaml();
 		String str = yaml.dump(inputObj);
 		
-		T newObj = (T) yaml.load(str);
+		T newObj = yaml.load(str);
 		return newObj;
 	}
 	

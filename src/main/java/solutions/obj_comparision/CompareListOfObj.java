@@ -144,13 +144,11 @@ public class CompareListOfObj {
                 .collect(Collectors.toList());
 		
 		System.out.println(matchingList);
-		
-		
-		if(matchingList.size() == expectedList.size())
-			return true;
-		
-		return false;
-	}
+
+
+        return matchingList.size() == expectedList.size();
+
+    }
 	
 	
 	

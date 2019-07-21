@@ -24,8 +24,8 @@ public class ReadCSVAsBeanUsingAnnotations {
 		String path = System.getProperty("user.dir")+"\\src\\main\\java\\file\\opencsv\\soceity_details.txt";
 		
 		try (
-	            Reader reader = Files.newBufferedReader(Paths.get(path));
-	        ) {
+	            Reader reader = Files.newBufferedReader(Paths.get(path))
+        ) {
 			
 				//setting up CSV Bean
 				@SuppressWarnings("rawtypes")

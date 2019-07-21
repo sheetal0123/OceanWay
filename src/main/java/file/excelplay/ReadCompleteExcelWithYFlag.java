@@ -49,7 +49,7 @@ public class ReadCompleteExcelWithYFlag {
         Sheet excelSheet;
 
         try (FileInputStream inputStream = new FileInputStream(file);
-             HSSFWorkbook excelWB = new HSSFWorkbook(inputStream);) {
+             HSSFWorkbook excelWB = new HSSFWorkbook(inputStream)) {
 
             excelSheet = excelWB.getSheet(sheetName);
             logger.info("Sheet Name to be read:" + excelSheet.getSheetName());

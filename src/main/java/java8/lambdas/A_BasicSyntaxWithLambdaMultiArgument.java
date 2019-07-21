@@ -14,5 +14,5 @@ public class A_BasicSyntaxWithLambdaMultiArgument {
 }
 
 interface Addable {
-	public int getAddition(int a, int b);
+	int getAddition(int a, int b);
 }

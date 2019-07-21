@@ -89,7 +89,7 @@ public class ReadExcelAsListOfList {
 	public static void main(String[] args) throws IOException {
 		ReadExcelAsListOfList obj = new ReadExcelAsListOfList();
 		obj.readExcel();
-		obj.readParticularColumnInExcel("file path",0,5);
+		readParticularColumnInExcel("file path",0,5);
 	}
 
 }

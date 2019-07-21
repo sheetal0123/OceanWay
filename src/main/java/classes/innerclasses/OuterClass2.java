@@ -32,9 +32,9 @@ class A {
 	// nested inner class
 	static class B {
 
-		int a = 100;;
-		
-		void nonStaticMethod() {
+		int a = 100;
+
+        void nonStaticMethod() {
 			System.out.println("I am non static method: " + rollno);
 			System.out.println(a);
 			//System.out.println(id);  compiler error

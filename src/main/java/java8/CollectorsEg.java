@@ -69,7 +69,7 @@ public class CollectorsEg {
 	public static void main(String[] args) {
 		//abc();
 		xyz();
-		https://www.javadevjournal.com/java/java-8-collectors/     8 pt completed
+		//https://www.javadevjournal.com/java/java-8-collectors/     8 pt completed
 	}
 
 }

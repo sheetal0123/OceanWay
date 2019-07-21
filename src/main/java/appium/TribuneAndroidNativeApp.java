@@ -81,13 +81,13 @@ public class TribuneAndroidNativeApp {
 	 */
 	public void swipeBottomToTop() {
 		try {
-			((AppiumDriver) driver).context("NATIVE_APP");
+			driver.context("NATIVE_APP");
 			org.openqa.selenium.Dimension size;
 			size = driver.manage().window().getSize();
 			int fixX = size.width / 2;
 			int startY = (int) (size.height * 0.90);
 			int endY = (int) (size.height * 0.10);
-			((AppiumDriver) driver).swipe(fixX, startY, fixX, endY, 1000);
+			driver.swipe(fixX, startY, fixX, endY, 1000);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -95,26 +95,26 @@ public class TribuneAndroidNativeApp {
 
 	public void swipeRightToLeft() {
 		try {
-			((AppiumDriver) driver).context("NATIVE_APP");
+			driver.context("NATIVE_APP");
 			org.openqa.selenium.Dimension size;
 			size = driver.manage().window().getSize();
 			int fixY = size.height / 2;
 			int startX = (int) (size.width * 0.90);
 			int endX = (int) (size.width * 0.10);
-			((AppiumDriver) driver).swipe(startX, fixY, endX, fixY, 200);
+			driver.swipe(startX, fixY, endX, fixY, 200);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
 	public void changeOrientation() {
-		((AppiumDriver) driver).rotate(ScreenOrientation.LANDSCAPE);
+		driver.rotate(ScreenOrientation.LANDSCAPE);
 		// ((AppiumDriver) driver).rotate(ScreenOrientation.PORTRAIT);
 	}
 
 	public void searchForText(String strg) throws IOException, InterruptedException {
-		((AppiumDriver) driver).findElement(By.id("com.apptivateme.next.ct:id/search")).click();
-		((AppiumDriver) driver).findElement(By.id("com.apptivateme.next.ct:id/search_src_text")).sendKeys(strg + "\n");
+		driver.findElement(By.id("com.apptivateme.next.ct:id/search")).click();
+		driver.findElement(By.id("com.apptivateme.next.ct:id/search_src_text")).sendKeys(strg + "\n");
 		// Process pr = Runtime.getRuntime().exec("adb -s input keyevent
 		// KEYCODE_SEARCH");
 		// pr.waitFor();

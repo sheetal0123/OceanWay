@@ -8,7 +8,7 @@ package java8.lambdas;
 
 //interface
 interface Greeting {
-	public int getLength(String s);
+	int getLength(String s);
 }
 
 
@@ -28,8 +28,8 @@ public class A_BasicSyntax {
 
 	public static void main(String[] args) {
 		Greet g = new Greet();
-		System.out.println("Length: "+g.getLength("Hello Lamdas"));;
-	}
+		System.out.println("Length: "+g.getLength("Hello Lamdas"));
+    }
 
 }
 
