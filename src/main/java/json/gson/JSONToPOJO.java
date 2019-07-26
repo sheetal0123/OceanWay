@@ -8,7 +8,7 @@ import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
 
 //Json to Java Object
-public class JSONToJavaObject1 {
+public class JSONToPOJO {
 
 	public static void main(String[] args) {
 		Gson gson = new Gson();

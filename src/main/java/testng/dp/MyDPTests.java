@@ -3,7 +3,7 @@ package testng.dp;
 import org.testng.annotations.Test;
 
 public class MyDPTests {
-
+/*
 	@Test(dataProvider = "intString", dataProviderClass = MyDP.class)
 	public void testSimpleIntString(int i, String str) {
 		System.out.println(i +" > "+ str);
@@ -27,6 +27,11 @@ public class MyDPTests {
 	public void testSimpleIntString3(int i) {
 		System.out.println("1D Array: "+i);
 	}
+*/	
 	
+	@Test(dataProvider = "multiParam", dataProviderClass = MyDP.class)
+	public void testMultiParam(int srno, String capital, String country) {
+		System.out.println(srno+" : "+ capital+"/ "+ country);
+	}
 	
 }

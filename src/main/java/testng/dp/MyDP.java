@@ -64,9 +64,6 @@ public class MyDP {
 	
 	/**
 	 * DP should return array of objects it can be 1D, 2D or 3D
-	 * 
-	 * 
-	 * 
 	 */
 	@DataProvider(name = "singleparam")
 	public Object[] singleParam() {
@@ -77,10 +74,70 @@ public class MyDP {
 		array[2] = 2;
 		array[3] = 3;
 		array[4] = 4;
-		
 		return array;
-		
 	}
+	
+
+	
+
+	@DataProvider(name = "multiParam")
+	public Object[][] multParam() {
+		Object[][] objArray = new Object[4][3];
+		objArray[0][0] = 1;
+		objArray[0][1] = "Delhi";
+		objArray[0][2] = "Ind";
+		
+		objArray[1][0] = 2;
+		objArray[1][1] = "Lahore";
+		objArray[1][2] = "Pak";
+
+		objArray[2][0] = 3;
+		objArray[2][1] = "Bejing";
+		objArray[2][2] = "Chn";
+
+		objArray[3][0] = 4;
+		objArray[3][1] = "Colombo";
+		objArray[3][2] = "SL";
+		
+		return objArray;
+	}
+	
+
+	@DataProvider(name = "multiParam2")
+	public Object[][] multParam2() {
+		return new Object[][] {
+	      new Object[] { 1, "Delhi", "India" },
+	      new Object[] { 2, "Lahore", "Pak" },
+	      new Object[] { 3, "Bejing", "China" },
+	      new Object[] { 4, "Colombo", "SriLanka" },
+	    };
+	}
+
+	
+	
+	@DataProvider(name = "listPram")
+	public Object[][] listParam() {
+		Object[][] objArray = new Object[1][3];
+		objArray[0][0] = 1;
+		objArray[0][1] = "Delhi";
+		objArray[0][2] = "Ind";
+		
+//		objArray[1][0] = 2;
+//		objArray[1][1] = "Lahore";
+//		objArray[1][2] = "Pak";
+//
+//		objArray[2][0] = 3;
+//		objArray[2][1] = "Bejing";
+//		objArray[2][2] = "Chn";
+//
+//		objArray[3][0] = 4;
+//		objArray[3][1] = "Colombo";
+//		objArray[3][2] = "SL";
+		
+		return objArray;
+	}
+	
+	
 	
 	
 }

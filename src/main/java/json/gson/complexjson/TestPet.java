@@ -6,7 +6,10 @@ import java.io.Reader;
 
 import com.google.gson.Gson;
 
-
+/**
+ * Create POJOs using http://www.jsonschema2pojo.org/
+ *
+ */
 public class TestPet {
 
 	
@@ -20,7 +23,7 @@ public class TestPet {
 		}catch (IOException e) {
             e.printStackTrace();
         }
-		System.out.println(petsbase.toString());
+		
 
 		return petsbase;	
 	}
@@ -28,8 +31,7 @@ public class TestPet {
 	
 	
 	public static void fetchDetailsFromObj(PetsBase baseObj) {
-		
-		
+		System.out.println(baseObj.toString());
 		
 	}
 	
