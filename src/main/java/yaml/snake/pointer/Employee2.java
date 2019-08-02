@@ -1,12 +1,11 @@
-package yaml.jackson.yaml2pojo.reference;
+package yaml.snake.pointer;
 
 import java.util.List;
 
-public class Employee1 {
+public class Employee2 {
 	String name;
 	String age;
 	List<String> hobbies;
-	String officialname;
 	
 	public String getName() {
 		return name;
@@ -26,16 +25,10 @@ public class Employee1 {
 	public void setHobbies(List<String> hobbies) {
 		this.hobbies = hobbies;
 	}
-	public String getOfficialname() {
-		return officialname;
-	}
-	public void setOfficialname(String officialname) {
-		this.officialname = officialname;
-	}
+	
+	
 	@Override
 	public String toString() {
-		return "Employee1 [name=" + name + ", age=" + age + ", hobbies=" + hobbies + ", officialname=" + officialname
-				+ "]";
+		return "Emp2 [name=" + name + ", age=" + age + ", hobbies=" + hobbies + "]";
 	}
-	
 }

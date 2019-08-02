@@ -40,7 +40,7 @@ public class TestPerson {
 	public static void dumpData(List<Person> ls){
 		Yaml yaml = new Yaml();
 		try {
-			String dataFile = "\\src\\main\\java\\yaml\\dumpobjinyaml\\person.yaml";
+			String dataFile = "\\src\\main\\java\\yaml\\snake\\dumpobjinyaml\\person.yaml";
 			String strFile = System.getProperty("user.dir") + dataFile;
 			yaml.dump(ls, new FileWriter(new File(strFile)));
 		} 

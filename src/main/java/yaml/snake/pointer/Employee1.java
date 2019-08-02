@@ -1,4 +1,4 @@
-package yaml.jackson.yaml2pojo.reference;
+package yaml.snake.pointer;
 
 import java.util.List;
 

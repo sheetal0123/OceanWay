@@ -1,4 +1,4 @@
-- !!yaml.dumpobj.Person
+- !!yaml.snake.dumpobjinyaml.Person
   education:
     college: null
     monitor: false
