@@ -1,5 +1,9 @@
-package yaml.dumpobj;
+package yaml.snake.dumpobjinyaml;
 
+/**
+ * Base class
+ *
+ */
 public class Education {
 	boolean isMonitor;
 	PlayGroup playgroup;

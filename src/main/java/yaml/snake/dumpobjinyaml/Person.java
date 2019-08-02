@@ -1,4 +1,4 @@
-package yaml.dumpobj;
+package yaml.snake.dumpobjinyaml;
 
 
 enum Gender{

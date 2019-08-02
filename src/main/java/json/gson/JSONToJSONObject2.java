@@ -44,7 +44,9 @@ public class JSONToJSONObject2 {
 		JsonObject jsonObject = getJsonAsJsonElement(gson);
 
 		JsonArray jsonArray = jsonObject.getAsJsonArray("Data");
-
+		
+		
+		
 //		@SuppressWarnings("unchecked")
 //		List<String> list = gson.fromJson(arraySkills, ArrayList.class);
 //		System.out.println(list);

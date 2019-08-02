@@ -1,4 +1,4 @@
-package yaml.jackson;
+package yaml.jackson.yaml2pojo;
 
 import java.util.List;
 import java.util.Map;

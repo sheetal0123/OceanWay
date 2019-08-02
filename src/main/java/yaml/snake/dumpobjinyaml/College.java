@@ -1,4 +1,4 @@
-package yaml.dumpobj;
+package yaml.snake.dumpobjinyaml;
 
 public class College extends Education{
 

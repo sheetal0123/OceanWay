@@ -1,4 +1,4 @@
-package yaml.dumpobj;
+package yaml.snake.dumpobjinyaml;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -12,6 +12,7 @@ public class TestPerson {
 
 	public static List<Person> createData(){
 		List<Person> ls = new ArrayList<>();
+		
 		Person p = new Person();
 		Education e = new Education();
 		PlayGroup pg = new PlayGroup();
@@ -37,30 +38,16 @@ public class TestPerson {
 	
 	
 	public static void dumpData(List<Person> ls){
-//		Yaml yaml = new Yaml();
-//		try {
-//			String dataFile = "\\src\\main\\java\\yaml\\dumpobj\\person.yaml";
-//			String strFile = System.getProperty("user.dir") + dataFile;
-//			yaml.dump(ls, new FileWriter(new File(strFile)));
-//		} 
-//		catch (IOException e) {
-//			e.printStackTrace();
-//		}
-//		System.out.println("Done");
-		
-		
 		Yaml yaml = new Yaml();
 		try {
-			String dataFile = "\\src\\main\\java\\yaml\\dumpobj\\person.yaml";
+			String dataFile = "\\src\\main\\java\\yaml\\dumpobjinyaml\\person.yaml";
 			String strFile = System.getProperty("user.dir") + dataFile;
 			yaml.dump(ls, new FileWriter(new File(strFile)));
 		} 
 		catch (IOException e) {
 			e.printStackTrace();
 		}
-		System.out.println("Done");
-
-		
+		System.out.println("Done: Data has been dumped into person.yaml");
 	}
 	
 	

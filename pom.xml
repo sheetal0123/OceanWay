@@ -27,6 +27,7 @@
 		<junit.version>4.12</junit.version>
 		<bouncycastle.version>1.61</bouncycastle.version>
 		<hamcrestcore.version>2.1</hamcrestcore.version>
+		<snakeyaml.version>1.24</snakeyaml.version>
 	</properties>
 
 
@@ -229,7 +230,7 @@
 		<dependency>
 			<groupId>org.yaml</groupId>
 			<artifactId>snakeyaml</artifactId>
-			<version>1.21</version>
+			<version>${snakeyaml.version}</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->

@@ -1,4 +1,4 @@
-package yaml.jackson;
+package yaml.jackson.yaml2pojo;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
@@ -12,13 +12,15 @@ public class UserYamlTesting {
 		ObjectMapper objectMapper = new ObjectMapper(new YAMLFactory());
 		User user = null;
 		try {
-			File file = new File(".\\src\\main\\java\\yaml\\jackson\\userjack.yaml");
+			File file = new File(".\\src\\main\\java\\yaml\\jackson\\yaml2pojo\\read_user.yaml");
 			user = objectMapper.readValue(file, User.class);
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
 		
-		System.out.println(user.getAge());
+		System.out.println(user.getName());
+		System.out.println(user.getRoles());
+		System.out.println(user.getAddress());
 
 	}
 
