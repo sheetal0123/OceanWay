@@ -4,7 +4,7 @@ import java.util.LinkedHashMap;
 import java.util.Set;
 
 /*
- * LHM is ordered(by insertion) + not sorted
+ * LHM is ordered(by insertion) + not sorted like TreeMap
  * Its again a Map interface class and don't implement Iterable interface hence can't use List iteration methods
  */
 public class LinkedHashMapExamples {
@@ -17,29 +17,23 @@ public class LinkedHashMapExamples {
 		lhm.put("4", "D");
 		lhm.put(null, null);
 		lhm.put("5", null);
-		lhm.put("lastkey", "lastvalue");
+		lhm.put("10", "K");
+		lhm.put("2", "Updated-B");
+		System.out.println("LHM: "+lhm);
 		
 		
-		//to fetch last entered value and update with new value
-		Object arr = lhm.entrySet().toArray()[lhm.size() -1];
-		String s = arr.toString();
-		String lastKey = s.split("=")[0];
-		System.out.println(lastKey);
-		System.out.println(lhm.get(lastKey));
-		lhm.put(lastKey, "FAIL");
-		
-		
-		System.out.println(lhm.size()); // 6
-		System.out.println(lhm.containsKey("2")); // true
-		System.out.println(lhm.containsValue("B")); // true
+		System.out.println("Contains Key Check: "+lhm.containsKey("4")); // true
+		System.out.println("Contains Value Check: "+lhm.containsValue("D")); // true
 		lhm.remove("4");
-		System.out.println(lhm); // {2=B, 1=A, 3=C, null=null, 5=null}
+		System.out.println("Updated LHM: "+lhm);
 
+
+		//To iterate on LHM : Can't use iterator as Map are not Collections
 		Set<String> set = lhm.keySet();
+		System.out.println("# Iterating over LHM:");
 		for (String key : set) {
-			System.out.print(key + ":" + lhm.get(key) + "  "); // 2:B  1:A  3:C  null:null  5:null 
+			System.out.println(key + ":" + lhm.get(key) + "	");
 		}
-		
 		
 	}
 

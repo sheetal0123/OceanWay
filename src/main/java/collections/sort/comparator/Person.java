@@ -1,4 +1,4 @@
-package collections.sort;
+package collections.sort.comparator;
 
 public class Person implements Comparable<Person>{
 	int age;

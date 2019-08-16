@@ -52,7 +52,7 @@ public class FilterMapUsingStreams {
 	    Map<Integer, String> filteredMap = map.entrySet().stream()
 	    									.filter(x -> x.getValue().contains("Ca"))
 	    									.collect(Collectors.toMap(x -> x.getKey(), x -> x.getValue()));
-
+ 
 	    
 	    System.out.println("### Filtered Map After Java8: "+ filteredMap);
 		

@@ -5,6 +5,9 @@ import java.util.Stack;
 
 /*											  | |
  * Stack is subclass of Vector. FILO or LIFO  |_|
+ * 
+ * 
+ * Collection(I)  ---->  List(I) ----->  Vector(C) ----->  Stack(C)
  */
 public class StackExamples {
 

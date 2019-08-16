@@ -1,4 +1,4 @@
-package collections.sort;
+package collections.sort.comparator;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -14,8 +14,6 @@ public class SortClassWithComparator {
 
 	
 	public static void sortEmployee() {
-		Employee [] employees = new Employee[3];
-		
 		Employee e1 = new Employee();
 		e1.setEid(100);
 		e1.setName("Beta");
@@ -31,7 +29,7 @@ public class SortClassWithComparator {
 		e3.setName("Charli");
 		e3.setSalary(500);
 		
-		
+		Employee [] employees = new Employee[3];
 		employees[0] = e1;
 		employees[1] = e2;
 		employees[2] = e3;
