@@ -66,9 +66,9 @@ public class ArrayListToArrayConversion {
 	
 	public static void main(String [] args){
 		ArrayListToArrayConversion obj=new ArrayListToArrayConversion();
-		//obj.manualWayArrayListToArray();
+		obj.manualWayArrayListToArray();
 		obj.convertingArrayListToArrays();
-		//obj.convertArrayListToString();
+		obj.convertArrayListToString();
 	}
 	
 	
