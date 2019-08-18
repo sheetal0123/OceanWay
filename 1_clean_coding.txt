@@ -14,6 +14,3 @@
 
 
 
-
-#Imp Notes:
-- The obj who invokes equals(overridden case) method is actually passed into equals(calling obj) e.g. CompareListOfObj.java

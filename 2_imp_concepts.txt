@@ -1,0 +1,31 @@
+#Imp Notes:
+- The obj who invokes equals(overridden case) method is actually passed into equals(calling obj) e.g. CompareListOfObj.java
+
+
+
+
+
+
+#Internal working of HashMap
+1. As per Key, Hashcode get calculated and Key get stored in respective Bucket ID.
+2. Within same Bucket ID, Linked List get implemented
+
+
+
+#Internal working of HashSet
+1. HashSet implements HashMap Internally
+2. Whenever we call hs.add(), it calls hm.put("key",Object CONSTENT);
+3. As HashMap can store only unique Key, hence Set contains only unique Keys
+
+
+
+#Internal working of ArrayList
+1. ArrayList has two overloaded method add(object) & add(int index, Object)
+2. Default add() method adds element at the end of AL, the other one at specified index
+3. Capacity:
+   List al = new ArrayList();  // Create space of 10
+   List al = new ArrayList(count);  // space of given count
+4. Dynamically grows
+   If AL is full and we added a new value. Then it create a new AL with more space.
+   inside .add() method we have a method ensureCapacity() which keep a watch on current AL size.
+      
