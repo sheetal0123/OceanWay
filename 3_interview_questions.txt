@@ -7,4 +7,6 @@ A: String [] arr = {"a","b","c"};
    List list = Arrays.asList(arr);
 
    
+Q: How can we create list as Synchronised? 
+A: List<type> synList = Collections.synchronizedList(listObj); listObj can be AL or LL
    
