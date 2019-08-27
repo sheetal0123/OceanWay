@@ -1,4 +1,4 @@
-package yaml.snake;
+package yaml.snake.read;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -10,7 +10,7 @@ import org.yaml.snakeyaml.Yaml;
 public class TestPlaceholder {
 
 	public static void main(String[] args) {
-		String yamlPath = ".\\src\\main\\java\\yaml\\snake\\sample.yaml";
+		String yamlPath = ".\\src\\main\\java\\yaml\\snake\\read\\child.yaml";
 		
 		Yaml yaml = new Yaml();
 		Placeholder placeholder = null; 

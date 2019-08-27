@@ -19,47 +19,57 @@ import org.yaml.snakeyaml.Yaml;
  */
 public class BasicTests {
 
-	// Yaml Str to Map yaml.load(String)
-	public void testLoadFromString() {
+	// Eg 1: Yaml String to Java Map
+	public void stringToMap() {
 		Yaml yaml = new Yaml();
-		String document = "hello: 25";
-		Map<String, Integer> map = yaml.load(document);
-		Assert.assertEquals(new Integer(25), map.get("hello"));
-		System.out.println(map);
+
+		String str = "hello: 25";
+		Map<String, Integer> map = yaml.load(str);
+
+		Integer value = map.get("hello");
+		System.out.println(value);
 	}
 
-	// Multiple str line to Map
-	public void readAsMapFromString() {
-		Yaml yaml = new Yaml();
-		String s = "name: Joe\n" + "phone: 111-111-1111\n" + "address: Park Dr, Charlie Hill";
-		Object obj = yaml.load(s);
-		System.out.println("Loaded object type: " + obj.getClass());
-		System.out.println(obj);
 
-		// now complete string is into map
+	
+	// Eg 2: Multiple str line to Map
+	public void multipleStringLinesToMap() {
+		Yaml yaml = new Yaml();
+		
+		// Read String as Object
+		String str = "name: Joe\n" + "phone: 111-111-1111\n" + "address: Park Dr, Charlie Hill";
+		Object obj = yaml.load(str);
+
+		// Object Type as LinkedHashMap
+		System.out.println("Object Type: " + obj.getClass());
+
+		
+		// Convert Object into Map
 		@SuppressWarnings("unchecked")
 		Map<String, String> map = (Map<String, String>) obj;
 
-		System.out.println(map.get("phone"));
+		System.out.println("Name: "+map.get("name"));
+		System.out.println(map);
+		
 	}
 
-
-	public void readAsMapFromYaml() throws FileNotFoundException {
+	
+	// Eg 3: Yaml File To Mao
+	public void yamlFileToMap() throws FileNotFoundException {
 		Yaml yaml = new Yaml();
 
-		@SuppressWarnings("unchecked")
-		Map<String, String> map = (Map<String, String>) yaml
-				.load(new FileInputStream(new File(".\\src\\main\\java\\yaml\\snake\\simple.yaml")));
+		String path = ".\\src\\main\\java\\yaml\\snake\\basic.yaml";
+		Map<String, String> map = yaml.load(new FileInputStream(new File(path)));
+		
 		System.out.println(map.get("name"));
-		System.out.println(map.get("phone"));
-		System.out.println(map.get("address"));
+		System.out.println(map);
 	}
 
 	public static void main(String[] args) throws IOException {
 		BasicTests obj = new BasicTests();
-		//obj.testLoadFromString();
-		//obj.readAsMapFromString();
-		obj.readAsMapFromYaml();
+		// obj.stringToMap();
+		// obj.multipleStringLinesToMap();
+		// obj.yamlFileToMap();
 	}
 
 }
