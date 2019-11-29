@@ -14,10 +14,10 @@ public class TestBalloonPassbyValue {
 	 * o1 and o2 has been swapped but red, blue remain same
 	 * after swap red,o2 points to mem loc 50 which is RED
 	 */
-	public static void swap(Object o1, Object o2) {
+	public static void swap(Object o1, Object o2) {      // o1 (60) ---------> RED ,   o2 (110) ----------> BLUE
 		Object temp = o1;
 		o1 = o2;
-		o2 = temp;
+		o2 = temp;     // o1 (110)  -----------> BLUE       o2 (60)  ------------->  RED
 	}
 	
 	
@@ -31,7 +31,7 @@ public class TestBalloonPassbyValue {
 	private static void foo(Balloon b) { // b=100
 		b.setColor("Apple"); // baloon=100
 		b = new Balloon("Green"); // baloon=200
-		b.setColor("Blue"); // baloon = 200
+		b.setColor("Mango"); // baloon = 200
 	}
 
 	
@@ -39,8 +39,8 @@ public class TestBalloonPassbyValue {
 	
 	public static void main(String[] args) {
 
-		Balloon red = new Balloon("RED"); // memory reference 50
-		Balloon blue = new Balloon("BLUE"); // memory reference 100
+		Balloon red = new Balloon("RED"); // memory reference 50          red(50) ------> RED
+		Balloon blue = new Balloon("BLUE"); // memory reference 100      blue(100) --------> BLUE
 
 		//Swap and Print
 		swap(red, blue);

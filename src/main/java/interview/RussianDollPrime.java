@@ -13,7 +13,7 @@ import java.io.InputStreamReader;
  * 
  * Valid Russian doll prime no: 29, 37, 239
  */
-public class xebia_RussianDollPrime {
+public class RussianDollPrime {
 
 	public static void main(String[] args) throws IOException {
 

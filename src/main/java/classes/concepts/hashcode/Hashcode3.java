@@ -30,13 +30,14 @@ public class Hashcode3 {
 	
 	@Override
 	public boolean equals(Object obj) {
-		System.out.println("<Inside equals>");
 		if (this == obj){
-			System.out.println("print if obj references are same");
+			System.out.println("will not print:  print if obj references are same");
 			return true;
 		}
+		
 		if (obj == null)
 			return false;
+		
 		if (getClass() != obj.getClass())
 			return false;
 		
@@ -69,12 +70,15 @@ public class Hashcode3 {
 			System.out.println("Objs are not same");
 		}
 		
-		//Reference check
+		//Reference check : ref always check for original code which will be diff
 		if(obj1 == obj2)
-			System.out.println("References, points to same location on heap");
+			System.out.println("True: References, points to same location on heap");
 		else
-			System.out.println("References, points to different location on heap");
+			System.out.println("False: References, points to different location on heap");
 		
+		
+		System.out.println("Orig HC: "+System.identityHashCode(obj1));  
+		System.out.println("Orig HC: "+System.identityHashCode(obj2));
 		
 	}
 

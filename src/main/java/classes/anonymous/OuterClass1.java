@@ -1,4 +1,4 @@
-package classes.innerclasses;
+package classes.anonymous;
 
 /**
  * Member Class example i.e. non static class example

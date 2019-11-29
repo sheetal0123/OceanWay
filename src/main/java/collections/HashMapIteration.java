@@ -77,8 +77,10 @@ public class HashMapIteration {
 
 
 		//GetorDefault Value
+		System.out.println("Get/Default: ");
+		System.out.println(hm);
 		String val1 = hm.getOrDefault("3","Mango");
-		String val2 = hm.getOrDefault("100","Mango");
+		String val2 = hm.getOrDefault("random_key","Default Val if Key Not Found");
 		System.out.println("Value1:"+ val1+ "   Value2:"+ val2);
 
 	}
@@ -180,10 +182,10 @@ public class HashMapIteration {
       HashMapIteration obj=new HashMapIteration();
       //obj.hashMapUnderstanding();
       //obj.testInvalidKeysInHashMap();
-      //obj.impMethods();
+      obj.impMethods();
 
       //obj.iterateHashMap();
-      obj.getHashMapValues();
+      //obj.getHashMapValues();
       //obj.iterateMapUsingIterator();
    }
 	

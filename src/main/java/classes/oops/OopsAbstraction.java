@@ -2,7 +2,7 @@ package classes.oops;
 
 
 /**
- * Opps principle : Abstraction don't confuse it with Abstract class
+ * Oops principle : Abstraction don't confuse it with Abstract class
  * 
  * Abstraction can be achieved by using
  * - abstract classes, interfaces and compositions (HAS-A relationship)

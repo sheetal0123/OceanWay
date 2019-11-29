@@ -49,8 +49,8 @@ public class DuplicateWordInAString {
 			}
 		}
 
-		Set<String> set = map.keySet();
-		for(String key: set){
+		//Set<String> set = map.keySet();
+		for(String key: map.keySet()){
 			if(map.get(key) > 1){
 				System.out.println(key+" "+map.get(key));
 			}
@@ -59,7 +59,7 @@ public class DuplicateWordInAString {
 
 	public static void main(String[] args) {
 		DuplicateWordInAString obj = new DuplicateWordInAString();
-		obj.method1("Super Man Bat Man Spider Man");
+		//obj.method1("Super Man Bat Man Spider Man");
 		obj.method2("Super Man Bat Man Spider Man");
 	}
 }

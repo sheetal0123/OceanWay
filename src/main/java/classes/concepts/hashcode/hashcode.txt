@@ -1,5 +1,5 @@
 #Thumb Rule:
-Always override hashcode and equals together else dont do it
+Always override hashcode and equals together else don't do it
 If hashcode is diff for two obj then obj cannot be equal in any case
 If hascode is same then two object may or may not be same 
 	>obj's equality depend upon overridden equals method

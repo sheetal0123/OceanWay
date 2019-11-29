@@ -65,7 +65,7 @@ public class PolymorphicWildCard {
 		a.add(new WildAnimal());
 		a.add(new WildDog());
 		a.add(new WildCat());
-		//obj.goodWildAnimal(a);
+		obj.goodWildAnimal(a);
 		
 
 		//Dog array list

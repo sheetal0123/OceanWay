@@ -5,9 +5,10 @@ import java.util.List;
 
 /**
  * Polymorphic Array List
- * Unlike Arrays, here Compiler stop us to use polymorphism	
- * So in case of Array List
- * ArrayList<Animal> and ArrayList<Dog> are different
+ * 
+ * 1. Compiler stop us to use polymorphism in AL i.e. no question abt Runtime exception	
+ * 2. So in case of Array List, List<Dog> cant be passed into List<Animal>
+ * 3. Arrays: Dog[] can be passed into Animal []
  * 
  * Lets see how to solve this problem using Wild Card in next example
  */
@@ -41,7 +42,7 @@ public class PolymorphicArrayLists {
 	 * Polymorphic method for ArrayList
 	 * It will except only Animal type, no Dog type, no Cat type array list .... no polymorphism
 	 */
-	public void goodBigAnimal(List<BigAnimal> list){
+	public void setAnimals(List<BigAnimal> list){
 		
 		//list.add(new BigCat()); //added a cat to the list 
 		
@@ -60,7 +61,7 @@ public class PolymorphicArrayLists {
 		ls1.add(new BigAnimal());
 		ls1.add(new BigDog());
 		ls1.add(new BigCat());
-		//obj.goodBigAnimal(ls1);
+		obj.setAnimals(ls1);
 		
 
 		//Dog array list - can contains only dog type

@@ -1,4 +1,4 @@
-package classes.innerclasses;
+package classes.anonymous;
 
 /**
  * AnonymousLambdaExpression.class, paintable.class

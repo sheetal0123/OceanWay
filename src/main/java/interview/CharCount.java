@@ -5,12 +5,10 @@ import java.util.Scanner;
 
 public class CharCount {
 
-	public void charOccurenceInAString1() {
-		Scanner sc = new Scanner(System.in);
-		String str = sc.nextLine();
+	public void charOccurenceInAString1(char input, String str) {
 		char[] ch = str.toCharArray();
 
-		char c = 'a';
+		char c = input;
 		int count = 0;
 
 		for (int i = 0; i < ch.length; i++) {
@@ -21,11 +19,10 @@ public class CharCount {
 	}
 
 	// without using loops
-	public void charOccurenceInAString2() {
-		String str = "I am not using any loops";
+	public void charOccurenceInAString2(String input, String str) {
 		int length1 = str.length();
 
-		str = str.replaceAll("a", "");
+		str = str.replaceAll(input, "");
 		int length2 = str.length();
 
 		System.out.println("Occurences: " + (length1 - length2));
@@ -38,7 +35,6 @@ public class CharCount {
 
 		// checking each char of strArray
 		for (char key : arr) {
-
 			if (map.containsKey(key)) {
 				map.put(key, map.get(key) + 1);
 			} else {
@@ -50,8 +46,8 @@ public class CharCount {
 
 	public static void main(String[] args) {
 		CharCount obj = new CharCount();
-		// obj.charOccurenceInAString1();
-		// obj.charOccurenceInAString2();
+		obj.charOccurenceInAString1('a', "Hello man how are you!! aha");
+		obj.charOccurenceInAString2("a", "I am not using any loops");
 		obj.characterCountInString();
 	}
 

@@ -22,7 +22,7 @@ public class AppiumWebApp {
 	
 	@BeforeMethod
 	public void setUp() throws MalformedURLException {
-		File appDir = new File("/home/xebia/Documents/qa/appium/apkdir");
+		File appDir = new File("/path/to/apk/qa/appium/apkdir");
 		File app = new File(appDir, "Chrome.apk");
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability("browserName", "Chrome");

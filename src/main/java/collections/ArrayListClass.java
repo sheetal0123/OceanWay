@@ -6,7 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 /*
- * imp: none of the collection classes are synchronized
+ * Imp: none of the collection classes are synchronized
  * all legacy classes like vector, Hashtable etc are synchronized
  * AL as Ordered (by insertion) + Not sorted + Duplicate allowed
  */
@@ -72,7 +72,8 @@ public class ArrayListClass {
 		
 		//Style 5: using ListIterator(start index)
 		System.out.println("\n");
-		ListIterator<String> listItr2=al.listIterator(2);
+		System.out.println("List Iterator for :"+ al);
+		ListIterator<String> listItr2=al.listIterator(1);
 		while(listItr2.hasNext()){
 			System.out.print(listItr2.next()+" > ");  // Orange > Apple >
 		}
@@ -133,9 +134,9 @@ public class ArrayListClass {
 	public static void main(String[] args) {
 		ArrayListClass obj = new ArrayListClass();
 		obj.howToIterateArrayList();
-		obj.handleObjectsArray();
-		obj.initializeArrayListWithNCopies();
-		obj.initializeArrayListWithInnerClass();
+//		obj.handleObjectsArray();
+//		obj.initializeArrayListWithNCopies();
+//		obj.initializeArrayListWithInnerClass();
 		
 	}
 }

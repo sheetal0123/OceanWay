@@ -9,7 +9,7 @@ package classes.initialization;
  * one rule to remember: static method like main() require obj to access non static methods/variables
  */
 
-public class StaticExamples{
+public class StaticExample1{
 
 	static int a=10;
 	int b=20;
@@ -18,7 +18,7 @@ public class StaticExamples{
 		System.out.println("Block: i am a static block:"+a);
 	}
 	
-	public static void method1(StaticExamples obj){
+	public static void method1(StaticExample1 obj){
 		System.out.println("SM: I am a static method:"+a);
 //		this.a=a;  // compiler error
 //		method2(); // compiler error
@@ -35,15 +35,15 @@ public class StaticExamples{
 		
 		System.out.println("Main: I can access static var w/o obj:"+a);
 
-		StaticExamples obj1=new StaticExamples();
-		StaticExamples obj2=new StaticExamples();
+		StaticExample1 obj1=new StaticExample1();
+		StaticExample1 obj2=new StaticExample1();
 		method1(obj1);
 		obj1.method2();
 		
-		StaticExamples.a=50; // a=50
-		StaticExamples.a=a+1; // a=50+1
-		System.out.println(StaticExamples.a); //51
-		System.out.println(StaticExamples.a); //51
+		StaticExample1.a=50; // a=50
+		StaticExample1.a=a+1; // a=50+1
+		System.out.println(StaticExample1.a); //51
+		System.out.println(StaticExample1.a); //51
 		
 		obj1.b=50;   // b=50
 		obj2.b=obj2.b+1;  // b=20+1

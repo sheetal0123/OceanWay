@@ -1,8 +1,8 @@
 package classes.initialization;
 
 /**
- * Members get initialized first even before Constructor is called
- * no matter where they are declared
+ * Class Members get initialized(priority) before(over) Constructor
+ * No matter where they are declared
  */
 
 class Ora{
@@ -16,15 +16,16 @@ class Ora{
 
 
 public class Initializations {
-
+	//Class Member 1
 	Ora a = new Ora(1);
 	
+	//Constructor
 	public Initializations(){
 		System.out.println("Default Constuctor");
 		System.out.println(t);
 	}
 	
-	//var declared after constructor
+	//Class Member 2; declared after constructor
 	int t = 10;
 	Ora b = new Ora(2);
 	

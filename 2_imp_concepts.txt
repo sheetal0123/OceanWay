@@ -75,10 +75,24 @@ AL stored in consecutive memory location
 
 
 
+# Compiler vs runtime
+Animal a = new Dog();
+a.bark();  // compiler error  |  Compiler always chk for ref obj and JVM runtime chk for whos obj is it
+(Dog)a.bark();  // no error
 
 
 
+# Polymorphism in List
+1. Dog[] can be passed into Animal[]
+2. List<Dog> can't be passed into List<Animal> ; will get compiler error
+3. To solve above problem we can use wild card; List<Dog> can be passed to List<? extends Animal> 
 
+
+# Interface
+Interface obj cant call implementing classes methods due to security purposes
+Runnable r = new Mango();
+r.taste();   // compiler error
+r.run();
 
 
       

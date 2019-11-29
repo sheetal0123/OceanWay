@@ -17,7 +17,8 @@ public class DeepCopyExample2 {
 	/**
 	 * Makes a deep copy of any Java object that is passed using serialization
 	 */
-	 private static Object deepCopyUsingSerialization(Object object) {
+	 @SuppressWarnings("unused")
+	private static Object deepCopyUsingSerialization(Object object) {
 	   try {
 	     ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 	     ObjectOutputStream outputStrm = new ObjectOutputStream(outputStream);
@@ -37,7 +38,6 @@ public class DeepCopyExample2 {
 	/**
 	 *  Makes a deep copy of any Java object that is passed using YAML
 	 */
-	@SuppressWarnings("unchecked")
 	public static <T> T deepCopyUsingYaml(T inputObj) {
 		Yaml yaml = new Yaml();
 		String str = yaml.dump(inputObj);

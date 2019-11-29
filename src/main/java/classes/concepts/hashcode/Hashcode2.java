@@ -24,8 +24,8 @@ public class Hashcode2 extends Object {
 		Hashcode2 obj2 = new Hashcode2();
 
 		//Just to get original hashcode
-		System.out.println(System.identityHashCode(obj1));  // 2018699554
-		System.out.println(System.identityHashCode(obj2));  // 1311053135
+		System.out.println(System.identityHashCode(obj1));  // 366712642
+		System.out.println(System.identityHashCode(obj2));  // 1829164700
 		
 
 		//hashcode has been overridden and now they are same
@@ -35,11 +35,11 @@ public class Hashcode2 extends Object {
 		//But obj still different in terms of equals, hence we need to override equals also; see nxt example
 		System.out.println(obj1.equals(obj2)); //false
 		
-		//Reference check
+		//Reference check : In ref check original hashcode value will be compared
 		if(obj1 == obj2)
-			System.out.println("References, points to same location on heap");
+			System.out.println("True: References, points to same location on heap");
 		else
-			System.out.println("References, points to different location on heap");
+			System.out.println("False: References, points to different location on heap");
 			
 		
 	}

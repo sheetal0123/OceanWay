@@ -32,13 +32,12 @@ public class ArrayListToArrayConversion {
 		al.add("100");
 		al.add("200");
 		al.add("300");
-		int len = al.size(); // 3
+		//int len = al.size(); // 3
 
-		String[] arr = new String[1]; //Array will grow dynamically if required
-
+		String[] arr = new String[0]; //Array will grow dynamically if required
 		arr=al.toArray(arr);
-		
-		System.out.println();
+		System.out.println(arr); // object notation
+		System.out.println(Arrays.toString(arr)); // [100, 200, 300]
 		for (String str : arr)
 			System.out.print(str + ", "); // 100, 200, 300
 	}
@@ -66,9 +65,9 @@ public class ArrayListToArrayConversion {
 	
 	public static void main(String [] args){
 		ArrayListToArrayConversion obj=new ArrayListToArrayConversion();
-		obj.manualWayArrayListToArray();
+		//obj.manualWayArrayListToArray();
 		obj.convertingArrayListToArrays();
-		obj.convertArrayListToString();
+		//obj.convertArrayListToString();
 	}
 	
 	

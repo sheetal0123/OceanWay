@@ -1,4 +1,4 @@
-package classes.innerclasses;
+package classes.anonymous;
 
 /**
  * Other class to access inner class of NonStaticInnerClass.java

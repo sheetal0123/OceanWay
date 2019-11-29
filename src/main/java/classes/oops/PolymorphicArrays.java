@@ -60,10 +60,10 @@ public class PolymorphicArrays {
 		Animal [] a = {new Animal(), new Animal(), new Animal()};
 		Dog [] d = {new Dog(), new Dog(), new Dog()};
 		
-		//obj.goodAnimal(a);
-		//obj.goodAnimal(d);
+		obj.goodAnimal(a);
+		obj.goodAnimal(d);
 		
-		//obj.badAnimal(a); // fine
+		obj.badAnimal(a); // fine
 		obj.badAnimal(d); // run time exception ArrayStoreException
 		
 	}

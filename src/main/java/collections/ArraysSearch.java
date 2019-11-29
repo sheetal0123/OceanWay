@@ -60,8 +60,8 @@ public class ArraysSearch {
 	}
 
 	public static void main(String[] args) {
-		//ArraySearch.searchUsingBinarySearch("mango",'m');
-		ArraysSearch.test("mango","noa");
+		ArraysSearch.searchUsingBinarySearch("mango",'m');
+		//ArraysSearch.test("mango","noa");
 	}
 
 }

@@ -1,8 +1,10 @@
 #Clean Coding:
+todo: https://www.codingdojo.com/blog/clean-code-techniques
+
 1. Local Var:  The best place to make local variable is where we have to use them. Shd have min scope.
 2. Loops:  Try to use for-each loop over normal for loop and iterator to iterate an array or collection.
 	       for-each has many adv specially in case of nested loops.
-3. Money:  Never use float and double to money related calculation. Use BigDecimal.
+3. Money:  Never use float and double to money related calculation. Use BigDecimal.    -- NEED EXAMPLE
 4. Primitives:  Always try to use Primitive over Boxed Primitive(Integer,Long,Boolean etc) wherever possible
 5. Utilities:
 	a. A utility class should always have a private constructor, so that no object can be created in class.
@@ -11,7 +13,7 @@
 6. Short Method Body:
 	a. Extract code to new a new method if code is getting longer than 4-5 lines	
 	b. Important method should have bare mini code, all other code shd extract to new method
-	c. try block shd have one row ideally
+	c. try block shd have one row ideally   -- NEED EXAMPLE
 
 7. Naming: 
 	a. method name is very imp and shd suite to particular functionality

@@ -1,4 +1,4 @@
-package classes.innerclasses;
+package classes.anonymous;
 
 /**
  * Static Inner class ex not used much in practical

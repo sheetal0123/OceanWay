@@ -6,6 +6,8 @@ public class PalendromeTest {
 
 	/**
 	 * This work for strings including ints (read them as string)
+	 * 
+	 * palindrome examples : aba, madam, level, kayak etc
 	 */
 	public void stringTest() {
 		Scanner sc = new Scanner(System.in);

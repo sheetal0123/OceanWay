@@ -1,4 +1,5 @@
 package classes.oops;
+
 /*
  * Overloading is static or compile time polymorphism
  * compiler know which overloading method to run
@@ -18,16 +19,21 @@ public class OopsStaticPolymorphism {
 		System.out.println("Third Method with both: " + s + " & " + i);
 	}
 
+	public void ambi(int a, long b) {
+		
+	}
+
+	public void ambi(long a, int b) {
+
+	}
+
 	public static void main(String[] args) {
 		OopsStaticPolymorphism obj = new OopsStaticPolymorphism();
 		obj.print("John");
 		obj.print(10);
 		obj.print("John", 10);
+
+//		obj.ambi(20, 20);
+//		obj.ambi(20, 20);
 	}
 }
-
-/*
-First Method with only String: John
-Second Method with only int: 10
-Third Method with both: John & 10
-*/

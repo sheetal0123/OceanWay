@@ -1,4 +1,4 @@
-package classes.innerclasses;
+package classes.anonymous;
 
 /**
  * Here we re defined parent class and override the same method with new feature

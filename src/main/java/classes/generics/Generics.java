@@ -46,7 +46,7 @@ public class Generics {
 
 		Iterator<Integer> itr = al.iterator();
 		while (itr.hasNext()) {
-			int i = itr.next(); // casting required
+			int i = itr.next(); // casting not required
 			System.out.print(i+" "); //10 20
 		}
 	}

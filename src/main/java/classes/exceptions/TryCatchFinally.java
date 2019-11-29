@@ -1,7 +1,6 @@
 package classes.exceptions;
 
 import java.io.FileNotFoundException;
-import java.util.logging.Logger;
 
 /**
  * finally block generally used for clean up purposes like closing a connection etc

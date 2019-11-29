@@ -2,11 +2,62 @@
 *                                                     Java							    								*  
 * ~~~~~~~ * ~~~~~~~ * ~~~~~~~ * ~~~~~~~ * ~~~~~~~ * ~~~~~~~ * ~~~~~~~ * ~~~~~~~ * ~~~~~~~ * ~~~~~~~ * ~~~~~~~ * ~~~~~~~ *
 
+# imp java codes for coding #
+
+#To read complete line from cmd line:
+Scanner sc = new Scanner(System.in);
+String line = sc.nextLine();
+
+#To read next integer from input line:
+Scanner sc = new Scanner(System.in);
+int num = sc.nextInt();
+
+
+#String to Char Array
+char [] chArr = str.toCharArray();
+Arrays.sort(chArr);
+
+
+#Two array can be easily compared using:
+boolean b = Arrays.equals(arr1, arr2);
+
+#Two maps can be easily compared using:
+boolean flag = map1.equals(map2);
+boolean flag = map1.entrySet().stream().allMatch(e -> e.getValue().equals(map2.get(e.getKey())));
+Note: allMatch can be replaced with anyMatch, noneMatch
+
+
+
+#Str to int
+String str ="20";
+int i = Integer.parseInt(str);
+
+
+#int to Str (also can be used to cal length of int value)
+int i = 123;
+String str = String.valueOf(i);
+System.out.println(str.length());
+
+
+#To convert int to its binary form
+Integer.toBinaryString(10);    will print : 1010
+
+
+
 Q: How to create ArrayList from Array (Object[]) ?
 A: String [] arr = {"a","b","c"};
-   List list = Arrays.asList(arr);
+   List<String> al = new ArrayList<String>(Arrays.asList(arr)); 
 
+   
+Q: AL to Array
+List<String> al = new ArrayList<>();
+al.add("abc");
+
+String[] arr = new String[0]; //Array will grow dynamically if required, size need to be given else compilation error comes
+arr=al.toArray(arr); 
+  
    
 Q: How can we create list as Synchronised? 
 A: List<type> synList = Collections.synchronizedList(listObj); listObj can be AL or LL
-   
+
+  

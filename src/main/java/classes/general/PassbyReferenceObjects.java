@@ -4,6 +4,8 @@ package classes.general;
  * Whenever we pass an object i.e. we are passing simply reference(memory location address) 
  * of an actual physical object on the heap. Any change will directly impact actual object on heap
  * hence all object pass are pass by reference
+ * 
+ * https://www.journaldev.com/3884/java-is-pass-by-value-and-not-pass-by-reference
  */
 class Modify {
 	int a, b;

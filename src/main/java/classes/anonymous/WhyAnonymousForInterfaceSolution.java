@@ -1,4 +1,4 @@
-package classes.innerclasses;
+package classes.anonymous;
 
 /**
  * Using anonymous inner class we able to create interface object w/o creating a new class, implementing interface etc

@@ -4,12 +4,10 @@ import java.util.Comparator;
 
 
 /**
- * Always use primitive over Boxed primitive like Integer, Long, Boolean etc
+ * Rule: Always use primitive over Boxed primitive like Integer, Long, Boolean etc
+ * Note: In collections we have to use Boxed primitive as collection don't support primitive
  * 
- * In collections we have to use Boxed primitive as collection don't support primitive
- * 
- * @author Sheetal_Singh May 2018
- *
+ * @author Sheetal_Singh
  */
 public class PreferPrimitiveOverboxedPrimitive {
 

@@ -13,9 +13,3 @@ public class OopsEncapsulationTest {
 
 	}
 }
-
-/*
-Emp ID: xi432
-Name : James
-Age : 30
-*/

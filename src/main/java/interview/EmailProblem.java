@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
-public class xebia_EmailProblem {
+public class EmailProblem {
 
 	public static void sendMail(String emailAddress, String message, String[][] friendsArray) {
 		

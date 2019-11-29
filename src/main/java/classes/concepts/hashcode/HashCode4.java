@@ -43,17 +43,23 @@ public class HashCode4{
 		Geek g1 = new Geek("aditya", 1); 
 		Geek g2 = new Geek("aditya", 2); 
 	 
+		System.out.println("Obj initialized");
+		
 		Map<Geek, String> map = new HashMap<Geek, String>(); 
-		map.put(g1, "CSE"); 
-		map.put(g2, "IT"); 
-	 
-		System.out.println("\nMap Size:"+map.size());
+		map.put(g1, "CSE");   // HC method will be called to find the first bucket id i.e. 10
+		map.put(g2, "IT");     // HC method will be called; as HC is same here (10), hence equals called to chk equality
+		
+		//In abv stmt equals failed because we are checking 'name and id' both in equals and id is diff for both obj
+		System.out.println("\nMap Size:"+map.size());  //2
 		
 		System.out.println("\nFor loop abt to start...");
 		
 		for(Geek key : map.keySet()) 
 			System.out.println("for loop: "+map.get(key).toString());
 	}
+	
+	
+	
 	
 	/**
 	 * In this case when map.put(g2,"IT") get called then
@@ -65,10 +71,11 @@ public class HashCode4{
 		Geek g2 = new Geek("aditya", 1); 
 	 
 		Map<Geek, String> map = new HashMap<Geek, String>(); 
-		map.put(g1, "CSE"); 
-		map.put(g2, "IT"); 
+		map.put(g1, "CSE");   // HC called and it will return 10
+		map.put(g2, "IT");    // HC called and it will return 10 + equals will be called as this is second time + equals return true
 	 
-		System.out.println("\nMap Size:"+map.size());
+		//In abv stmt equals return true because 'name and id' are both same and both key will be treated as same
+		System.out.println("\nMap Size:"+map.size()); // 1 , second val will override first
 		
 		System.out.println("\nFor loop abt to start...");
 		

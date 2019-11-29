@@ -1,4 +1,4 @@
-package classes.innerclasses;
+package classes.anonymous;
 
 /**
  * Why need anonymous class:  Suppose we have a legacy code and we want to change its method behavior
