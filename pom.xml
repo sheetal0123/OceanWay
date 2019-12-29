@@ -9,7 +9,7 @@
 	<description>all test code</description>
 
 	<properties>
-	
+
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<selenium.version>3.141.59</selenium.version>
 		<itextpdf.version>5.5.11</itextpdf.version>
@@ -20,6 +20,7 @@
 		<jacksondatabind.version>2.10.0.pr1</jacksondatabind.version>
 		<jacksondataformatxml.version>2.10.0.pr1</jacksondataformatxml.version>
 		<jacksoncore.version>2.10.0.pr1</jacksoncore.version>
+		<jacksonannotation.version>2.10.1</jacksonannotation.version>
 		<snakeyaml.version>1.24</snakeyaml.version>
 
 		<opencsv.version>4.1</opencsv.version>
@@ -45,7 +46,7 @@
 		<lang3.version>3.7</lang3.version>
 		<guava.version>25.1-jre</guava.version>
 		<orika.version>1.5.2</orika.version>
-		
+
 	</properties>
 
 
@@ -205,6 +206,10 @@
 			<version>${gson.version}</version>
 		</dependency>
 
+
+
+
+
 		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.dataformat</groupId>
@@ -219,7 +224,6 @@
 			<version>${jacksondataformatxml.version}</version>
 		</dependency>
 
-
 		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
@@ -233,6 +237,16 @@
 			<artifactId>jackson-core</artifactId>
 			<version>${jacksoncore.version}</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>${jacksonannotation.version}</version>
+		</dependency>
+
+
+
 
 
 
@@ -279,6 +293,9 @@
 
 	<build>
 		<plugins>
+		
+		
+		
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.5</version>
@@ -287,6 +304,36 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
+
+
+
+			<!-- for: api_json.jackson.json_schema_to_dynamic_pojo 
+			<outputDirectory>${basedir}/src/main/java/api_json/jackson/json_schema_to_dynamic_pojo</outputDirectory>
+					
+			-->
+			<plugin>
+				<groupId>org.jsonschema2pojo</groupId>
+				<artifactId>jsonschema2pojo-maven-plugin</artifactId>
+				<version>1.0.1</version>
+				<configuration>
+					<sourceDirectory>${basedir}/src/main/resources/schema</sourceDirectory>
+					<targetPackage>com.pojos</targetPackage>
+					<generateBuilders>true</generateBuilders>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+
+
+
+
+
 		</plugins>
 
 	</build>

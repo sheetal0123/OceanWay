@@ -8,7 +8,7 @@ ep training
 1. Interface shd not start with 'I', it decreases readability e.g. 
 	incorrect:  IClean    
 	correct: GarageCleaningService
-2. Method params shd not be like Method(pColor, pCar) | use simple short name  Method(color, car)
+2. Method params shd not be like myMethod(pColor, pCar) | use simple short name  myMethod(color, car)
 3. Class name shd be correct as per implementation of interface
 	wrong: 		public class GarageControllerImpl implements GarageService {}            
 	correct: 	public class GarageServiceImpl implements GarageService {}
@@ -52,7 +52,7 @@ ep training
 	#incorrect: magical C and S
 	return String.format("%s %s [%s] %s", manufacturer, model, year, classic ? "C" : "S"); 
 	
-	#correct: make class level contantsa ad use them
+	#correct: make class level constants and use them
 	private static final String CLASSIC_CAR_ABBREVIATION = "C";
 	return String.format("%s %s [%s] %s", manufacturer, model, year, classic ? CLASSIC_CAR_ABBREVIATION : SIMPLE_CAR_ABBREVIATION);
 	
@@ -89,7 +89,7 @@ ep training
 	
 2. Conditions:
 A:
-	#Confussing Code:		
+	#Confusing Code:		
 	if(!list.isEmpty()){
 		//code
 	}	
@@ -142,7 +142,7 @@ B: 	In case if(cond), conditions are more that one, then make new methods for co
 		}   
 		 
 		#Good Code 
-		swtuch (){
+		switch (){
 			case VACANCY_OPEN:
 			case VACANCY_CLOSE:
 		}	
