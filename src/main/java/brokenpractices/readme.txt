@@ -149,11 +149,11 @@ B: 	In case if(cond), conditions are more that one, then make new methods for co
 		 
 	
 8. Code Quality Matrics:
-	Cyclomatic Complexity   CC < 5 is Good,    CC : 5 to 10 is OK,    CC: Above 10 is bad 
-	Coupling Cohesion : Plugins: MetricReloaded(IntelliJ), Metrics(Eclipse)
-	Code Coverage: SonarQube
-	Duplicate Code Percentage: SonarQube
-	Technical Debt - Startegic(genuine and are tracked), Non startegic (becasue of process gaps, bad code quality)
-	Comment Percentage  : SonarQube . Shd be low
-	Static Rule Compliance : SonarQube	. Number shd be 100 ideally
+	1. Cyclomatic Complexity   CC < 5 is Good,    CC : 5 to 10 is OK,    CC: Above 10 is bad 
+	2. Coupling Cohesion : Plugins: MetricReloaded(IntelliJ), Metrics(Eclipse)
+	3. Code Coverage: SonarQube
+	4. Duplicate Code Percentage: SonarQube
+	5. Technical Debt - Startegic(genuine and are tracked), Non startegic (becasue of process gaps, bad code quality)
+	6. Comment Percentage  : SonarQube . Shd be low
+	7. Static Rule Compliance : SonarQube	. Number shd be 100 ideally
 	

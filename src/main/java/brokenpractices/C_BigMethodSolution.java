@@ -1,4 +1,4 @@
-package cleancode;
+package brokenpractices;
 
 /**
  * Rules: 
@@ -13,10 +13,7 @@ public class C_BigMethodSolution {
 	public static void longMethod() {
 		methodExtracted();
 
-		int a1 = 15;
-		int b1 = 25;
-		int c1 = a1 + b1;
-		System.out.println(c1);
+		newMethod();
 
 		int a2 = 20;
 		int b2 = 30;
@@ -33,6 +30,13 @@ public class C_BigMethodSolution {
 		int c4 = a4 + b4;
 		System.out.println(c4);
 
+	}
+
+	private static void newMethod() {
+		int a1 = 15;
+		int b1 = 25;
+		int c1 = a1 + b1;
+		System.out.println(c1);
 	}
 
 	private static void methodExtracted() {

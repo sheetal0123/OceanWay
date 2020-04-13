@@ -1,6 +1,6 @@
-package cleancode;
+package brokenpractices;
 
-public class A_NamingProblems {
+public class B_NamingProblems {
 
 	int iAge;
 	String sFName;
@@ -9,7 +9,7 @@ public class A_NamingProblems {
 	String c = "INDIA";
 	boolean isClassicCar;
 
-	public A_NamingProblems(int a, String f, String l, String adr) {
+	public B_NamingProblems(int a, String f, String l, String adr) {
 		this.iAge = a;
 		this.sFName = f;
 		this.lname = l;

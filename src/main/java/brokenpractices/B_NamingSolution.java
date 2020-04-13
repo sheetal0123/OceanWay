@@ -1,12 +1,12 @@
-package cleancode;
+package brokenpractices;
 
 
 /**
- * Variable/Mathod name should convey the clear message 
+ * Variable/Method name should convey the clear message 
  * 
  * @author Sheetal_Singh
  */
-public class A_NamingSolution {
+public class B_NamingSolution {
 
 	int age;
 	String firstName;
@@ -15,7 +15,7 @@ public class A_NamingSolution {
 	public static final String EMP_COUNTRY = "INDIA";
 	boolean classicCar;
 
-	public A_NamingSolution(int age, String firstName, String lastName, String address) {
+	public B_NamingSolution(int age, String firstName, String lastName, String address) {
 		this.age = age;
 		this.firstName = firstName;
 		this.lastName = lastName;

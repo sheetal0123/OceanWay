@@ -1,4 +1,4 @@
-package cleancode;
+package brokenpractices;
 
 /**
  * Try to split method into two in case we are passing boolean

@@ -1,8 +1,8 @@
-package cleancode;
+package brokenpractices;
 
-public class E_LocalVariableProblem {
+public class G_LocalVariableProblem {
 
-	int i = 10; // initialized outside method
+	int i = 10;
 	int sum;
 
 	public void invalidUsage() {

@@ -1,4 +1,4 @@
-package cleancode;
+package brokenpractices;
 
 import java.math.BigDecimal;
 
@@ -8,15 +8,19 @@ import java.math.BigDecimal;
  * 
  * @author Sheetal_Singh
  */
-public class B_MoneySolution {
+public class A_MoneySolution {
 
 	public static void subtractionSolution() {
 		System.out.println("Difference Solution:");
-		BigDecimal i = BigDecimal.valueOf(1.03);
-		BigDecimal j = BigDecimal.valueOf(0.42);
-		System.out.println("Correct Answer: " + i.subtract(j));
+		BigDecimal num1 = BigDecimal.valueOf(1);
+		BigDecimal num2 = BigDecimal.valueOf(0.90);
+		System.out.println("Correct Answer: " + num1.subtract(num2));
 	}
 
+	
+	
+	
+	
 	public static void CandySolution() {
 		System.out.println("\n\nCandy Solution:");
 		BigDecimal walletBalance = BigDecimal.valueOf(1.00);

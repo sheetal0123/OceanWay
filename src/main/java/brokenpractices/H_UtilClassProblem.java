@@ -1,5 +1,10 @@
-package cleancode;
+package brokenpractices;
 
+/**
+ *  Hypothetical Class: Methods written by different developer at different point of time
+ *  
+ * @author Sheetal_Singh
+ */
 public class H_UtilClassProblem {
 
 	public String str = ""; // class level variable

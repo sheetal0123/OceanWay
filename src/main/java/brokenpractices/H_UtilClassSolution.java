@@ -1,4 +1,4 @@
-package cleancode;
+package brokenpractices;
 
 /**
  * Rule 1: A utility class should always have a private constructor, so that no object can be created in class.

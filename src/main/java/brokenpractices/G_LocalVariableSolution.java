@@ -1,4 +1,4 @@
-package cleancode;
+package brokenpractices;
 
 /**
  * Rule: 
@@ -7,11 +7,11 @@ package cleancode;
  * 
  * @author Sheetal_Singh
  */
-public class E_LocalVariableSolution {
+public class G_LocalVariableSolution {
 
 	public void correctUsageOfLocalVariable() {
-		int j = 10;
-		int sum = j + 100;
+		int num = 10; // local var
+		int sum = num + 100;
 		System.out.println("Sum is: " + sum);
 	}
 }

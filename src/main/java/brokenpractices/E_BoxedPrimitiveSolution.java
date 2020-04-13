@@ -1,4 +1,4 @@
-package cleancode;
+package brokenpractices;
 
 import java.util.Comparator;
 
@@ -10,7 +10,7 @@ import java.util.Comparator;
  * 
  * @author Sheetal_Singh
  */
-public class G_BoxedPrimitiveSolution {
+public class E_BoxedPrimitiveSolution {
 
 	public static void boxedPrimitiveUpdatedCode() {
 

@@ -1,4 +1,4 @@
-package cleancode;
+package brokenpractices;
 
 public class L_SwitchSolution {
 
