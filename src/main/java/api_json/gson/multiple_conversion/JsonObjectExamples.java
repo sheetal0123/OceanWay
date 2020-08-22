@@ -31,16 +31,16 @@ public class JsonObjectExamples {
 		// JSON Element
 		JsonElement jsonElement = gson.fromJson(reader, JsonElement.class);
 
-		// JSON String
+		// JSON Element -> JSON String
 		String jsonString = gson.toJson(jsonElement);
 		
-		// JSON Object
+		// JSON Element -> JSON Object
 		JsonObject jsonObject = jsonElement.getAsJsonObject();
 
 		return jsonObject;
 	}
 
-	
+	// We could have converted json to java obj directly as well
 	public static void fetchData(JsonObject jsonObject,Gson gson) {
 		String id = jsonObject.get("ID").getAsString();
 		String name = jsonObject.get("Name").getAsString();

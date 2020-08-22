@@ -17,10 +17,10 @@
 		<jsch.version>0.1.54</jsch.version>
 		<commonsio.version>2.6</commonsio.version>
 
-		<jacksondatabind.version>2.10.0.pr1</jacksondatabind.version>
-		<jacksondataformatxml.version>2.10.0.pr1</jacksondataformatxml.version>
-		<jacksoncore.version>2.10.0.pr1</jacksoncore.version>
-		<jacksonannotation.version>2.10.1</jacksonannotation.version>
+		<jacksondatabind.version>2.11.1</jacksondatabind.version>
+		<jacksondataformatxml.version>2.11.1</jacksondataformatxml.version>
+		<jacksoncore.version>2.11.1</jacksoncore.version>
+		<jacksonannotation.version>2.11.1</jacksonannotation.version>
 		<snakeyaml.version>1.24</snakeyaml.version>
 
 		<opencsv.version>4.1</opencsv.version>
@@ -32,6 +32,7 @@
 
 		<mockito.version>2.25.0</mockito.version>
 		<junit.version>4.12</junit.version>
+		<junit5.version>5.6.2</junit5.version>
 		<bouncycastle.version>1.61</bouncycastle.version>
 		<hamcrestcore.version>2.1</hamcrestcore.version>
 
@@ -52,6 +53,8 @@
 
 
 	<dependencies>
+
+
 
 
 		<!-- for java fields mapping -->
@@ -85,6 +88,14 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>${junit5.version}</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -231,21 +242,20 @@
 			<version>${jacksondatabind.version}</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+<!--  
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-core</artifactId>
 			<version>${jacksoncore.version}</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-annotations</artifactId>
 			<version>${jacksonannotation.version}</version>
 		</dependency>
 
-
+-->
 
 
 
@@ -293,9 +303,9 @@
 
 	<build>
 		<plugins>
-		
-		
-		
+
+
+
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.5</version>
@@ -307,10 +317,7 @@
 
 
 
-			<!-- for: api_json.jackson.json_schema_to_dynamic_pojo 
-			<outputDirectory>${basedir}/src/main/java/api_json/jackson/json_schema_to_dynamic_pojo</outputDirectory>
-					
-			-->
+			<!-- for: api_json.jackson.json_schema_to_dynamic_pojo <outputDirectory>${basedir}/src/main/java/api_json/jackson/json_schema_to_dynamic_pojo</outputDirectory> -->
 			<plugin>
 				<groupId>org.jsonschema2pojo</groupId>
 				<artifactId>jsonschema2pojo-maven-plugin</artifactId>

@@ -6,9 +6,9 @@ import java.io.IOException;
 import com.google.gson.Gson;
 
 /**
+ * Serialization : Java Object -> Json String/File etc
  * Here we initialize java obj with constructor rather getter setter
  */
-
 public class UserTestCode {
 
 	public static void main(String[] args) {

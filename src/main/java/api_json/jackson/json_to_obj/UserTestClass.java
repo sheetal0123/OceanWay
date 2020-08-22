@@ -13,6 +13,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  * Jackson Library:
  * Populating POJOs classes with Json Files
  * 
+ * Deserialization Json -> Java Obj
  * @author Sheetal_Singh
  */
 

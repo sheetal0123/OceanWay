@@ -7,7 +7,10 @@ import java.io.Reader;
 import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
 
-//Json to Java Object
+/**
+ * Deserialization : Json to Java Object
+ * @author Sheetal_Singh
+ */
 public class DirectorTestClass {
 
 	

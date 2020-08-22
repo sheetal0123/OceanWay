@@ -16,6 +16,8 @@ import com.opencsv.CSVReader;
 /**
  * This class read data from csv and create a single json with all employee data in it
  * 
+ * csv -> hash map -> pojo -> json(via gson lib)
+ * 
  * json can be passed to POST req etc
  *
  */
@@ -24,7 +26,9 @@ public class TestCreateJsonUsingCSVData {
 	
 	/**
 	 * This method will read complete test data present in csv file and create a big LinkedHashMap
-	 * big hash map contains test case id as key & val as <title heading,title value>
+	 * 
+	 * Big hash map contains test case id as key & val as <title heading,title value>
+	 * <"1",  <"Name","Sheetal">>
 	 * 
 	 * LinkedHM chosen just go get data in same sequence as it has been arranged in CSV
 	 */

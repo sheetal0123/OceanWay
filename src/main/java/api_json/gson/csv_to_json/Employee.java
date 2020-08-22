@@ -2,6 +2,7 @@ package api_json.gson.csv_to_json;
 
 import org.apache.commons.lang.builder.ToStringBuilder;
 
+//Base Class: ServicePlaceholderPojo
 public class Employee {
 
     private String name;

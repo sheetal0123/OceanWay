@@ -6,6 +6,10 @@ import java.io.Reader;
 
 import com.google.gson.Gson;
 
+/**
+ * Deserialization : Json to Java Object
+ * @author Sheetal_Singh
+ */
 public class DataTestClass {
 
 	

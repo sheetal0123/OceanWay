@@ -7,6 +7,10 @@ import java.util.List;
 
 import com.google.gson.Gson;
 
+/**
+ * pojo -> json(via gson lib)
+ * @return
+ */
 public class TestCreateJsonUsingJavaObject {
 
 	public static ServicePlaceholderPojo readDataHardCoded() {
