@@ -17,10 +17,10 @@
 		<jsch.version>0.1.54</jsch.version>
 		<commonsio.version>2.6</commonsio.version>
 
-		<jacksondatabind.version>2.11.1</jacksondatabind.version>
-		<jacksondataformatxml.version>2.11.1</jacksondataformatxml.version>
-		<jacksoncore.version>2.11.1</jacksoncore.version>
-		<jacksonannotation.version>2.11.1</jacksonannotation.version>
+		<jacksondatabind.version>2.11.2</jacksondatabind.version>
+		<jacksondataformatxml.version>2.11.2</jacksondataformatxml.version>
+		<jacksoncore.version>2.11.2</jacksoncore.version>
+		<jacksonannotation.version>2.11.2</jacksonannotation.version>
 		<snakeyaml.version>1.24</snakeyaml.version>
 
 		<opencsv.version>4.1</opencsv.version>

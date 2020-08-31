@@ -6,7 +6,7 @@ package java8;
  * @author Sheetal_Singh
  */
 
-
+/*
 //@FunctionalInterface
 interface Interface1 {
 	void method1(String str);
@@ -48,3 +48,4 @@ public class MyClass  {
 //	}
 
 }
+*/

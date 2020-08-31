@@ -1,4 +1,4 @@
-package webdriver.image_comparsion;
+package solutions.image_comparsion;
 
 import java.awt.Color;
 import java.awt.image.BufferedImage;
@@ -35,13 +35,12 @@ public class CompareAndPaintImageDifferences {
 	
 	
 	public static void main(String[] args) throws IOException {
-		BufferedImage expectedImage = ImageIO.read(new File(".\\src\\main\\java\\webdriver\\image_comparsion\\expected_image.png")) ;
-		BufferedImage actualImage = ImageIO.read(new File(".\\src\\main\\java\\webdriver\\image_comparsion\\actual_image.png")) ;
-		File resultImage = new File(".\\src\\main\\java\\webdriver\\image_comparsion\\result_image.png");
+		BufferedImage expectedImage = ImageIO.read(new File(".\\src\\main\\java\\solutions\\image_comparsion\\expected_image.png")) ;
+		BufferedImage actualImage = ImageIO.read(new File(".\\src\\main\\java\\solutions\\image_comparsion\\actual_image.png")) ;
+		File resultImage = new File(".\\src\\main\\java\\solutions\\image_comparsion\\result_image.png");
 		
 		BufferedImage imageDifference = getDifferenceImage(expectedImage,actualImage );
 		ImageIO.write(imageDifference, "png", resultImage);
-		System.out.println("Done");
 	}
 	
 	

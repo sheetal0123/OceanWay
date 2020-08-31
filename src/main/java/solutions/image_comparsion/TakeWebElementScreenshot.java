@@ -1,4 +1,4 @@
-package webdriver.image_comparsion;
+package solutions.image_comparsion;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
