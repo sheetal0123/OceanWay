@@ -13,7 +13,7 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<selenium.version>3.141.59</selenium.version>
 		<itextpdf.version>5.5.11</itextpdf.version>
-		<poi.version>3.12</poi.version>
+		<poi.version>4.1.2</poi.version>
 		<jsch.version>0.1.54</jsch.version>
 		<commonsio.version>2.6</commonsio.version>
 
