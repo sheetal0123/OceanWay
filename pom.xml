@@ -15,7 +15,7 @@
 		<itextpdf.version>5.5.11</itextpdf.version>
 		<poi.version>3.12</poi.version>
 		<jsch.version>0.1.54</jsch.version>
-		<commonsio.version>2.6</commonsio.version>
+		<commonsio.version>2.7</commonsio.version>
 
 		<jacksondatabind.version>2.11.2</jacksondatabind.version>
 		<jacksondataformatxml.version>2.11.2</jacksondataformatxml.version>
