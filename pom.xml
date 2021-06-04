@@ -21,7 +21,7 @@
 		<jacksondataformatxml.version>2.11.2</jacksondataformatxml.version>
 		<jacksoncore.version>2.11.2</jacksoncore.version>
 		<jacksonannotation.version>2.11.2</jacksonannotation.version>
-		<snakeyaml.version>1.24</snakeyaml.version>
+		<snakeyaml.version>1.26</snakeyaml.version>
 
 		<opencsv.version>4.1</opencsv.version>
 		<apachecsv.version>1.6</apachecsv.version>
